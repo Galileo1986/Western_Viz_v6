@@ -16,3 +16,7 @@ desktop.ini
 # Logs / temp
 *.log
 *.tmp
+
+# Rhino backups
+*.3dmbak
+*.3dm.bak
