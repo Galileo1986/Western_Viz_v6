@@ -196,6 +196,10 @@ export function applyStyle(entry, styleMap, global, selectionKey, mode, envelope
     // ENVELOPE shell
     if (kind === 'envelope') {
       if (campusRooms) {
+        // Spotlight (ghost) active: a category is picked from the infographic, so the envelope shells are
+        // hidden entirely — only the rooms remain (matching = colored, ghosted = receded), nothing wraps
+        // them. (user request 2026-06-08: "when ghost mode is on, the building envelope should not be visible".)
+        if (spotKeys) { child.visible = false; setEdge(edge, WHITE, 0, false); return; }
         // room-paint: the envelope drops to a faint context shell (the rooms inside carry the data color),
         // so cross-building distribution reads. Same styling as a building-scope unselected "other" shell.
         child.visible = true;

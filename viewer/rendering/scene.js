@@ -478,7 +478,12 @@ export function initRenderer({ container, store, assetBase = '/', contextUrl = n
     if (current.scope.mode === 'campus') {
       if (current.campusRender === 'rooms') {
         // room-paint layer active → single-click selects the ROOM under the cursor (room-readings card).
-        const hit = pickAt(e.clientX, e.clientY, (o) => o.userData.kind === 'room' && o.userData.key);
+        // Spotlight (ghost) active: a category is picked from the infographic, so ONLY the spotlighted
+        // rooms are selectable — the ghosted (non-matching) rooms ignore clicks. No spotlight → any room.
+        // (user request 2026-06-08: ghosted rooms cannot be selected.)
+        const spotKeys = current.spotlight && current.spotlight.keys;
+        const hit = pickAt(e.clientX, e.clientY,
+          (o) => o.userData.kind === 'room' && o.userData.key && (!spotKeys || spotKeys.has(o.userData.key)));
         if (hit) store.dispatch(select(hit.object.userData.key));
         else store.dispatch(clearSelection());
       } else {
