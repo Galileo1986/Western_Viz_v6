@@ -145,10 +145,17 @@ function buildCard(vm, viewportUrl) {
     b.innerHTML = '<b style="font:500 15px/1 var(--sans)">WesternU</b>';
     header.appendChild(b);
   }
-  const logo = document.createElement('img');
-  logo.src = './logo.png'; logo.alt = 'ARTIFACT';
-  Object.assign(logo.style, { height: '30px', width: 'auto', filter: 'invert(1)', opacity: '0.9', display: 'block' });
-  header.appendChild(logo);
+  // Reuse whichever logo candidate actually resolved on the splash (app/main.js LOGO_SRC tries
+  // .png/.svg/.webp/.jpg in order) rather than hard-coding './logo.png' — so a non-PNG logo still
+  // shows here, and if none loaded the card simply omits the logo instead of baking a broken image.
+  const splashImg = document.getElementById('splash-logo-img');
+  const logoSrc = (splashImg && splashImg.naturalWidth > 0) ? (splashImg.currentSrc || splashImg.src) : null;
+  if (logoSrc) {
+    const logo = document.createElement('img');
+    logo.src = logoSrc; logo.alt = 'ARTIFACT';
+    Object.assign(logo.style, { height: '30px', width: 'auto', filter: 'invert(1)', opacity: '0.9', display: 'block' });
+    header.appendChild(logo);
+  }
   card.appendChild(header);
 
   // title block: lime eyebrow (mode · family) + large layer name + one-line layer description (subtle box)

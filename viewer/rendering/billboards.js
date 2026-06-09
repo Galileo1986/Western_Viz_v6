@@ -381,7 +381,7 @@ export function addBuildingBillboards(scene, manifest, opts = {}) {
     lastSig = sig;
     for (const [code, e] of byCode) {
       const t = tags[code];
-      setPinGraphic(e.sprite, drawPin({ title: e.title, label: t && t.label, value: t && t.value }, style));
+      setPinGraphic(e.sprite, drawPin({ title: e.title, value: t && t.value }, style));
     }
   };
   return group;

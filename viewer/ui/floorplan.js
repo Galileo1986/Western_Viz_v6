@@ -30,7 +30,17 @@ export function initFloorPlan({ container, store }) {
   container.replaceChildren();
   const head = div('plan-head');
   head.title = 'Drag to move the panel';
-  head.append(div('plan-title', 'Floor plan'), div('plan-hint', 'drag header to move · ↙ resize'));
+  // minimize toggle — collapses the panel to just this header bar (a draggable floating title) so it
+  // doesn't obstruct the 3D view while orbiting on small screens. Lives in the header's right group.
+  const collapseBtn = document.createElement('button');
+  collapseBtn.className = 'plan-collapse';
+  collapseBtn.type = 'button';
+  collapseBtn.setAttribute('aria-label', 'Minimize floor-plan panel');
+  collapseBtn.title = 'Minimize to title bar';
+  collapseBtn.textContent = '–';
+  const headRight = div('plan-head-right');
+  headRight.append(div('plan-hint', 'drag header to move · ↙ resize'), collapseBtn);
+  head.append(div('plan-title', 'Floor plan'), headRight);
   const floorsBar = div('plan-floors');
   const svgwrap = div('plan-svgwrap');
   const svg = document.createElementNS(SVGNS, 'svg');
@@ -49,10 +59,13 @@ export function initFloorPlan({ container, store }) {
   ghostOp.type = 'range'; ghostOp.min = '0'; ghostOp.max = '100'; ghostOp.value = '30';
   const ghostVal = div('val', '30%');
   ghostOpRow.append(div('lbl', 'Opacity'), ghostOp, ghostVal);
-  ghostWrap.append(ghostBtn, ghostOpRow);
+  ghostWrap.append(ghostBtn);
 
-  // order: title · level buttons · ghost-mode · plan (ghost sits directly under the level buttons)
-  container.append(head, floorsBar, ghostWrap, svgwrap);
+  // level buttons (left, flexible) + ghost toggle (right) share ONE compact control row so the plan keeps
+  // more height; the opacity slider — only shown when ghost is on — sits as its own thin row beneath it.
+  const controls = div('plan-controls');
+  controls.append(floorsBar, ghostWrap);
+  container.append(head, controls, ghostOpRow, svgwrap);
 
   // ---- resize grip (top-left; panel is anchored bottom-right → grows toward top-left) ----
   // Drives the panel's width/height inline; the SVG area (flex:1) fills the rest. CSS max-width/height
@@ -105,6 +118,24 @@ export function initFloorPlan({ container, store }) {
   const endMove = (e) => { if (!mv) return; mv = null; try { head.releasePointerCapture(e.pointerId); } catch (_) { /* ignore */ } head.classList.remove('dragging'); };
   head.addEventListener('pointerup', endMove);
   head.addEventListener('pointercancel', endMove);
+
+  // ---- minimize / restore — toggles a .collapsed class; CSS hides everything but the header and lets
+  // the panel shrink to the title bar. State persists across re-renders (chrome built once) and across
+  // building switches, so a minimized panel stays minimized until the user expands it. ----
+  let collapsed = false;
+  function setCollapsed(c) {
+    collapsed = c;
+    container.classList.toggle('collapsed', c);
+    collapseBtn.textContent = c ? '+' : '–';
+    collapseBtn.title = c ? 'Expand floor-plan panel' : 'Minimize to title bar';
+    collapseBtn.setAttribute('aria-label', c ? 'Expand floor-plan panel' : 'Minimize floor-plan panel');
+  }
+  // swallow pointerdown so clicking the button never starts a header drag
+  collapseBtn.addEventListener('pointerdown', (e) => { e.stopPropagation(); });
+  collapseBtn.addEventListener('click', (e) => { e.stopPropagation(); setCollapsed(!collapsed); });
+  // start collapsed so the plan never obstructs the 3D view on first entering a building — the user
+  // expands it deliberately via the title-bar toggle.
+  setCollapsed(true);
 
   // ghost controls → dispatch SET_GHOST (store owns the flag so Rendering can read it; transient)
   ghostBtn.addEventListener('click', () => {

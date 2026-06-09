@@ -350,11 +350,6 @@ export function loadDecorGeometry(cacheKey, geometryUrl, { color = '#4caf50', op
           }
           return String(path).split(/::|\//).map(norm).filter(Boolean);
         };
-        // One-time diagnostic: confirm the loader gives us resolvable layer paths (so underLayer works).
-        if (byLayer) {
-          const sample = layers.slice(0, 24).map((l, i) => `${i}:${l && (l.fullPath != null ? l.fullPath : l.name)}`);
-          console.log(`[decor ${cacheKey}] layer paths:`, sample);
-        }
         const layerMats = new Map();
         function matForLayer(name) {
           if (layerMats.has(name)) return layerMats.get(name);
@@ -466,30 +461,18 @@ export function loadContextGeometry(url) {
           }
           return false;
         };
-        // ---- TEMP DIAGNOSTIC: report what the loader actually gave us (remove after verifying) ----
-        const _counts = {};
-        object.traverse((c) => {
-          if (!c.isMesh) return;
-          const ln = layerNameOf(c) || '(none)';
-          _counts[ln] = (_counts[ln] || 0) + 1;
-        });
-        console.log('[context] layers table:', layers.map((l, i) => `${i}:${l && l.name}`));
-        console.log('[context] mesh layer-name counts:', _counts);
         // context shows edges too, but THINNER than buildings — the shared _contextEdgeMat keeps a
         // fainter/darker line + a fraction of the tuned linewidth (applySharedStyle, rendering.md).
         const ctxMeshes = [];
-        let _nl = 0;
         object.traverse((child) => {
           if (!child.isMesh) return;
           const notLinked = isNotLinked(child);
-          if (notLinked) _nl++;
           child.material = notLinked ? _notLinkedMat : _contextMat;
           child.userData.key = null;
           child.userData.context = true;
           child.userData.notLinked = notLinked;
           ctxMeshes.push(child);
         });
-        console.log(`[context] Project_notLinked meshes detected: ${_nl} of ${ctxMeshes.length}`);
         for (const cm of ctxMeshes) {
           cm.add(edgeLine(cm.geometry, _contextEdgeMat, 'context-edge'));
         }

@@ -87,7 +87,7 @@ function pickPrimaryFigure(figures, mode, slotId) {
   return (pref && ids.has(pref)) ? pref : null;
 }
 
-function buildContent(world, mode, buildingCode, selection, activeLayerId, activeSlot, activeFamily) {
+function buildContent(world, mode, buildingCode, activeLayerId, activeSlot, activeFamily) {
   // Content (rail: layer prose + infographic + Key-takeaway) follows the MODE scope only — NOT the
   // campus building selection. Selecting a building at campus must not re-scope the rail to that
   // building: the campus layer's primary figure (e.g. campus_building → sqft_by_building) is a
@@ -506,7 +506,7 @@ export function derive(raw, world) {
         family: activeLayer.family, // spec.js routes the infographic style by family (ui.md)
       }
     : null;
-  const content = buildContent(world, mode, raw.scope.buildingCode, selection,
+  const content = buildContent(world, mode, raw.scope.buildingCode,
     activeLayerVM && activeLayerVM.layer_id, activeLayer && activeLayer.data_source,
     activeLayer && activeLayer.family);
 

@@ -233,7 +233,7 @@
 
   /* ---- readings = FLOATING corner cards over the 3D (sandbox vp-col/vp-card; UImigration.md §6) ---- */
   [data-region="readings"]{position:absolute;top:70px;right:14px;z-index:6;
-    width:min(390px,42vw);max-height:calc(100% - 104px);overflow-y:auto;overflow-x:hidden;
+    width:min(331px,35.7vw);max-height:calc(100% - 104px);overflow-y:auto;overflow-x:hidden;
     background:transparent;border:0;pointer-events:none;}
   /* each block = a floating card (padding 12 14). Host click-through; cards not. Target [data-block]
      (set by the engine on every card root) so the padding wins over the rail's .sec rule. */
@@ -326,9 +326,9 @@
 
   /* ---- 2D floor-plan panel (building scope; bottom-right floating card; ui.md) ---- */
   /* built by viewer/ui/floorplan.js into #planpanel; shown/hidden by scope (display:flex when shown). */
-  /* default size: width = the building-id/name floating card (min(390px,42vw)); height 15% < prior (user 2026-06-06) */
+  /* default size: width = the building-id/name floating card (min(331px,35.7vw)); height 15% < prior (user 2026-06-06) */
   #planpanel{position:absolute;right:14px;bottom:14px;z-index:6;
-    width:min(390px,42vw);height:min(52.7vh,476px);max-width:calc(100% - 28px);max-height:calc(100% - 28px);
+    width:min(331px,35.7vw);height:min(52.7vh,476px);max-width:calc(100% - 28px);max-height:calc(100% - 28px);
     min-width:300px;min-height:240px;
     display:none;flex-direction:column;overflow:hidden;pointer-events:auto;
     background:rgba(18,18,18,.82);border:1px solid var(--line);border-radius:12px;
@@ -338,14 +338,32 @@
   .plan-grip::before{content:"";position:absolute;top:6px;left:6px;width:7px;height:7px;
     border-top:2px solid var(--muted);border-left:2px solid var(--muted);border-radius:1px;}
   .plan-grip:hover::before{border-color:var(--ink);}
-  .plan-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:11px 14px;
+  .plan-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
     border-bottom:1px solid var(--line);cursor:move;user-select:none;touch-action:none;}
   .plan-head.dragging{cursor:grabbing;}
   .plan-title{font:700 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--hi);}
+  .plan-head-right{display:flex;align-items:center;gap:10px;flex:none;}
   .plan-hint{font:10px/1 var(--mono);color:var(--dim);}
-  .plan-floors{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+  /* minimize/restore toggle — square chip at the header's right edge */
+  .plan-collapse{appearance:none;flex:none;width:22px;height:22px;border:1px solid var(--line);
+    background:transparent;color:var(--muted);font:700 14px/1 var(--mono);border-radius:6px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:.12s;}
+  .plan-collapse:hover{color:var(--ink);border-color:var(--line-2);}
+  /* collapsed: shrink the panel to its header bar (a floating, draggable title) — hide everything else */
+  /* collapsed: keep the panel's full width (matches the open state); shrink height to the header only */
+  #planpanel.collapsed{height:auto!important;min-height:0;}
+  #planpanel.collapsed .plan-controls,
+  #planpanel.collapsed .plan-ghost-op,
+  #planpanel.collapsed .plan-svgwrap,
+  #planpanel.collapsed .plan-grip,
+  #planpanel.collapsed .plan-hint{display:none!important;}
+  #planpanel.collapsed .plan-head{border-bottom:none;padding:4px 14px;}
+  #planpanel.collapsed .plan-collapse{width:20px;height:20px;font-size:13px;}
+  /* level buttons + ghost toggle share ONE compact row → maximizes the plan's height */
+  .plan-controls{display:flex;align-items:center;gap:8px;padding:7px 12px;border-bottom:1px solid var(--line);}
+  .plan-floors{display:flex;gap:5px;flex:1;min-width:0;flex-wrap:wrap;}
   .plan-floor-btn{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);
-    font:600 12px/1 var(--sans);padding:6px 12px;border-radius:7px;cursor:pointer;transition:.12s;}
+    font:600 11px/1 var(--sans);padding:4px 9px;border-radius:6px;cursor:pointer;transition:.12s;}
   .plan-floor-btn:hover{color:var(--ink);border-color:var(--line-2);}
   .plan-floor-btn.on{background:var(--hi);border-color:var(--hi);color:#15240a;}
   /* flex:1 + min-height:0 → the SVG area fills whatever height the panel is resized to */
@@ -364,14 +382,14 @@
   .plan-svg .rlabel{fill:rgba(225,232,238,.82);font:2.4px var(--sans);text-anchor:middle;
     dominant-baseline:central;pointer-events:none;}
   .plan-svg .rlabel.sel{fill:#15240a;font-weight:700;}
-  .plan-ghost{padding:10px 14px;border-bottom:1px solid var(--line);}
-  .plan-ghost-btn{appearance:none;width:100%;border:1px solid var(--line);background:transparent;color:var(--muted);
-    font:600 12px/1 var(--sans);padding:9px 13px;border-radius:8px;cursor:pointer;transition:.12s;
-    display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .plan-ghost{flex:none;}
+  .plan-ghost-btn{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);
+    font:600 11px/1 var(--sans);padding:5px 10px;border-radius:6px;cursor:pointer;transition:.12s;
+    display:flex;align-items:center;gap:7px;white-space:nowrap;}
   .plan-ghost-btn:hover{color:var(--ink);border-color:var(--line-2);}
   .plan-ghost-btn.on{background:var(--hi);border-color:var(--hi);color:#15240a;}
   .plan-ghost-btn .st{font:10px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;opacity:.85;}
-  .plan-ghost-op{display:flex;align-items:center;gap:8px;margin-top:8px;}
+  .plan-ghost-op{display:flex;align-items:center;gap:8px;padding:6px 12px;border-bottom:1px solid var(--line);}
   .plan-ghost-op .lbl{font:10px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--dim);}
   .plan-ghost-op input[type=range]{flex:1;min-width:0;accent-color:var(--hi);cursor:pointer;}
   .plan-ghost-op .val{font:11px/1 var(--mono);color:var(--muted);min-width:34px;text-align:right;}
