@@ -1,0 +1,1010 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "HPC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Classroom",
+          "value": 19650
+        },
+        {
+          "label": "Laboratory",
+          "value": 15984
+        },
+        {
+          "label": "Office",
+          "value": 21023
+        },
+        {
+          "label": "Study / Library",
+          "value": 3500
+        },
+        {
+          "label": "Special Use",
+          "value": 1404
+        },
+        {
+          "label": "General Use",
+          "value": 6690
+        },
+        {
+          "label": "Support",
+          "value": 6238
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 40824
+        },
+        {
+          "label": "Unclassified",
+          "value": 20
+        }
+      ],
+      "domain": [
+        0,
+        40824
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 44517
+        },
+        {
+          "label": "1500 - College of Pharmacy",
+          "value": 37830
+        },
+        {
+          "label": "1400 - College of Osteopathic Medicine",
+          "value": 14686
+        },
+        {
+          "label": "12 - Office of the Provost",
+          "value": 4827
+        },
+        {
+          "label": "2000 - College of Optometry",
+          "value": 3680
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 3233
+        },
+        {
+          "label": "1800 - College of Graduate Nursing",
+          "value": 3070
+        },
+        {
+          "label": "5100 - University Financial Services & Treasury",
+          "value": 1606
+        },
+        {
+          "label": "UCEC - University Compliance, Ethics, and Culture",
+          "value": 1436
+        },
+        {
+          "label": "5520 - University Communications",
+          "value": 448
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 56067
+        },
+        {
+          "label": "College of Pharmacy",
+          "value": 37830
+        },
+        {
+          "label": "College of Osteopathic Medicine",
+          "value": 14686
+        },
+        {
+          "label": "College of Optometry",
+          "value": 3680
+        },
+        {
+          "label": "College of Graduate Nursing",
+          "value": 3070
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 1
+        },
+        {
+          "label": "Underused",
+          "value": 252
+        },
+        {
+          "label": "Moderate",
+          "value": 114
+        },
+        {
+          "label": "Target+",
+          "value": 13
+        }
+      ],
+      "domain": [
+        0,
+        252
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Balanced",
+          "value": 75
+        },
+        {
+          "label": "Idle",
+          "value": 1
+        }
+      ],
+      "domain": [
+        0,
+        75
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "HPC:FL1:105A-105L:BreakoutRm",
+          "value": 0.1705
+        },
+        {
+          "label": "HPC:FL1:109-109D:Ofc",
+          "value": 0.2528
+        },
+        {
+          "label": "HPC:FL1:132-149:Ofc",
+          "value": 0.208
+        },
+        {
+          "label": "HPC:FL1:135-143A:Ofc",
+          "value": 0.3359
+        },
+        {
+          "label": "HPC:FL1:151-153:BreakoutRm",
+          "value": 0.3162
+        },
+        {
+          "label": "HPC:FL1:164:BreakoutRm",
+          "value": 0.3937
+        },
+        {
+          "label": "HPC:FL1:Amp1:Clsrm",
+          "value": 0.2166
+        },
+        {
+          "label": "HPC:FL1:BPSClass:Clsrm",
+          "value": 0.4067
+        },
+        {
+          "label": "HPC:FL1:POD1:Clsrm",
+          "value": 0.1175
+        },
+        {
+          "label": "HPC:FL1:POD2:Clsrm",
+          "value": 0.3931
+        },
+        {
+          "label": "HPC:FL1:POD3:Clsrm",
+          "value": 0.4464
+        },
+        {
+          "label": "HPC:FL2:203-203H:Ofc",
+          "value": 0.3153
+        },
+        {
+          "label": "HPC:FL2:206H:Conf",
+          "value": 0.2467
+        },
+        {
+          "label": "HPC:FL2:207-207V:PractRm",
+          "value": 0.3353
+        },
+        {
+          "label": "HPC:FL2:208-208F:PractRm",
+          "value": 0.2417
+        },
+        {
+          "label": "HPC:FL2:2202-2246:Ofc",
+          "value": 0.2008
+        },
+        {
+          "label": "HPC:FL2:2203-2261:Ofc",
+          "value": 0.1298
+        },
+        {
+          "label": "HPC:FL2:2221-2247:Ofc",
+          "value": 0.8788
+        },
+        {
+          "label": "HPC:FL2:Amp2:Clsrm",
+          "value": 0.0991
+        },
+        {
+          "label": "HPC:FL2:COMPSimLab:Clsrm",
+          "value": 0.2442
+        },
+        {
+          "label": "HPC:FL2:COP:ClsLab",
+          "value": 0.3025
+        },
+        {
+          "label": "HPC:FL2:ResearchSpace:ClsLab",
+          "value": 0.635
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 32230
+        },
+        {
+          "label": "110 - Classroom",
+          "value": 19650
+        },
+        {
+          "label": "310 - Academic Office",
+          "value": 16072
+        },
+        {
+          "label": "210 - Research Lab / Studio",
+          "value": 8896
+        },
+        {
+          "label": "261 - Special Class Laboratory",
+          "value": 5302
+        },
+        {
+          "label": "630 - Commons",
+          "value": 4748
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 4097
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 3818
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 3652
+        },
+        {
+          "label": "410 - Study Room",
+          "value": 3500
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 3077
+        },
+        {
+          "label": "760 - Central Service",
+          "value": 1912
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 1514
+        },
+        {
+          "label": "260 - Class Laboratory",
+          "value": 1298
+        },
+        {
+          "label": "640 - Merchandising",
+          "value": 1277
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 956
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 679
+        },
+        {
+          "label": "721 - Storage - Teaching Laboratory",
+          "value": 674
+        },
+        {
+          "label": "635 - Commons Service",
+          "value": 491
+        },
+        {
+          "label": "265 - Class Laboratory Service",
+          "value": 488
+        },
+        {
+          "label": "560 - Media Production",
+          "value": 448
+        },
+        {
+          "label": "320 - Administrative Office",
+          "value": 360
+        },
+        {
+          "label": "645 - Merchandising Service",
+          "value": 174
+        },
+        {
+          "label": "010 - Inactive Area",
+          "value": 20
+        }
+      ],
+      "domain": [
+        0,
+        32230
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 74509
+        },
+        {
+          "label": "NSF",
+          "value": 40824
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "S",
+          "value": 62047
+        },
+        {
+          "label": "N",
+          "value": 53286
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 52926
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 24675
+        },
+        {
+          "label": "1 - Classroom Facilities",
+          "value": 19650
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 10320
+        },
+        {
+          "label": "2 - Class Laboratories",
+          "value": 7762
+        }
+      ],
+      "domain": [
+        0,
+        52926
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 143
+        },
+        {
+          "label": "SS",
+          "value": 13
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "HPC:FL1:105A-105L:BreakoutRm",
+          "value": 89
+        },
+        {
+          "label": "HPC:FL1:109-109D:Ofc",
+          "value": 9
+        },
+        {
+          "label": "HPC:FL1:132-149:Ofc",
+          "value": 50
+        },
+        {
+          "label": "HPC:FL1:135-143A:Ofc",
+          "value": 16
+        },
+        {
+          "label": "HPC:FL1:151-153:BreakoutRm",
+          "value": 20
+        },
+        {
+          "label": "HPC:FL1:164:BreakoutRm",
+          "value": 12
+        },
+        {
+          "label": "HPC:FL1:Amp1:Clsrm",
+          "value": 220
+        },
+        {
+          "label": "HPC:FL1:BPSClass:Clsrm",
+          "value": 15
+        },
+        {
+          "label": "HPC:FL1:POD1:Clsrm",
+          "value": 144
+        },
+        {
+          "label": "HPC:FL1:POD2:Clsrm",
+          "value": 144
+        },
+        {
+          "label": "HPC:FL1:POD3:Clsrm",
+          "value": 144
+        },
+        {
+          "label": "HPC:FL2:203-203H:Ofc",
+          "value": 18
+        },
+        {
+          "label": "HPC:FL2:206H:Conf",
+          "value": 30
+        },
+        {
+          "label": "HPC:FL2:207-207V:PractRm",
+          "value": 39
+        },
+        {
+          "label": "HPC:FL2:208-208F:PractRm",
+          "value": 12
+        },
+        {
+          "label": "HPC:FL2:2202-2246:Ofc",
+          "value": 33
+        },
+        {
+          "label": "HPC:FL2:2203-2261:Ofc",
+          "value": 21
+        },
+        {
+          "label": "HPC:FL2:2221-2247:Ofc",
+          "value": 13
+        },
+        {
+          "label": "HPC:FL2:Amp2:Clsrm",
+          "value": 230
+        },
+        {
+          "label": "HPC:FL2:COMPSimLab:Clsrm",
+          "value": 30
+        },
+        {
+          "label": "HPC:FL2:COP:ClsLab",
+          "value": 10
+        },
+        {
+          "label": "HPC:FL2:ResearchSpace:ClsLab",
+          "value": 5
+        }
+      ],
+      "domain": [
+        0,
+        230
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "HPC:FL1:105A-105L:BreakoutRm",
+          "value": 88
+        },
+        {
+          "label": "HPC:FL1:109-109D:Ofc",
+          "value": 11
+        },
+        {
+          "label": "HPC:FL1:132-149:Ofc",
+          "value": 42
+        },
+        {
+          "label": "HPC:FL1:135-143A:Ofc",
+          "value": 24
+        },
+        {
+          "label": "HPC:FL1:151-153:BreakoutRm",
+          "value": 29
+        },
+        {
+          "label": "HPC:FL1:164:BreakoutRm",
+          "value": 20
+        },
+        {
+          "label": "HPC:FL1:Amp1:Clsrm",
+          "value": 135
+        },
+        {
+          "label": "HPC:FL1:BPSClass:Clsrm",
+          "value": 26
+        },
+        {
+          "label": "HPC:FL1:POD1:Clsrm",
+          "value": 47
+        },
+        {
+          "label": "HPC:FL1:POD2:Clsrm",
+          "value": 186
+        },
+        {
+          "label": "HPC:FL1:POD3:Clsrm",
+          "value": 232
+        },
+        {
+          "label": "HPC:FL2:203-203H:Ofc",
+          "value": 34
+        },
+        {
+          "label": "HPC:FL2:206H:Conf",
+          "value": 33
+        },
+        {
+          "label": "HPC:FL2:207-207V:PractRm",
+          "value": 56
+        },
+        {
+          "label": "HPC:FL2:208-208F:PractRm",
+          "value": 5
+        },
+        {
+          "label": "HPC:FL2:2202-2246:Ofc",
+          "value": 29
+        },
+        {
+          "label": "HPC:FL2:2203-2261:Ofc",
+          "value": 10
+        },
+        {
+          "label": "HPC:FL2:2221-2247:Ofc",
+          "value": 51
+        },
+        {
+          "label": "HPC:FL2:Amp2:Clsrm",
+          "value": 100
+        },
+        {
+          "label": "HPC:FL2:COMPSimLab:Clsrm",
+          "value": 37
+        },
+        {
+          "label": "HPC:FL2:COP:ClsLab",
+          "value": 14
+        },
+        {
+          "label": "HPC:FL2:ResearchSpace:ClsLab",
+          "value": 17
+        }
+      ],
+      "domain": [
+        0,
+        232
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "HPC:FL1:105A-105L:BreakoutRm",
+          "value": 57
+        },
+        {
+          "label": "HPC:FL1:109-109D:Ofc",
+          "value": 6
+        },
+        {
+          "label": "HPC:FL1:132-149:Ofc",
+          "value": 25
+        },
+        {
+          "label": "HPC:FL1:135-143A:Ofc",
+          "value": 16
+        },
+        {
+          "label": "HPC:FL1:151-153:BreakoutRm",
+          "value": 24
+        },
+        {
+          "label": "HPC:FL1:164:BreakoutRm",
+          "value": 18
+        },
+        {
+          "label": "HPC:FL1:Amp1:Clsrm",
+          "value": 86
+        },
+        {
+          "label": "HPC:FL1:BPSClass:Clsrm",
+          "value": 24
+        },
+        {
+          "label": "HPC:FL1:POD1:Clsrm",
+          "value": 38
+        },
+        {
+          "label": "HPC:FL1:POD2:Clsrm",
+          "value": 101
+        },
+        {
+          "label": "HPC:FL1:POD3:Clsrm",
+          "value": 123
+        },
+        {
+          "label": "HPC:FL2:203-203H:Ofc",
+          "value": 25
+        },
+        {
+          "label": "HPC:FL2:206H:Conf",
+          "value": 18
+        },
+        {
+          "label": "HPC:FL2:207-207V:PractRm",
+          "value": 40
+        },
+        {
+          "label": "HPC:FL2:208-208F:PractRm",
+          "value": 5
+        },
+        {
+          "label": "HPC:FL2:2202-2246:Ofc",
+          "value": 23
+        },
+        {
+          "label": "HPC:FL2:2203-2261:Ofc",
+          "value": 8
+        },
+        {
+          "label": "HPC:FL2:2221-2247:Ofc",
+          "value": 30
+        },
+        {
+          "label": "HPC:FL2:Amp2:Clsrm",
+          "value": 76
+        },
+        {
+          "label": "HPC:FL2:COMPSimLab:Clsrm",
+          "value": 35
+        },
+        {
+          "label": "HPC:FL2:COP:ClsLab",
+          "value": 13
+        },
+        {
+          "label": "HPC:FL2:ResearchSpace:ClsLab",
+          "value": 11
+        }
+      ],
+      "domain": [
+        0,
+        123
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "HPC:FL1:105A-105L:BreakoutRm",
+          "value": 12.8312
+        },
+        {
+          "label": "HPC:FL1:109-109D:Ofc",
+          "value": 3.2737
+        },
+        {
+          "label": "HPC:FL1:132-149:Ofc",
+          "value": 3.4678
+        },
+        {
+          "label": "HPC:FL1:135-143A:Ofc",
+          "value": 5.8647
+        },
+        {
+          "label": "HPC:FL1:151-153:BreakoutRm",
+          "value": 16.7552
+        },
+        {
+          "label": "HPC:FL1:164:BreakoutRm",
+          "value": 32.6795
+        },
+        {
+          "label": "HPC:FL1:Amp1:Clsrm",
+          "value": 24.3992
+        },
+        {
+          "label": "HPC:FL1:BPSClass:Clsrm",
+          "value": 23.7923
+        },
+        {
+          "label": "HPC:FL1:POD1:Clsrm",
+          "value": 7.1021
+        },
+        {
+          "label": "HPC:FL1:POD2:Clsrm",
+          "value": 26.2863
+        },
+        {
+          "label": "HPC:FL1:POD3:Clsrm",
+          "value": 26.0824
+        },
+        {
+          "label": "HPC:FL2:203-203H:Ofc",
+          "value": 4.5531
+        },
+        {
+          "label": "HPC:FL2:206H:Conf",
+          "value": 17.0281
+        },
+        {
+          "label": "HPC:FL2:207-207V:PractRm",
+          "value": 5.9229
+        },
+        {
+          "label": "HPC:FL2:208-208F:PractRm",
+          "value": 5.0726
+        },
+        {
+          "label": "HPC:FL2:2202-2246:Ofc",
+          "value": 2.5078
+        },
+        {
+          "label": "HPC:FL2:2203-2261:Ofc",
+          "value": 2.7217
+        },
+        {
+          "label": "HPC:FL2:2221-2247:Ofc",
+          "value": 17.766
+        },
+        {
+          "label": "HPC:FL2:Amp2:Clsrm",
+          "value": 8.6978
+        },
+        {
+          "label": "HPC:FL2:COMPSimLab:Clsrm",
+          "value": 15.3981
+        },
+        {
+          "label": "HPC:FL2:COP:ClsLab",
+          "value": 3.9755
+        },
+        {
+          "label": "HPC:FL2:ResearchSpace:ClsLab",
+          "value": 1.6996
+        }
+      ],
+      "domain": [
+        0,
+        32.6795
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Amphitheater II (Amp II)",
+          "value": 230
+        },
+        {
+          "label": "Amphitheater I (Amp I)",
+          "value": 220
+        },
+        {
+          "label": "POD 1",
+          "value": 144
+        },
+        {
+          "label": "POD 2",
+          "value": 144
+        },
+        {
+          "label": "POD 3",
+          "value": 144
+        },
+        {
+          "label": "Bartlett Theater",
+          "value": 38
+        },
+        {
+          "label": "HPC North Conference Room",
+          "value": 20
+        },
+        {
+          "label": "Biotechnology and Pharmaceutical Sciences (BPS Class)",
+          "value": 15
+        },
+        {
+          "label": "Humanism Center",
+          "value": 15
+        }
+      ],
+      "domain": [
+        0,
+        230
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "Humanism Center",
+          "value": 59.4
+        },
+        {
+          "label": "Biotechnology and Pharmaceutical Sciences (BPS Class)",
+          "value": 31.87
+        },
+        {
+          "label": "POD 3",
+          "value": 26.21
+        },
+        {
+          "label": "POD 1",
+          "value": 25.22
+        },
+        {
+          "label": "POD 2",
+          "value": 24.34
+        },
+        {
+          "label": "Bartlett Theater",
+          "value": 22.84
+        },
+        {
+          "label": "HPC North Conference Room",
+          "value": 20.25
+        },
+        {
+          "label": "Amphitheater II (Amp II)",
+          "value": 16.0
+        },
+        {
+          "label": "Amphitheater I (Amp I)",
+          "value": 13.95
+        }
+      ],
+      "domain": [
+        0,
+        59.4
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "HPC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 380
+        },
+        {
+          "label": "Total SqFt",
+          "value": 115333
+        },
+        {
+          "label": "Capacity",
+          "value": 1700
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.1875
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.9926
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

@@ -1,0 +1,906 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "HSC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Classroom",
+          "value": 6771
+        },
+        {
+          "label": "Laboratory",
+          "value": 26961
+        },
+        {
+          "label": "Office",
+          "value": 10514
+        },
+        {
+          "label": "Special Use",
+          "value": 648
+        },
+        {
+          "label": "General Use",
+          "value": 411
+        },
+        {
+          "label": "Support",
+          "value": 3564
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 15171
+        },
+        {
+          "label": "Unclassified",
+          "value": 1669
+        }
+      ],
+      "domain": [
+        0,
+        26961
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "1600 - College of Health Sciences",
+          "value": 22453
+        },
+        {
+          "label": "1400 - College of Osteopathic Medicine",
+          "value": 18632
+        },
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 16925
+        },
+        {
+          "label": "1800 - College of Graduate Nursing",
+          "value": 3937
+        },
+        {
+          "label": "2100 - College of Podiatric Medicine",
+          "value": 1271
+        },
+        {
+          "label": "12 - Office of the Provost",
+          "value": 953
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 944
+        },
+        {
+          "label": "5520 - University Communications",
+          "value": 594
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "College of Health Sciences",
+          "value": 22453
+        },
+        {
+          "label": "Shared / Administrative",
+          "value": 19416
+        },
+        {
+          "label": "College of Osteopathic Medicine",
+          "value": 18632
+        },
+        {
+          "label": "College of Graduate Nursing",
+          "value": 3937
+        },
+        {
+          "label": "College of Podiatric Medicine",
+          "value": 1271
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 2
+        },
+        {
+          "label": "Underused",
+          "value": 150
+        },
+        {
+          "label": "Moderate",
+          "value": 1
+        },
+        {
+          "label": "Target+",
+          "value": 12
+        }
+      ],
+      "domain": [
+        0,
+        150
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Bottleneck",
+          "value": 2
+        },
+        {
+          "label": "Balanced",
+          "value": 16
+        },
+        {
+          "label": "Idle",
+          "value": 1
+        }
+      ],
+      "domain": [
+        0,
+        16
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "HSC:FL1:101-101A:StuCommons",
+          "value": 1.0
+        },
+        {
+          "label": "HSC:FL1:102:RschLab",
+          "value": 0.1225
+        },
+        {
+          "label": "HSC:FL1:104:Conf",
+          "value": 0.1363
+        },
+        {
+          "label": "HSC:FL1:111-121:Ofc",
+          "value": 0.1041
+        },
+        {
+          "label": "HSC:FL1:125:StuCommons",
+          "value": 0.0232
+        },
+        {
+          "label": "HSC:FL1:139-158:Ofc",
+          "value": 0.2896
+        },
+        {
+          "label": "HSC:FL1:CGNSimLab:ClsLab",
+          "value": 0.2437
+        },
+        {
+          "label": "HSC:FL1:ClassroomEast:Clsrm",
+          "value": 0.4089
+        },
+        {
+          "label": "HSC:FL1:ClassroomWest:Clsrm",
+          "value": 0.2315
+        },
+        {
+          "label": "HSC:FL1:SimulationLaboratory:ClsLab",
+          "value": 1.0
+        },
+        {
+          "label": "HSC:FL2:202-205_252:Ofc",
+          "value": 1.0
+        },
+        {
+          "label": "HSC:FL2:AnatomageLab:ClsLab",
+          "value": 0.8281
+        },
+        {
+          "label": "HSC:FL2:AnatomyLab:ClsLab",
+          "value": 0.0359
+        },
+        {
+          "label": "HSC:FL2:OMMLab:ClsLab",
+          "value": 0.2267
+        },
+        {
+          "label": "HSC:FL2:PASkillsLab:ClsLab",
+          "value": 0.1842
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab3:ClsLab",
+          "value": 0.1179
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab:ClsLab",
+          "value": 0.1638
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "260 - Class Laboratory",
+          "value": 22899
+        },
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 12450
+        },
+        {
+          "label": "310 - Academic Office",
+          "value": 8027
+        },
+        {
+          "label": "110 - Classroom",
+          "value": 6771
+        },
+        {
+          "label": "261 - Special Class Laboratory",
+          "value": 2675
+        },
+        {
+          "label": "721 - Storage - Teaching Laboratory",
+          "value": 2425
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 1725
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 1390
+        },
+        {
+          "label": "265 - Class Laboratory Service",
+          "value": 1387
+        },
+        {
+          "label": "030 - Alteration or Conversion Area",
+          "value": 1307
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 1097
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 792
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 625
+        },
+        {
+          "label": "560 - Media Production",
+          "value": 594
+        },
+        {
+          "label": "710 - Shop - General and Research",
+          "value": 514
+        },
+        {
+          "label": "020 - Unfinished Area",
+          "value": 362
+        },
+        {
+          "label": "630 - Commons",
+          "value": 284
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 204
+        },
+        {
+          "label": "635 - Commons Service",
+          "value": 127
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 54
+        }
+      ],
+      "domain": [
+        0,
+        22899
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 50538
+        },
+        {
+          "label": "NSF",
+          "value": 15171
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "S",
+          "value": 48458
+        },
+        {
+          "label": "N",
+          "value": 17251
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "2 - Class Laboratories",
+          "value": 29386
+        },
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 17251
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 11139
+        },
+        {
+          "label": "1 - Classroom Facilities",
+          "value": 6771
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 1162
+        }
+      ],
+      "domain": [
+        0,
+        29386
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 37
+        },
+        {
+          "label": "PARSED",
+          "value": 18
+        },
+        {
+          "label": "SS",
+          "value": 12
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "HSC:FL1:101-101A:StuCommons",
+          "value": 2
+        },
+        {
+          "label": "HSC:FL1:102:RschLab",
+          "value": 20
+        },
+        {
+          "label": "HSC:FL1:104:Conf",
+          "value": 20
+        },
+        {
+          "label": "HSC:FL1:111-121:Ofc",
+          "value": 55
+        },
+        {
+          "label": "HSC:FL1:125:StuCommons",
+          "value": 14
+        },
+        {
+          "label": "HSC:FL1:139-158:Ofc",
+          "value": 36
+        },
+        {
+          "label": "HSC:FL1:CGNSimLab:ClsLab",
+          "value": 12
+        },
+        {
+          "label": "HSC:FL1:ClassroomEast:Clsrm",
+          "value": 104
+        },
+        {
+          "label": "HSC:FL1:ClassroomWest:Clsrm",
+          "value": 104
+        },
+        {
+          "label": "HSC:FL1:SimulationLaboratory:ClsLab",
+          "value": 2
+        },
+        {
+          "label": "HSC:FL2:202-205_252:Ofc",
+          "value": 8
+        },
+        {
+          "label": "HSC:FL2:AnatomageLab:ClsLab",
+          "value": 8
+        },
+        {
+          "label": "HSC:FL2:AnatomyLab:ClsLab",
+          "value": 230
+        },
+        {
+          "label": "HSC:FL2:OMMLab:ClsLab",
+          "value": 160
+        },
+        {
+          "label": "HSC:FL2:PASkillsLab:ClsLab",
+          "value": 30
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab3:ClsLab",
+          "value": 39
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab:ClsLab",
+          "value": 40
+        }
+      ],
+      "domain": [
+        0,
+        230
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "HSC:FL1:101-101A:StuCommons",
+          "value": 17
+        },
+        {
+          "label": "HSC:FL1:102:RschLab",
+          "value": 10
+        },
+        {
+          "label": "HSC:FL1:104:Conf",
+          "value": 9
+        },
+        {
+          "label": "HSC:FL1:111-121:Ofc",
+          "value": 19
+        },
+        {
+          "label": "HSC:FL1:125:StuCommons",
+          "value": 2
+        },
+        {
+          "label": "HSC:FL1:139-158:Ofc",
+          "value": 43
+        },
+        {
+          "label": "HSC:FL1:CGNSimLab:ClsLab",
+          "value": 6
+        },
+        {
+          "label": "HSC:FL1:ClassroomEast:Clsrm",
+          "value": 125
+        },
+        {
+          "label": "HSC:FL1:ClassroomWest:Clsrm",
+          "value": 101
+        },
+        {
+          "label": "HSC:FL1:SimulationLaboratory:ClsLab",
+          "value": 11
+        },
+        {
+          "label": "HSC:FL2:202-205_252:Ofc",
+          "value": 49
+        },
+        {
+          "label": "HSC:FL2:AnatomageLab:ClsLab",
+          "value": 24
+        },
+        {
+          "label": "HSC:FL2:AnatomyLab:ClsLab",
+          "value": 26
+        },
+        {
+          "label": "HSC:FL2:OMMLab:ClsLab",
+          "value": 68
+        },
+        {
+          "label": "HSC:FL2:PASkillsLab:ClsLab",
+          "value": 14
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab3:ClsLab",
+          "value": 15
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab:ClsLab",
+          "value": 23
+        }
+      ],
+      "domain": [
+        0,
+        125
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "HSC:FL1:101-101A:StuCommons",
+          "value": 15
+        },
+        {
+          "label": "HSC:FL1:102:RschLab",
+          "value": 8
+        },
+        {
+          "label": "HSC:FL1:104:Conf",
+          "value": 8
+        },
+        {
+          "label": "HSC:FL1:111-121:Ofc",
+          "value": 10
+        },
+        {
+          "label": "HSC:FL1:125:StuCommons",
+          "value": 2
+        },
+        {
+          "label": "HSC:FL1:139-158:Ofc",
+          "value": 27
+        },
+        {
+          "label": "HSC:FL1:CGNSimLab:ClsLab",
+          "value": 3
+        },
+        {
+          "label": "HSC:FL1:ClassroomEast:Clsrm",
+          "value": 102
+        },
+        {
+          "label": "HSC:FL1:ClassroomWest:Clsrm",
+          "value": 48
+        },
+        {
+          "label": "HSC:FL1:SimulationLaboratory:ClsLab",
+          "value": 6
+        },
+        {
+          "label": "HSC:FL2:202-205_252:Ofc",
+          "value": 36
+        },
+        {
+          "label": "HSC:FL2:AnatomageLab:ClsLab",
+          "value": 18
+        },
+        {
+          "label": "HSC:FL2:AnatomyLab:ClsLab",
+          "value": 19
+        },
+        {
+          "label": "HSC:FL2:OMMLab:ClsLab",
+          "value": 58
+        },
+        {
+          "label": "HSC:FL2:PASkillsLab:ClsLab",
+          "value": 9
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab3:ClsLab",
+          "value": 10
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab:ClsLab",
+          "value": 17
+        }
+      ],
+      "domain": [
+        0,
+        102
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "HSC:FL1:101-101A:StuCommons",
+          "value": 5.7246
+        },
+        {
+          "label": "HSC:FL1:102:RschLab",
+          "value": 2.1457
+        },
+        {
+          "label": "HSC:FL1:104:Conf",
+          "value": 4.7939
+        },
+        {
+          "label": "HSC:FL1:111-121:Ofc",
+          "value": 3.1565
+        },
+        {
+          "label": "HSC:FL1:125:StuCommons",
+          "value": 1.9104
+        },
+        {
+          "label": "HSC:FL1:139-158:Ofc",
+          "value": 3.5799
+        },
+        {
+          "label": "HSC:FL1:CGNSimLab:ClsLab",
+          "value": 1.9039
+        },
+        {
+          "label": "HSC:FL1:ClassroomEast:Clsrm",
+          "value": 16.5294
+        },
+        {
+          "label": "HSC:FL1:ClassroomWest:Clsrm",
+          "value": 12.5112
+        },
+        {
+          "label": "HSC:FL1:SimulationLaboratory:ClsLab",
+          "value": 8.5507
+        },
+        {
+          "label": "HSC:FL2:202-205_252:Ofc",
+          "value": 13.4775
+        },
+        {
+          "label": "HSC:FL2:AnatomageLab:ClsLab",
+          "value": 26.355
+        },
+        {
+          "label": "HSC:FL2:AnatomyLab:ClsLab",
+          "value": 2.8203
+        },
+        {
+          "label": "HSC:FL2:OMMLab:ClsLab",
+          "value": 5.2548
+        },
+        {
+          "label": "HSC:FL2:PASkillsLab:ClsLab",
+          "value": 6.6556
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab3:ClsLab",
+          "value": 3.195
+        },
+        {
+          "label": "HSC:FL2:PTSkillsLab:ClsLab",
+          "value": 2.6454
+        }
+      ],
+      "domain": [
+        0,
+        26.355
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Anatomy Lab",
+          "value": 230
+        },
+        {
+          "label": "Osteopathic Manipulative Medicine Lab (OMM Lab)",
+          "value": 160
+        },
+        {
+          "label": "Classroom East",
+          "value": 104
+        },
+        {
+          "label": "Classroom West",
+          "value": 104
+        },
+        {
+          "label": "Skills & Simulation Laboratory (CGN Sim Lab)",
+          "value": 70
+        },
+        {
+          "label": "Physician Assistant Skills Lab (PA Skills Lab)",
+          "value": 40
+        },
+        {
+          "label": "Physical Therapy Skills Laboratory III (PT Skills Lab III)",
+          "value": 39
+        },
+        {
+          "label": "Physical Therapy Skills Laboratory II (PT Skills Lab II)",
+          "value": 35
+        },
+        {
+          "label": "Physical Therapy Skills Laboratory I (PT Skills Lab I)",
+          "value": 27
+        },
+        {
+          "label": "Gait Lab",
+          "value": 20
+        },
+        {
+          "label": "Anatomage Lab",
+          "value": 8
+        }
+      ],
+      "domain": [
+        0,
+        230
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "Gait Lab",
+          "value": 59.6
+        },
+        {
+          "label": "Osteopathic Manipulative Medicine Lab (OMM Lab)",
+          "value": 58.34
+        },
+        {
+          "label": "Physical Therapy Skills Laboratory I (PT Skills Lab I)",
+          "value": 50.67
+        },
+        {
+          "label": "Physical Therapy Skills Laboratory II (PT Skills Lab II)",
+          "value": 49.71
+        },
+        {
+          "label": "Physical Therapy Skills Laboratory III (PT Skills Lab III)",
+          "value": 48.54
+        },
+        {
+          "label": "Anatomage Lab",
+          "value": 46.88
+        },
+        {
+          "label": "Classroom East",
+          "value": 33.62
+        },
+        {
+          "label": "Classroom West",
+          "value": 31.49
+        },
+        {
+          "label": "Skills & Simulation Laboratory (CGN Sim Lab)",
+          "value": 31.4
+        },
+        {
+          "label": "Physician Assistant Skills Lab (PA Skills Lab)",
+          "value": 26.52
+        },
+        {
+          "label": "Anatomy Lab",
+          "value": 25.81
+        }
+      ],
+      "domain": [
+        0,
+        59.6
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "HSC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 165
+        },
+        {
+          "label": "Total SqFt",
+          "value": 65709
+        },
+        {
+          "label": "Capacity",
+          "value": 930
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.1712
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 1.0
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "VMC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Laboratory",
+          "value": 4402
+        },
+        {
+          "label": "Office",
+          "value": 4643
+        },
+        {
+          "label": "Study / Library",
+          "value": 5304
+        },
+        {
+          "label": "Special Use",
+          "value": 146
+        },
+        {
+          "label": "Support",
+          "value": 2581
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 7175
+        }
+      ],
+      "domain": [
+        0,
+        7175
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "1700 - College of Veterinary Medicine",
+          "value": 16683
+        },
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 7175
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 393
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "College of Veterinary Medicine",
+          "value": 16683
+        },
+        {
+          "label": "Shared / Administrative",
+          "value": 7568
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Underused",
+          "value": 52
+        },
+        {
+          "label": "Moderate",
+          "value": 47
+        },
+        {
+          "label": "Target+",
+          "value": 1
+        }
+      ],
+      "domain": [
+        0,
+        52
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Balanced",
+          "value": 7
+        }
+      ],
+      "domain": [
+        0,
+        7
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "VMC:FL1:101-115:StdyRm",
+          "value": 0.2961
+        },
+        {
+          "label": "VMC:FL1:126-132:Ofc",
+          "value": 0.1505
+        },
+        {
+          "label": "VMC:FL1:VetAnatomyLab:Clsrm",
+          "value": 0.5625
+        },
+        {
+          "label": "VMC:FL2:201-215:StdyRm",
+          "value": 0.2856
+        },
+        {
+          "label": "VMC:FL2:216-231:Ofc",
+          "value": 0.3011
+        },
+        {
+          "label": "VMC:FL2:219:Conf",
+          "value": 0.1516
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 6014
+        },
+        {
+          "label": "410 - Study Room",
+          "value": 5304
+        },
+        {
+          "label": "310 - Academic Office",
+          "value": 3983
+        },
+        {
+          "label": "260 - Class Laboratory",
+          "value": 2267
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 2180
+        },
+        {
+          "label": "265 - Class Laboratory Service",
+          "value": 2135
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 803
+        },
+        {
+          "label": "721 - Storage - Teaching Laboratory",
+          "value": 401
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 398
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 330
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 262
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 146
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 28
+        }
+      ],
+      "domain": [
+        0,
+        6014
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 17076
+        },
+        {
+          "label": "NSF",
+          "value": 7175
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 12479
+        },
+        {
+          "label": "S",
+          "value": 11772
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 12479
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 6823
+        },
+        {
+          "label": "2 - Class Laboratories",
+          "value": 4803
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 146
+        }
+      ],
+      "domain": [
+        0,
+        12479
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 45
+        },
+        {
+          "label": "SS",
+          "value": 8
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "VMC:FL1:101-115:StdyRm",
+          "value": 146
+        },
+        {
+          "label": "VMC:FL1:126-132:Ofc",
+          "value": 52
+        },
+        {
+          "label": "VMC:FL1:VetAnatomyLab:Clsrm",
+          "value": 30
+        },
+        {
+          "label": "VMC:FL2:201-215:StdyRm",
+          "value": 135
+        },
+        {
+          "label": "VMC:FL2:216-231:Ofc",
+          "value": 23
+        },
+        {
+          "label": "VMC:FL2:219:Conf",
+          "value": 16
+        }
+      ],
+      "domain": [
+        0,
+        146
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "VMC:FL1:101-115:StdyRm",
+          "value": 177
+        },
+        {
+          "label": "VMC:FL1:126-132:Ofc",
+          "value": 32
+        },
+        {
+          "label": "VMC:FL1:VetAnatomyLab:Clsrm",
+          "value": 15
+        },
+        {
+          "label": "VMC:FL2:201-215:StdyRm",
+          "value": 171
+        },
+        {
+          "label": "VMC:FL2:216-231:Ofc",
+          "value": 27
+        },
+        {
+          "label": "VMC:FL2:219:Conf",
+          "value": 14
+        }
+      ],
+      "domain": [
+        0,
+        177
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "VMC:FL1:101-115:StdyRm",
+          "value": 129
+        },
+        {
+          "label": "VMC:FL1:126-132:Ofc",
+          "value": 17
+        },
+        {
+          "label": "VMC:FL1:VetAnatomyLab:Clsrm",
+          "value": 15
+        },
+        {
+          "label": "VMC:FL2:201-215:StdyRm",
+          "value": 144
+        },
+        {
+          "label": "VMC:FL2:216-231:Ofc",
+          "value": 20
+        },
+        {
+          "label": "VMC:FL2:219:Conf",
+          "value": 6
+        }
+      ],
+      "domain": [
+        0,
+        144
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "VMC:FL1:101-115:StdyRm",
+          "value": 24.606
+        },
+        {
+          "label": "VMC:FL1:126-132:Ofc",
+          "value": 5.304
+        },
+        {
+          "label": "VMC:FL1:VetAnatomyLab:Clsrm",
+          "value": 10.7108
+        },
+        {
+          "label": "VMC:FL2:201-215:StdyRm",
+          "value": 21.1367
+        },
+        {
+          "label": "VMC:FL2:216-231:Ofc",
+          "value": 5.2032
+        },
+        {
+          "label": "VMC:FL2:219:Conf",
+          "value": 9.5736
+        }
+      ],
+      "domain": [
+        0,
+        24.606
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Vet Anatomy Lab",
+          "value": 114
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        },
+        {
+          "label": "PBL Room",
+          "value": 9
+        }
+      ],
+      "domain": [
+        0,
+        114
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "PBL Room",
+          "value": 22.33
+        },
+        {
+          "label": "PBL Room",
+          "value": 21.33
+        },
+        {
+          "label": "PBL Room",
+          "value": 21.33
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.89
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.78
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.78
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.67
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.56
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.56
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.33
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.33
+        },
+        {
+          "label": "PBL Room",
+          "value": 20.33
+        }
+      ],
+      "domain": [
+        0,
+        22.33
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "VMC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 100
+        },
+        {
+          "label": "Total SqFt",
+          "value": 24251
+        },
+        {
+          "label": "Capacity",
+          "value": 381
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.2798
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.8906
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

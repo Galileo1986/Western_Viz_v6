@@ -1,0 +1,498 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "AAC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Office",
+          "value": 8449
+        },
+        {
+          "label": "Support",
+          "value": 2872
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 5491
+        },
+        {
+          "label": "Unclassified",
+          "value": 288
+        }
+      ],
+      "domain": [
+        0,
+        8449
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 6170
+        },
+        {
+          "label": "12 - Office of the Provost",
+          "value": 3388
+        },
+        {
+          "label": "1 - Office of the President",
+          "value": 3212
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 2631
+        },
+        {
+          "label": "5000 - Office of Legal Affairs",
+          "value": 1090
+        },
+        {
+          "label": "OSP - Office of Special Projects",
+          "value": 466
+        },
+        {
+          "label": "1800 - College of Graduate Nursing",
+          "value": 143
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 16957
+        },
+        {
+          "label": "College of Graduate Nursing",
+          "value": 143
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Underused",
+          "value": 68
+        },
+        {
+          "label": "Moderate",
+          "value": 17
+        },
+        {
+          "label": "Target+",
+          "value": 6
+        }
+      ],
+      "domain": [
+        0,
+        68
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "AAC:FL1:100-104_113:Ofc",
+          "value": 0.2607
+        },
+        {
+          "label": "AAC:FL1:105-112:Ofc",
+          "value": 0.2432
+        },
+        {
+          "label": "AAC:FL1:114-118_131:Ofc",
+          "value": 0.4844
+        },
+        {
+          "label": "AAC:FL1:121-126:Ofc",
+          "value": 0.5333
+        },
+        {
+          "label": "AAC:FL2:208:Conf",
+          "value": 0.1288
+        },
+        {
+          "label": "AAC:FL2:210-206:Ofc",
+          "value": 0.1333
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "320 - Administrative Office",
+          "value": 5928
+        },
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 4616
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 2872
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 1956
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 565
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 446
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 383
+        },
+        {
+          "label": "UNO - Unclassified / Other",
+          "value": 288
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 46
+        }
+      ],
+      "domain": [
+        0,
+        5928
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 11321
+        },
+        {
+          "label": "NSF",
+          "value": 5779
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 11707
+        },
+        {
+          "label": "S",
+          "value": 5393
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "3 - Office Facilities",
+          "value": 11321
+        },
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 5779
+        }
+      ],
+      "domain": [
+        0,
+        11321
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 39
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "AAC:FL1:100-104_113:Ofc",
+          "value": 14
+        },
+        {
+          "label": "AAC:FL1:105-112:Ofc",
+          "value": 11
+        },
+        {
+          "label": "AAC:FL1:114-118_131:Ofc",
+          "value": 8
+        },
+        {
+          "label": "AAC:FL1:121-126:Ofc",
+          "value": 6
+        },
+        {
+          "label": "AAC:FL2:208:Conf",
+          "value": 20
+        },
+        {
+          "label": "AAC:FL2:210-206:Ofc",
+          "value": 24
+        }
+      ],
+      "domain": [
+        0,
+        24
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "AAC:FL1:100-104_113:Ofc",
+          "value": 15
+        },
+        {
+          "label": "AAC:FL1:105-112:Ofc",
+          "value": 12
+        },
+        {
+          "label": "AAC:FL1:114-118_131:Ofc",
+          "value": 18
+        },
+        {
+          "label": "AAC:FL1:121-126:Ofc",
+          "value": 13
+        },
+        {
+          "label": "AAC:FL2:208:Conf",
+          "value": 13
+        },
+        {
+          "label": "AAC:FL2:210-206:Ofc",
+          "value": 15
+        }
+      ],
+      "domain": [
+        0,
+        18
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "AAC:FL1:100-104_113:Ofc",
+          "value": 8
+        },
+        {
+          "label": "AAC:FL1:105-112:Ofc",
+          "value": 5
+        },
+        {
+          "label": "AAC:FL1:114-118_131:Ofc",
+          "value": 9
+        },
+        {
+          "label": "AAC:FL1:121-126:Ofc",
+          "value": 7
+        },
+        {
+          "label": "AAC:FL2:208:Conf",
+          "value": 9
+        },
+        {
+          "label": "AAC:FL2:210-206:Ofc",
+          "value": 9
+        }
+      ],
+      "domain": [
+        0,
+        9
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "AAC:FL1:100-104_113:Ofc",
+          "value": 3.1881
+        },
+        {
+          "label": "AAC:FL1:105-112:Ofc",
+          "value": 2.4567
+        },
+        {
+          "label": "AAC:FL1:114-118_131:Ofc",
+          "value": 4.396
+        },
+        {
+          "label": "AAC:FL1:121-126:Ofc",
+          "value": 4.5825
+        },
+        {
+          "label": "AAC:FL2:208:Conf",
+          "value": 7.4092
+        },
+        {
+          "label": "AAC:FL2:210-206:Ofc",
+          "value": 2.7584
+        }
+      ],
+      "domain": [
+        0,
+        7.4092
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Saul Bernat Boardroom",
+          "value": 20
+        },
+        {
+          "label": "Warren Lawless",
+          "value": 12
+        },
+        {
+          "label": "AAC Conference Room",
+          "value": 10
+        }
+      ],
+      "domain": [
+        0,
+        20
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "Warren Lawless",
+          "value": 33.92
+        },
+        {
+          "label": "Saul Bernat Boardroom",
+          "value": 33.3
+        },
+        {
+          "label": "AAC Conference Room",
+          "value": 18.8
+        }
+      ],
+      "domain": [
+        0,
+        33.92
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "AAC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 91
+        },
+        {
+          "label": "Total SqFt",
+          "value": 17100
+        },
+        {
+          "label": "Capacity",
+          "value": 99
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.1773
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.9114
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

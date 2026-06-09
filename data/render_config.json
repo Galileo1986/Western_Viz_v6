@@ -1,0 +1,104 @@
+{
+  "version": "v2-cinematic-1",
+  "_comment": "V2 cinematic-gold render style — the architectural-masterplan look (sun + soft VSM shadows + PMREM IBL + metal material + patina), ported from sandbox/cinematic_gold_sandbox.html per sandbox/CINEMATIC_GOLD_MIGRATION.md. Authoritative values = sandbox/cinematic_gold_state.json (the agreed checkpoint). COLOR is still DATA: classes/_defaults/layers drive per-building + per-room color; global.cinematic holds only material PHYSICS + lighting + tone (constant across layers). See architecture/rendering.md 'Cinematic render style'. Fog near/far are WORLD-SCALE — tune in the browser smoke-test.",
+  "global": {
+    "background": "#0a0a0c",
+    "fog": { "enabled": true, "color": "#0a0a0c", "near": 3000, "far": 16000 },
+    "bloom": { "enabled": true, "strength": 0.07, "radius": 0.5, "threshold": 0.85 },
+    "cinematic": {
+      "exposure": 1.48,
+      "environment": "studio",
+      "sun": { "azimuth": 171, "elevation": 28, "intensity": 2.55, "color": "#fff1da" },
+      "shadow": { "enabled": true, "softness": 4.5, "mapSize": 2048, "bias": -0.0006, "normalBias": 1.5 },
+      "ambient": 0.48,
+      "ao": { "enabled": false, "radius": 0.75, "scale": 3 },
+      "material": {
+        "metalness": 0.25,
+        "roughness": 0.51,
+        "envMapIntensity": 1.55,
+        "patina": 0.21,
+        "contextPatina": 0.37,
+        "envelopeOpacity": 0.56,
+        "roomOpacity": 0.2
+      },
+      "edges": {
+        "envelope": { "on": true, "color": "#ffffff", "thickness": 0.2, "opacity": 0.46, "worldScale": 1.5 },
+        "room": { "on": true, "color": "#ffffff", "thickness": 0, "opacity": 0.5, "worldScale": 1.5 }
+      }
+    },
+    "classes": {
+      "building": { "fill": { "color": "#888888", "opacity": 0.56 }, "edge": { "thickness": 0.2, "brightness": 0.85 } },
+      "room": { "fill": { "color": "#9a9a9a", "opacity": 0.2 }, "edge": { "thickness": 1.0, "brightness": 0.5 } },
+      "floor": { "fill": { "color": "#5c5c5c", "opacity": 0.0 }, "edge": { "thickness": 0.8, "brightness": 0.22 } },
+      "context": { "fill": { "color": "#222225", "opacity": 1.0 }, "edge": { "thickness": 0.8, "brightness": 0.2 } }
+    },
+    "selection": { "color": "#c8f24a", "opacity": 1.0 },
+    "missingData": { "color": "#4a4e52", "opacity": 0.55 },
+    "byScope": {
+      "campus": {
+        "classes": {
+          "room": { "fill": { "opacity": 0.2 } },
+          "context": { "fill": { "opacity": 1.0 } }
+        }
+      },
+      "building": {
+        "classes": {
+          "room": { "fill": { "opacity": 0.9 } },
+          "context": { "fill": { "opacity": 0.0 } }
+        },
+        "selection": { "color": "#c8f24a", "opacity": 0.95 }
+      }
+    }
+  },
+  "_defaults": {
+    "numeric": {
+      "stops": ["#2c7bb6", "#00a6ca", "#7fbc41", "#fdae61", "#d7191c"],
+      "interpolation": "linear",
+      "opacity": 0.92
+    },
+    "categorical": {
+      "palette": ["#c8f24a", "#6fb3d6", "#d68f6f", "#9a7fd6", "#d6c86f", "#6fd6a3", "#7f8488", "#c96f9a", "#86bcb6", "#d37295"],
+      "opacity": 0.92
+    }
+  },
+  "layers": {
+    "_comment_assigned": "Per-layer colors authored via sandbox/layer_gradient_options.html (2026-06-08). Numeric layers carry 5-stop `stops`; categorical layers carry positional `palette` (encode.js applies palette to category values in ALPHABETICAL order, by position). NOTE: the ordered diagnostics layer_condition_fci / layer_underutilization / layer_lab_allocation use positional palettes here — if the good→bad verdict order reads wrong in-browser, switch them back to semantic `colors` maps. layer_ada_flag keeps its semantic colors map (was left unassigned).",
+
+    "layer_campus_building": { "palette": ["#d68f6f", "#c96f9a", "#d6c86f", "#86bcb6", "#6fb3d6", "#9a7fd6", "#6fd6a3", "#d37295", "#a0cbe8", "#b5895f"] },
+    "layer_division": { "palette": ["#00429d", "#4771b2", "#73a2c6", "#a5d5d8", "#ffd0a8", "#ffbcaf", "#f4777f", "#cf3759", "#93003a", "#9aa0a6"] },
+    "layer_room_use": { "palette": ["#4e79a7", "#a0588f", "#d4574e", "#e6913c", "#d9b13b", "#6aa84f", "#46817d", "#7c6ba8", "#b5739d", "#8c7b6b"] },
+    "layer_space_category": { "palette": ["#4e79a7", "#a0588f", "#d4574e", "#e6913c", "#d9b13b", "#6aa84f", "#46817d", "#7c6ba8", "#b5739d", "#8c7b6b"] },
+    "layer_college": { "palette": ["#6fb3d6", "#d68f6f", "#9a7fd6", "#d6c86f", "#6fd6a3", "#7f8488", "#c96f9a", "#86bcb6", "#d37295", "#a0cbe8"] },
+    "layer_healthcare_space": { "palette": ["#4e79a7", "#a0588f", "#d4574e", "#e6913c", "#d9b13b", "#6aa84f", "#46817d", "#7c6ba8", "#b5739d", "#8c7b6b"] },
+    "layer_room_type": { "palette": ["#00429d", "#4771b2", "#73a2c6", "#a5d5d8", "#ffd0a8", "#ffbcaf", "#f4777f", "#cf3759", "#93003a", "#9aa0a6"] },
+    "layer_space_standard": { "palette": ["#2a9d8f", "#e9c46a", "#e76f51", "#6b7077"] },
+    "layer_cpec_code": { "palette": ["#2a9d8f", "#e9c46a", "#e76f51", "#6b7077"] },
+    "layer_ownership": { "palette": ["#2a9d8f", "#e9c46a", "#e76f51", "#6b7077"] },
+
+    "layer_underutilization": { "palette": ["#00429d", "#4771b2", "#73a2c6", "#a5d5d8", "#ffd0a8", "#ffbcaf", "#f4777f", "#cf3759", "#93003a", "#9aa0a6"] },
+    "layer_lab_allocation": { "palette": ["#57c79a", "#f2b134", "#d9603b", "#7a7f84"] },
+    "layer_condition_fci": { "palette": ["#57c79a", "#f2b134", "#d9603b", "#7a7f84"] },
+
+    "layer_zone_source": { "palette": ["#00429d", "#4771b2", "#73a2c6", "#a5d5d8", "#ffd0a8", "#ffbcaf", "#f4777f", "#cf3759", "#93003a", "#9aa0a6"] },
+    "layer_reconciliation_status": { "palette": ["#00429d", "#4771b2", "#73a2c6", "#a5d5d8", "#ffd0a8", "#ffbcaf", "#f4777f", "#cf3759", "#93003a", "#9aa0a6"] },
+
+    "layer_zone_sqft": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_capacity": { "stops": ["#0b0724", "#51127c", "#b73779", "#fc8961", "#fcfdbf"] },
+    "layer_daily_user_sessions": { "stops": ["#c51b7d", "#e9a3c9", "#f7f7f7", "#a1d76a", "#4d9221"] },
+    "layer_daily_unique_users": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_fill_rate_40h": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_occupied_rate": { "stops": ["#0b0724", "#51127c", "#b73779", "#fc8961", "#fcfdbf"] },
+    "layer_people_minutes_per_sqft": { "stops": ["#0b0724", "#51127c", "#b73779", "#fc8961", "#fcfdbf"] },
+    "layer_nominal_seats": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_sqft_per_seat": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_use_occupancy_gap": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_condition_fcni": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_deferred_maintenance": { "stops": ["#2166ac", "#67a9cf", "#f7f7f7", "#ef8a62", "#b2182b"] },
+    "layer_replacement_value": { "stops": ["#2166ac", "#67a9cf", "#f7f7f7", "#ef8a62", "#b2182b"] },
+    "layer_building_age": { "stops": ["#2166ac", "#67a9cf", "#f7f7f7", "#ef8a62", "#b2182b"] },
+    "layer_gsf": { "stops": ["#8c510a", "#d8b365", "#f5f5f5", "#5ab4ac", "#01665e"] },
+    "layer_stories": { "stops": ["#00204d", "#31446b", "#666970", "#a09b76", "#ffe945"] },
+
+    "layer_ada_flag": { "colors": { "Has items": "#fdae61", "None": "#6fd6a3" } }
+  }
+}

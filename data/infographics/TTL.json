@@ -1,0 +1,169 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "TTL",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Support",
+          "value": 888
+        },
+        {
+          "label": "Unclassified",
+          "value": 2500
+        }
+      ],
+      "domain": [
+        0,
+        2500
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 2500
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 888
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 3388
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "030 - Alteration or Conversion Area",
+          "value": 2500
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 888
+        }
+      ],
+      "domain": [
+        0,
+        2500
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 3388
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 2500
+        },
+        {
+          "label": "S",
+          "value": 888
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 2500
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 888
+        }
+      ],
+      "domain": [
+        0,
+        2500
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "TTL at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 4
+        },
+        {
+          "label": "Total SqFt",
+          "value": 3388
+        },
+        {
+          "label": "Capacity",
+          "value": null
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": null
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": null
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

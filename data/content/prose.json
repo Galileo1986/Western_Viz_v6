@@ -1,0 +1,360 @@
+{
+  "version": "1",
+  "_doc": "HAND-EDITABLE on-screen prose for the viewer. The UI requests prose by KEY (layer_id / figure_id / family / scope) and applies its own style + graphics; numbers live separately in data/infographics/. Edit any text here to change what appears on screen — no code change, no model. The loader (viewer/data/loaders.js) assembles each scope's content from this single file: shared `layers` + `figures`, per-family `families` (building scope, {building} substituted), and `overview` (per scope, with `_template` fallback for buildings without an override). See architecture/content_generation.md + claude.md 2.6.",
+  "layers": {
+    "layer_campus_building": {
+      "headline": "All buildings",
+      "prose": "Which buildings make up the campus, before any data layer narrows the view."
+    },
+    "layer_division": {
+      "headline": "Owning division",
+      "prose": "Which division controls each room, and how far its holdings scatter across campus."
+    },
+    "layer_room_use": {
+      "headline": "Detailed room use",
+      "prose": "What each room is actually used for, at the finest level of detail."
+    },
+    "layer_space_category": {
+      "headline": "Space type from Room Use",
+      "prose": "What type of space each room is, rolled up from its room use."
+    },
+    "layer_college": {
+      "headline": "College footprint",
+      "prose": "Where each college's space sits, and how far it scatters across buildings."
+    },
+    "layer_healthcare_space": {
+      "headline": "Clinical space",
+      "prose": "Which spaces are clinical, and where the patient-facing footprint concentrates."
+    },
+    "layer_room_type": {
+      "headline": "Assignable vs not",
+      "prose": "How much space is usable program area versus service space like corridors and mechanical rooms."
+    },
+    "layer_space_standard": {
+      "headline": "Standard sizing",
+      "prose": "Which rooms follow a standard size profile and which break from it."
+    },
+    "layer_cpec_code": {
+      "headline": "CPEC rollup",
+      "prose": "How the inventory sorts under CPEC categories, a cross-check on the space-type read."
+    },
+    "layer_primary_usage": {
+      "headline": "Zone usage",
+      "prose": "What each utilization zone is mainly used for."
+    },
+    "layer_zone_type": {
+      "headline": "Zone character",
+      "prose": "What kind of space each end zone is."
+    },
+    "layer_zone_source": {
+      "headline": "Data source",
+      "prose": "Where each room's zone data came from, and how far to trust it."
+    },
+    "layer_reconciliation_status": {
+      "headline": "Reconciliation",
+      "prose": "Which rooms matched cleanly across sources and which need a closer look."
+    },
+    "layer_ownership": {
+      "headline": "Owned or leased",
+      "prose": "Which buildings the university owns and which it leases."
+    },
+    "layer_zone_sqft": {
+      "headline": "Area",
+      "prose": "How much assignable floor area each zone and building holds, the size baseline for every other measure."
+    },
+    "layer_capacity": {
+      "headline": "Capacity",
+      "prose": "How many people each space is built to hold."
+    },
+    "layer_daily_user_sessions": {
+      "headline": "Daily sessions",
+      "prose": "How much daily foot traffic moves through each space."
+    },
+    "layer_daily_unique_users": {
+      "headline": "Unique users",
+      "prose": "How many distinct people pass through each space each day."
+    },
+    "layer_fill_rate_40h": {
+      "headline": "Fill rate",
+      "prose": "How hard each space works across the week, and where capacity goes unused."
+    },
+    "layer_occupied_rate": {
+      "headline": "Occupied rate",
+      "prose": "How much of scheduled time each space is actually occupied."
+    },
+    "layer_people_minutes_per_sqft": {
+      "headline": "Use intensity",
+      "prose": "How hard each space works for its size, traffic weighed against floor area."
+    },
+    "layer_nominal_seats": {
+      "headline": "Designed seats",
+      "prose": "How many seats each room was designed to hold."
+    },
+    "layer_sqft_per_seat": {
+      "headline": "Area per seat",
+      "prose": "Whether each room is generously or tightly sized per seat."
+    },
+    "layer_use_occupancy_gap": {
+      "headline": "Claimed vs used",
+      "prose": "Where space is claimed or scheduled but only lightly used."
+    },
+    "layer_underutilization": {
+      "headline": "Utilization bands",
+      "prose": "Which spaces sit furthest below the utilization benchmark, from dead to on target."
+    },
+    "layer_lab_allocation": {
+      "headline": "Lab allocation",
+      "prose": "Which teaching labs and classrooms are bottlenecked, idle, or balanced."
+    },
+    "layer_condition_fci": {
+      "headline": "Condition grade",
+      "prose": "Which buildings are in good shape and which are falling behind."
+    },
+    "layer_condition_fcni": {
+      "headline": "Renewal pressure",
+      "prose": "Which buildings are nearing the point where renewal beats repair."
+    },
+    "layer_deferred_maintenance": {
+      "headline": "Deferred maintenance",
+      "prose": "Which buildings carry the heaviest ten-year maintenance backlog."
+    },
+    "layer_replacement_value": {
+      "headline": "Replacement value",
+      "prose": "What each building would cost to replace, and where the capital is concentrated."
+    },
+    "layer_building_age": {
+      "headline": "Age",
+      "prose": "Which buildings are oldest, and where age is driving condition."
+    },
+    "layer_gsf": {
+      "headline": "Gross area",
+      "prose": "Which buildings hold the most gross floor area."
+    },
+    "layer_stories": {
+      "headline": "Stories",
+      "prose": "Which buildings carry the campus's height, counted in floors."
+    },
+    "layer_ada_flag": {
+      "headline": "ADA items",
+      "prose": "Which buildings still carry outstanding accessibility work."
+    }
+  },
+  "figures": {
+    "space_category_distribution": {
+      "caption": "Square footage by space type",
+      "insight": "Most of the floor area belongs to a few space types, while the rest is split among many smaller ones."
+    },
+    "division_mix": {
+      "caption": "Area by division",
+      "insight": "A few divisions hold most of the space, with the rest divided among smaller ones."
+    },
+    "college_mix": {
+      "caption": "Area by college",
+      "insight": "Space is split among the colleges that use it, alongside shared and administrative area."
+    },
+    "underutilization_mix": {
+      "caption": "Rooms by utilization band",
+      "insight": "Most rooms fall in the lower utilization bands, well short of the benchmark."
+    },
+    "lab_allocation_mix": {
+      "caption": "Teaching rooms by allocation",
+      "insight": "Teaching rooms split between those running at their limit and those sitting idle."
+    },
+    "fill_rate_by_zone": {
+      "caption": "Fill rate by zone",
+      "insight": "Use varies widely from one zone to the next, with busy zones alongside nearly empty ones."
+    },
+    "condition_fci_mix": {
+      "caption": "Buildings by condition rating",
+      "insight": "The campus splits into a newer set of buildings in good shape and an older set that is wearing out."
+    },
+    "fcni_by_building": {
+      "caption": "Facility condition needs index by building",
+      "insight": "A few buildings are close to needing renewal, while most are not."
+    },
+    "deferred_maintenance_by_building": {
+      "caption": "10-year deferred maintenance",
+      "insight": "Most of the maintenance backlog is carried by a small number of buildings."
+    },
+    "sqft_by_building": {
+      "caption": "Inventory area by building",
+      "insight": "A few large buildings hold most of the campus's usable area, while the rest is spread across many smaller ones."
+    },
+    "fill_rate_by_building": {
+      "caption": "Average fill rate by building",
+      "insight": "Almost every building is used well below its capacity across the week, not just a few."
+    },
+    "occupied_rate_by_building": {
+      "caption": "Average occupied rate by building",
+      "insight": "Buildings register as occupied far more often than they are actually full."
+    },
+    "healthcare_space_mix": {
+      "caption": "Clinical space footprint",
+      "insight": "Clinical space makes up only a small share of the total."
+    },
+    "ownership_mix": {
+      "caption": "Owned versus leased buildings",
+      "insight": "The university owns most of its buildings and leases only a few."
+    },
+    "ada_mix": {
+      "caption": "Buildings by ADA remediation status",
+      "insight": "Most buildings are clear of accessibility items, while a smaller group still has work outstanding."
+    },
+    "building_age_by_building": {
+      "caption": "Building age",
+      "insight": "Building ages vary widely, from around a century old to recently built."
+    },
+    "gsf_by_building": {
+      "caption": "Gross floor area by building",
+      "insight": "A few large buildings account for most of the campus's gross floor area."
+    },
+    "stories_by_building": {
+      "caption": "Stories by building",
+      "insight": "Most buildings are only a few floors, with a small number rising much taller."
+    },
+    "replacement_value_by_building": {
+      "caption": "Replacement value by building",
+      "insight": "Most of the campus's replacement value is concentrated in its largest buildings."
+    },
+    "reconciliation_status_mix": {
+      "caption": "Rooms by reconciliation status",
+      "insight": "Many rooms matched cleanly across both sources, but a large share carry a flag instead."
+    },
+    "zone_source_mix": {
+      "caption": "Rooms by zone data source",
+      "insight": "Rooms draw their zone from a mix of primary, averaged, and supplemental sources."
+    },
+    "room_use_mix": {
+      "caption": "Area by room use",
+      "insight": "Floor area is concentrated in a few uses, with many others taking only a small share each."
+    },
+    "room_type_mix": {
+      "caption": "Assignable versus non-assignable area",
+      "insight": "Space divides between usable program area and non-assignable service area."
+    },
+    "space_standard_mix": {
+      "caption": "Standard versus non-standard area",
+      "insight": "Rooms divide between those that follow a standard size and those that do not."
+    },
+    "cpec_mix": {
+      "caption": "Area by CPEC category",
+      "insight": "Floor area concentrates in a few CPEC categories, with the rest spread thin."
+    },
+    "capacity_by_zone": {
+      "caption": "Capacity by zone",
+      "insight": "A few rooms hold most of the building's capacity, while the rest are much smaller."
+    },
+    "sessions_by_zone": {
+      "caption": "Daily sessions by zone",
+      "insight": "Daily traffic concentrates in a few zones, while most see far less."
+    },
+    "unique_users_by_zone": {
+      "caption": "Daily unique users by zone",
+      "insight": "A few zones draw most of the building's distinct daily visitors."
+    },
+    "people_minutes_by_zone": {
+      "caption": "Use intensity by zone",
+      "insight": "Use intensity varies sharply across zones, some working far harder for their size than others."
+    },
+    "seats_by_room": {
+      "caption": "Designed seats by room",
+      "insight": "Most of the building's seating is concentrated in a few large rooms."
+    },
+    "sqft_per_seat_by_room": {
+      "caption": "Area per seat by room",
+      "insight": "Area per seat varies widely, from tightly packed rooms to generously sized ones."
+    },
+    "headline_stats": {
+      "caption": "At a glance",
+      "insight": ""
+    }
+  },
+  "families": {
+    "Categorical": "These layers describe what {building}'s spaces are and who they serve — its space-type mix, divisions, and college footprint. Read against the campus, they show whether the building is single-purpose or shared, and how its programs sit within Pomona's wider pattern.",
+    "Performance": "The performance layers show how heavily {building}'s spaces are actually used — fill rate, occupancy, sessions, and intensity. Across campus most space reads as lightly used against the work-week benchmark, so these layers locate where {building} falls in that pattern.",
+    "Analytical": "The analytical layers turn raw utilization into verdicts — the use-versus-occupancy gap, underutilization bands, and lab allocation — plus building condition and deferred maintenance. Together they point to where {building}'s space is claimed-but-idle versus genuinely constrained.",
+    "Reconciliation": "The reconciliation layers show how {building}'s rooms were matched across the inventory and utilization sources, and where each room's zone came from. They are a data-health view: clean matches read as trustworthy, while flagged rooms or averaged sources mark where {building}'s numbers rest on weaker provenance."
+  },
+  "overview": {
+    "_template": {
+      "title": "{building}",
+      "prose": "{building} is one of the Pomona campus buildings in the space-utilization study. The categorical layers show what its spaces are and which programs they serve, the performance layers show how heavily they are used, and the analytical layers flag where space is claimed but idle. Compare its profile against the campus to see where it stands."
+    },
+    "campus": {
+      "title": "Campus space utilization",
+      "prose": "The WesternU Pomona campus packs many buildings into a small footprint, and its assignable space is dominated by offices rather than teaching rooms. On the whole its rooms are lightly used against a standard work week, with occupancy running ahead of fill rate almost everywhere — space is widely claimed but seldom busy. Building condition divides a newer eastern core from an aging set that carries most of the deferred-maintenance burden."
+    },
+    "RWC": {
+      "title": "University Research Center",
+      "prose": "RWC houses research labs and vivarium space in one of the campus's most aging buildings. Its condition reads at the bottom of the portfolio while much of its lab space is lightly used — the clearest case on campus of a building that is both worn and underused, and a candidate for rethinking rather than patching."
+    },
+    "HEC": {
+      "title": "Health Education Center",
+      "prose": "HEC is the modern core of the campus — large, recently built, and in good condition. It concentrates teaching, clinical, and research space for several colleges, and its scale means its utilization patterns weigh heavily on the campus totals."
+    },
+    "HPC": {
+      "title": "Health Professions Center",
+      "prose": "HPC is a large, older teaching-and-clinical building serving pharmacy and osteopathic medicine. Its size makes it a major contributor to campus space, but its age leaves it carrying one of the heaviest deferred-maintenance loads on campus."
+    },
+    "PCC": {
+      "title": "Patient Care Center",
+      "prose": "PCC is the public-facing clinic, reconciled only at the floor level from utilization averages, so its rooms inherit a floor reading rather than a per-room one. It is shown for completeness; its categorical detail is limited by the source data."
+    },
+    "AAC": {
+      "title": "Administration and Advancement Center",
+      "prose": "AAC is predominantly office and conference space, with a large share given to circulation. It is a candidate for consolidation under the campus plan, with administration targeted to move off-site to 300 S Park. Its offices are occupied through much of the day but rarely worked at full weekly intensity, the typical campus pattern."
+    },
+    "AT": {
+      "title": "Anderson Tower",
+      "prose": "Anderson Tower is one of the larger buildings on campus, almost entirely office space stacked over several floors. Its fill rate sits among the lowest on campus, yet its fourth floor is a favored gathering spot and the tower is being looked at as a home for new student and staff common areas."
+    },
+    "BBC": {
+      "title": "Booth Book Center",
+      "prose": "The Booth Book Center holds the campus bookstore and is one of the smallest buildings. Its inventory is largely uncoded, so its data profile is thin and its utilization is not well captured. It sits at the edge of the reconciliation and is shown for completeness."
+    },
+    "CDHP": {
+      "title": "Center for Disability and Health Policy",
+      "prose": "CDHP is a small building on the campus core housing policy and program functions. Its spaces register one of the lowest fill rates on campus, in line with the wider pattern of lightly used office and program space."
+    },
+    "DOC": {
+      "title": "Daumier Office Complex",
+      "prose": "The Daumier Office Complex is a compact, office-heavy building housing dental and optometry research alongside medical-sciences offices. It is a transitional case, tied to a neighboring private apartment building expected to be gifted to the university. Its offices read as among the more consistently used spaces on campus."
+    },
+    "HSC": {
+      "title": "Health Sciences Center",
+      "prose": "The Health Sciences Center is a large building anchored by anatomy and OMM teaching labs. Its cadaver lab is sharply underused while its simulation-table space runs near saturation, reflecting the shift from cadavers toward simulation. Its rooms are almost always occupied but seldom at full weekly intensity."
+    },
+    "NSC": {
+      "title": "Nursing Science Center",
+      "prose": "The Nursing Science Center is a small building serving nursing programs, many of which run largely online or hybrid. That delivery model leaves its physical space lightly loaded relative to enrollment, a useful caveat when reading its utilization."
+    },
+    "PLC": {
+      "title": "Pumerantz Library and Learning",
+      "prose": "The Pumerantz Library mixes library, study, office, and circulation space at the western edge of campus. Originally planned as a gym, it was converted to classrooms, and several colleges still hold classes here, a small illustration of the campus's fragmented space. Its study and instructional zones show only modest use."
+    },
+    "SSC": {
+      "title": "Student Services Center",
+      "prose": "The Student Services Center gathers student-facing services in a compact building near the campus core. It posts the highest fill rate of any building on campus, standing out against an otherwise lightly used inventory."
+    },
+    "TTL": {
+      "title": "Technology Training Lab",
+      "prose": "The Technology Training Lab is one of the smallest buildings on campus, a focused technology and training space. Its limited footprint means it contributes little to campus totals but serves a specific instructional role."
+    },
+    "USC": {
+      "title": "University Services Center",
+      "prose": "The University Services Center is a small operational building supporting campus services. Its spaces are occupied throughout the working day, though like most of campus they are rarely used at full weekly intensity."
+    },
+    "VCC": {
+      "title": "Veterinary Care Center",
+      "prose": "The Veterinary Care Center is the clinical home of the College of Veterinary Medicine, in a building that began as repurposed retail and was never designed to be public-facing. The clinic is widely seen as too small for its role, and consolidating the veterinary functions is a stated priority. Its spaces are among the more heavily used on campus."
+    },
+    "VMC": {
+      "title": "Veterinary Medicine Center",
+      "prose": "The Veterinary Medicine Center holds teaching and program space for the College of Veterinary Medicine. It posts one of the highest fill rates on campus, reflecting tightly used breakout and instructional rooms that constrain enrollment growth."
+    },
+    "VPC": {
+      "title": "Veterinary Pathology Center",
+      "prose": "The Veterinary Pathology Center is the smallest building on campus, a specialized pathology facility for the College of Veterinary Medicine. It is barely used but retained because accreditation requires it, a clear case of space kept for compliance rather than load."
+    }
+  }
+}

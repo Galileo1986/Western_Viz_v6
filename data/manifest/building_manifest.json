@@ -1,0 +1,1514 @@
+[
+  {
+    "building_code": "AAC",
+    "building_name": "Administration and Advancement Center",
+    "geometry_url": "geometry/AAC.3dm",
+    "data_url": "data/buildings/AAC.json",
+    "bounds": {
+      "min": [
+        2034.2518,
+        1008.3489,
+        -15.4338
+      ],
+      "max": [
+        2199.3018,
+        1229.1332,
+        29.8662
+      ]
+    },
+    "default_view": {
+      "target": [
+        2116.7768,
+        1118.7411,
+        7.2162
+      ],
+      "position": [
+        2337.5611,
+        897.9568,
+        172.8044
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.029713,
+      0.999558,
+      0.0,
+      2076.457031,
+      -0.999558,
+      0.029713,
+      0.0,
+      1059.739136,
+      0.0,
+      0.0,
+      1.0,
+      -0.133783,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "AT",
+    "building_name": "Anderson Tower",
+    "geometry_url": "geometry/AT.3dm",
+    "data_url": "data/buildings/AT.json",
+    "bounds": {
+      "min": [
+        1091.4279,
+        891.0282,
+        -15.4338
+      ],
+      "max": [
+        1216.5643,
+        1007.0437,
+        105.5087
+      ]
+    },
+    "default_view": {
+      "target": [
+        1153.9961,
+        949.0359,
+        45.0374
+      ],
+      "position": [
+        1279.1324,
+        823.8996,
+        138.8897
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.050637,
+      0.998717,
+      0.0,
+      1099.847046,
+      -0.998717,
+      0.050637,
+      0.0,
+      894.17627,
+      0.0,
+      0.0,
+      1.0,
+      -0.133783,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "BBC",
+    "building_name": "Booth Book Center",
+    "geometry_url": "geometry/BBC.3dm",
+    "data_url": "data/buildings/BBC.json",
+    "bounds": {
+      "min": [
+        2183.7475,
+        1099.2723,
+        -0.4338
+      ],
+      "max": [
+        2239.1521,
+        1224.5219,
+        15.1274
+      ]
+    },
+    "default_view": {
+      "target": [
+        2211.4498,
+        1161.8971,
+        7.3468
+      ],
+      "position": [
+        2336.6994,
+        1036.6475,
+        101.284
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      -0.029713,
+      -0.999558,
+      0.0,
+      2235.563721,
+      0.999558,
+      -0.029713,
+      0.0,
+      1221.523193,
+      0.0,
+      0.0,
+      1.0,
+      -0.133783,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "CDHP",
+    "building_name": "Center for Disability and Health Policy",
+    "geometry_url": "geometry/CDHP.3dm",
+    "data_url": "data/buildings/CDHP.json",
+    "bounds": {
+      "min": [
+        2172.6998,
+        913.6253,
+        -0.3
+      ],
+      "max": [
+        2243.5803,
+        1039.4814,
+        30.0
+      ]
+    },
+    "default_view": {
+      "target": [
+        2208.14,
+        976.5533,
+        14.85
+      ],
+      "position": [
+        2333.9961,
+        850.6972,
+        109.2421
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.034402,
+      0.999408,
+      0.0,
+      2176.822266,
+      -0.999408,
+      0.034402,
+      0.0,
+      917.425537,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "DOC",
+    "building_name": "Daumier Office Complex",
+    "geometry_url": "geometry/DOC.3dm",
+    "data_url": "data/buildings/DOC.json",
+    "bounds": {
+      "min": [
+        2945.1616,
+        803.1594,
+        -0.3
+      ],
+      "max": [
+        3235.1213,
+        1083.6421,
+        95.1409
+      ]
+    },
+    "default_view": {
+      "target": [
+        3090.1414,
+        943.4007,
+        47.4205
+      ],
+      "position": [
+        3380.1011,
+        653.441,
+        264.8902
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.999472,
+      -0.032486,
+      0.0,
+      3218.972168,
+      0.032486,
+      0.999472,
+      0.0,
+      1078.276123,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "HEC",
+    "building_name": "Health Education Center",
+    "geometry_url": "geometry/HEC.3dm",
+    "data_url": "data/buildings/HEC.json",
+    "bounds": {
+      "min": [
+        3109.4159,
+        1095.4582,
+        -0.3001
+      ],
+      "max": [
+        3560.9877,
+        1275.6979,
+        61.0
+      ]
+    },
+    "default_view": {
+      "target": [
+        3335.2018,
+        1185.578,
+        30.3499
+      ],
+      "position": [
+        3786.7736,
+        734.0063,
+        369.0288
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.999484,
+      -0.03211,
+      0.0,
+      3559.131348,
+      0.03211,
+      0.999484,
+      0.0,
+      1116.994873,
+      0.0,
+      0.0,
+      1.0,
+      -0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "HPC",
+    "building_name": "Health Professions Center",
+    "geometry_url": "geometry/HPC.3dm",
+    "data_url": "data/buildings/HPC.json",
+    "bounds": {
+      "min": [
+        2630.8809,
+        785.0493,
+        -0.4338
+      ],
+      "max": [
+        2923.1879,
+        1064.1061,
+        30.5426
+      ]
+    },
+    "default_view": {
+      "target": [
+        2777.0344,
+        924.5777,
+        15.0544
+      ],
+      "position": [
+        3069.3414,
+        632.2708,
+        234.2846
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      -0.999472,
+      0.032486,
+      0.0,
+      2903.538574,
+      -0.032486,
+      -0.999472,
+      0.0,
+      1054.597534,
+      0.0,
+      0.0,
+      1.0,
+      -0.133783,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "HSC",
+    "building_name": "Health Sciences Center",
+    "geometry_url": "geometry/HSC.3dm",
+    "data_url": "data/buildings/HSC.json",
+    "bounds": {
+      "min": [
+        2163.889,
+        767.8079,
+        -0.0
+      ],
+      "max": [
+        2711.8117,
+        1179.6149,
+        31.1421
+      ]
+    },
+    "default_view": {
+      "target": [
+        2437.8503,
+        973.7114,
+        15.5711
+      ],
+      "position": [
+        2985.773,
+        425.7887,
+        426.5131
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.9993,
+      -0.037415,
+      0.0,
+      2566.738281,
+      0.037415,
+      0.9993,
+      0.0,
+      1050.321045,
+      0.0,
+      0.0,
+      1.0,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "NSC",
+    "building_name": "Nursing Science Center",
+    "geometry_url": "geometry/NSC.3dm",
+    "data_url": "data/buildings/NSC.json",
+    "bounds": {
+      "min": [
+        2382.2402,
+        979.667,
+        -0.0
+      ],
+      "max": [
+        2680.3104,
+        1336.5073,
+        30.4239
+      ]
+    },
+    "default_view": {
+      "target": [
+        2531.2753,
+        1158.0872,
+        15.2119
+      ],
+      "position": [
+        2888.1156,
+        801.2469,
+        282.8421
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.027601,
+      0.999619,
+      0.0,
+      2497.848145,
+      -0.999619,
+      0.027601,
+      0.0,
+      1234.995483,
+      0.0,
+      0.0,
+      1.0,
+      0.299999,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "PLC",
+    "building_name": "Harriet K. & Philip Pumerantz Library & Learning",
+    "geometry_url": "geometry/PLC.3dm",
+    "data_url": "data/buildings/PLC.json",
+    "bounds": {
+      "min": [
+        1707.1724,
+        631.531,
+        -16.0804
+      ],
+      "max": [
+        2001.8112,
+        976.0318,
+        75.0
+      ]
+    },
+    "default_view": {
+      "target": [
+        1854.4918,
+        803.7814,
+        29.4598
+      ],
+      "position": [
+        2198.9926,
+        459.2806,
+        287.8354
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      -0.035678,
+      -0.999363,
+      0.0,
+      1848.815308,
+      0.999363,
+      -0.035678,
+      0.0,
+      887.12738,
+      0.0,
+      0.0,
+      1.0,
+      -0.780365,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "RWC",
+    "building_name": "Rodney P Wineberg Center",
+    "geometry_url": "geometry/RWC.3dm",
+    "data_url": "data/buildings/RWC.json",
+    "bounds": {
+      "min": [
+        1971.7756,
+        1091.5276,
+        -15.4536
+      ],
+      "max": [
+        2110.1315,
+        1217.946,
+        27.4942
+      ]
+    },
+    "default_view": {
+      "target": [
+        2040.9536,
+        1154.7368,
+        6.0203
+      ],
+      "position": [
+        2179.3095,
+        1016.3809,
+        109.7872
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.999558,
+      -0.029713,
+      0.0,
+      1930.404785,
+      0.029713,
+      0.999558,
+      0.0,
+      1061.882202,
+      0.0,
+      0.0,
+      1.0,
+      -0.133783,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "SSC",
+    "building_name": "Student Services Center",
+    "geometry_url": "geometry/SSC.3dm",
+    "data_url": "data/buildings/SSC.json",
+    "bounds": {
+      "min": [
+        1997.5622,
+        820.9938,
+        -0.3
+      ],
+      "max": [
+        2295.9516,
+        1114.0365,
+        30.0
+      ]
+    },
+    "default_view": {
+      "target": [
+        2146.7569,
+        967.5151,
+        14.85
+      ],
+      "position": [
+        2445.1463,
+        669.1257,
+        238.6421
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.032936,
+      0.999408,
+      0.0,
+      2172.502441,
+      -0.956823,
+      0.034402,
+      0.0,
+      1036.861816,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "TTL",
+    "building_name": "Technology Training Lab",
+    "geometry_url": "geometry/TTL.3dm",
+    "data_url": "data/buildings/TTL.json",
+    "bounds": {
+      "min": [
+        1537.345,
+        1085.5428,
+        -0.0
+      ],
+      "max": [
+        1573.2089,
+        1209.3855,
+        15.4493
+      ]
+    },
+    "default_view": {
+      "target": [
+        1555.2769,
+        1147.4641,
+        7.7246
+      ],
+      "position": [
+        1679.1196,
+        1023.6215,
+        100.6066
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.027332,
+      0.999626,
+      0.0,
+      1538.565796,
+      -0.999626,
+      0.027332,
+      0.0,
+      1205.529053,
+      0.0,
+      0.0,
+      1.0,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "USC",
+    "building_name": "University Services Center",
+    "geometry_url": "geometry/USC.3dm",
+    "data_url": "data/buildings/USC.json",
+    "bounds": {
+      "min": [
+        2298.8455,
+        1041.8415,
+        -15.0
+      ],
+      "max": [
+        2364.841,
+        1326.4077,
+        45.3
+      ]
+    },
+    "default_view": {
+      "target": [
+        2331.8433,
+        1184.1246,
+        15.15
+      ],
+      "position": [
+        2616.4095,
+        899.5584,
+        228.5747
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.032192,
+      0.999482,
+      0.0,
+      2309.968018,
+      -0.999482,
+      0.032192,
+      0.0,
+      1112.621094,
+      0.0,
+      0.0,
+      1.0,
+      0.299999,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "VCC",
+    "building_name": "Veterinary Care Center",
+    "geometry_url": "geometry/VCC.3dm",
+    "data_url": "data/buildings/VCC.json",
+    "bounds": {
+      "min": [
+        2957.6279,
+        1127.2884,
+        -0.0
+      ],
+      "max": [
+        3099.7803,
+        1261.7162,
+        30.6445
+      ]
+    },
+    "default_view": {
+      "target": [
+        3028.7041,
+        1194.5023,
+        15.3223
+      ],
+      "position": [
+        3170.8565,
+        1052.3499,
+        121.9365
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.999518,
+      -0.031052,
+      0.0,
+      3095.573975,
+      0.031052,
+      0.999518,
+      0.0,
+      1137.643311,
+      0.0,
+      0.0,
+      1.0,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "VMC",
+    "building_name": "Veterinary Medicine Center",
+    "geometry_url": "geometry/VMC.3dm",
+    "data_url": "data/buildings/VMC.json",
+    "bounds": {
+      "min": [
+        2531.5073,
+        1027.1068,
+        -0.3
+      ],
+      "max": [
+        2900.3763,
+        1371.4576,
+        31.0
+      ]
+    },
+    "default_view": {
+      "target": [
+        2715.9418,
+        1199.2822,
+        15.35
+      ],
+      "position": [
+        3084.8108,
+        830.4132,
+        292.0018
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.999295,
+      -0.03755,
+      0.0,
+      2635.310547,
+      0.03755,
+      0.999295,
+      0.0,
+      1122.712524,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "VPC",
+    "building_name": "Veterinary Pathology Center",
+    "geometry_url": "geometry/VPC.3dm",
+    "data_url": "data/buildings/VPC.json",
+    "bounds": {
+      "min": [
+        2777.8258,
+        1216.2419,
+        -0.0
+      ],
+      "max": [
+        2873.2083,
+        1273.8631,
+        15.6337
+      ]
+    },
+    "default_view": {
+      "target": [
+        2825.517,
+        1245.0525,
+        7.8168
+      ],
+      "position": [
+        2920.8995,
+        1149.67,
+        79.3537
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.999369,
+      -0.035526,
+      0.0,
+      2862.601562,
+      0.035526,
+      0.999369,
+      0.0,
+      1231.444702,
+      0.0,
+      0.0,
+      1.0,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "building_code": "PCC",
+    "building_name": "Patient Care Center",
+    "geometry_url": "geometry/PCC.3dm",
+    "data_url": "data/buildings/PCC.json",
+    "bounds": {
+      "min": [
+        3628.6554,
+        1149.7306,
+        -1.1833
+      ],
+      "max": [
+        3733.5748,
+        1414.0422,
+        45.0
+      ]
+    },
+    "default_view": {
+      "target": [
+        3681.1151,
+        1281.8864,
+        21.9084
+      ],
+      "position": [
+        3945.4267,
+        1017.5749,
+        220.142
+      ]
+    },
+    "available_layers": [
+      "layer_campus_building",
+      "layer_zone_sqft",
+      "layer_capacity",
+      "layer_daily_user_sessions",
+      "layer_daily_unique_users",
+      "layer_fill_rate_40h",
+      "layer_occupied_rate",
+      "layer_people_minutes_per_sqft",
+      "layer_use_occupancy_gap",
+      "layer_primary_usage",
+      "layer_zone_type",
+      "layer_division",
+      "layer_room_use",
+      "layer_space_category",
+      "layer_college",
+      "layer_healthcare_space",
+      "layer_underutilization",
+      "layer_lab_allocation",
+      "layer_room_type",
+      "layer_space_standard",
+      "layer_cpec_code",
+      "layer_zone_source",
+      "layer_reconciliation_status",
+      "layer_nominal_seats",
+      "layer_sqft_per_seat",
+      "layer_condition_fci",
+      "layer_condition_fcni",
+      "layer_deferred_maintenance",
+      "layer_replacement_value",
+      "layer_building_age",
+      "layer_gsf",
+      "layer_stories",
+      "layer_ownership",
+      "layer_ada_flag"
+    ],
+    "placement": [
+      0.031106,
+      0.999516,
+      0.0,
+      3732.655029,
+      -0.999516,
+      0.031106,
+      0.0,
+      1157.819702,
+      0.0,
+      0.0,
+      1.0,
+      -0.883274,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  }
+]

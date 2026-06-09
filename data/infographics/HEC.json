@@ -1,0 +1,1446 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "HEC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Classroom",
+          "value": 15083
+        },
+        {
+          "label": "Laboratory",
+          "value": 32557
+        },
+        {
+          "label": "Office",
+          "value": 25650
+        },
+        {
+          "label": "Study / Library",
+          "value": 8153
+        },
+        {
+          "label": "Special Use",
+          "value": 1620
+        },
+        {
+          "label": "General Use",
+          "value": 3162
+        },
+        {
+          "label": "Support",
+          "value": 5807
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 60450
+        }
+      ],
+      "domain": [
+        0,
+        60450
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 63948
+        },
+        {
+          "label": "1400 - College of Osteopathic Medicine",
+          "value": 39422
+        },
+        {
+          "label": "1900 - College of Dental Medicine",
+          "value": 15770
+        },
+        {
+          "label": "2000 - College of Optometry",
+          "value": 15653
+        },
+        {
+          "label": "12 - Office of the Provost",
+          "value": 5957
+        },
+        {
+          "label": "5100 - University Financial Services & Treasury",
+          "value": 3863
+        },
+        {
+          "label": "2100 - College of Podiatric Medicine",
+          "value": 3074
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 2852
+        },
+        {
+          "label": "1700 - College of Veterinary Medicine",
+          "value": 1943
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 76620
+        },
+        {
+          "label": "College of Osteopathic Medicine",
+          "value": 39422
+        },
+        {
+          "label": "College of Dental Medicine",
+          "value": 15770
+        },
+        {
+          "label": "College of Optometry",
+          "value": 15653
+        },
+        {
+          "label": "College of Podiatric Medicine",
+          "value": 3074
+        },
+        {
+          "label": "College of Veterinary Medicine",
+          "value": 1943
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 204
+        },
+        {
+          "label": "Underused",
+          "value": 178
+        },
+        {
+          "label": "Moderate",
+          "value": 129
+        },
+        {
+          "label": "Target+",
+          "value": 76
+        }
+      ],
+      "domain": [
+        0,
+        204
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Bottleneck",
+          "value": 3
+        },
+        {
+          "label": "Balanced",
+          "value": 19
+        },
+        {
+          "label": "Idle",
+          "value": 142
+        }
+      ],
+      "domain": [
+        0,
+        142
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "HEC:FL1:1031-32:Ofc",
+          "value": 0.775
+        },
+        {
+          "label": "HEC:FL1:1102-1113:Study",
+          "value": 0.2191
+        },
+        {
+          "label": "HEC:FL1:1117-1126:Ofc",
+          "value": 0.2889
+        },
+        {
+          "label": "HEC:FL1:1208-10:Ofc",
+          "value": 1.0
+        },
+        {
+          "label": "HEC:FL1:1211-16:Ofc",
+          "value": 0.9167
+        },
+        {
+          "label": "HEC:FL1:1301-14:Ofc",
+          "value": 0.4891
+        },
+        {
+          "label": "HEC:FL1:1303:Conf",
+          "value": 0.1075
+        },
+        {
+          "label": "HEC:FL1:CMRLab:ClsLab",
+          "value": 0.0421
+        },
+        {
+          "label": "HEC:FL1:ClsrmC:Clsrm",
+          "value": 0.334
+        },
+        {
+          "label": "HEC:FL1:ClsrmD:Clsrm",
+          "value": 0.1804
+        },
+        {
+          "label": "HEC:FL2:2011-40:Study",
+          "value": 0.1517
+        },
+        {
+          "label": "HEC:FL2:2105-31:Ofc",
+          "value": 0.0633
+        },
+        {
+          "label": "HEC:FL2:2132A-E_2132G-J:Ofc",
+          "value": 0.2386
+        },
+        {
+          "label": "HEC:FL2:2208:Food",
+          "value": 0.2037
+        },
+        {
+          "label": "HEC:FL2:2210-20:Ofc",
+          "value": 0.5792
+        },
+        {
+          "label": "HEC:FL2:2224-28:Ofc",
+          "value": 0.8083
+        },
+        {
+          "label": "HEC:FL2:2301-19B_2352-53:Ofc",
+          "value": 0.3193
+        },
+        {
+          "label": "HEC:FL2:COLab2108:ClsLab",
+          "value": 0.47
+        },
+        {
+          "label": "HEC:FL2:COLab2110:ClsLab",
+          "value": 0.1388
+        },
+        {
+          "label": "HEC:FL2:COLab2124:ClsLab",
+          "value": 0.2938
+        },
+        {
+          "label": "HEC:FL2:COLab2205:ClsLab",
+          "value": 0.2963
+        },
+        {
+          "label": "HEC:FL2:COLab2207:ClsLab",
+          "value": 0.5737
+        },
+        {
+          "label": "HEC:FL3:3001:Conf",
+          "value": 0.1375
+        },
+        {
+          "label": "HEC:FL3:3102-06:Study",
+          "value": 0.3795
+        },
+        {
+          "label": "HEC:FL3:3103-17:Study",
+          "value": 0.2413
+        },
+        {
+          "label": "HEC:FL3:3112-14:Study",
+          "value": 0.2271
+        },
+        {
+          "label": "HEC:FL3:3123-35:Ofc",
+          "value": 0.1279
+        },
+        {
+          "label": "HEC:FL3:3212-20:Ofc",
+          "value": 0.4341
+        },
+        {
+          "label": "HEC:FL3:3229_3229A-G:Ofc",
+          "value": 0.4425
+        },
+        {
+          "label": "HEC:FL3:3301-09:Ofc",
+          "value": 0.6312
+        },
+        {
+          "label": "HEC:FL3:3310:Conf",
+          "value": 0.0854
+        },
+        {
+          "label": "HEC:FL3:3312-22:Ofc",
+          "value": 0.855
+        },
+        {
+          "label": "HEC:FL3:3315:Conf",
+          "value": 0.6925
+        },
+        {
+          "label": "HEC:FL3:3317_3325B-D:Ofc",
+          "value": 1.0
+        },
+        {
+          "label": "HEC:FL3:DSLab3124:ClsLab",
+          "value": 0.9319
+        },
+        {
+          "label": "HEC:FL3:DSLab3132:ClsLab",
+          "value": 0.3593
+        },
+        {
+          "label": "HEC:FL3:LectureHall1:Clsrm",
+          "value": 0.0772
+        },
+        {
+          "label": "HEC:FL3:LectureHall2:Clsrm",
+          "value": 0.0617
+        },
+        {
+          "label": "HEC:FL4:4001:RschLab",
+          "value": 0.725
+        },
+        {
+          "label": "HEC:FL4:4010:Comp",
+          "value": 1.0
+        },
+        {
+          "label": "HEC:FL4:4023:RschLab",
+          "value": 0.9
+        },
+        {
+          "label": "HEC:FL4:4025:RschLab",
+          "value": 0.525
+        },
+        {
+          "label": "HEC:FL4:4202:RschLab",
+          "value": 1.0
+        },
+        {
+          "label": "HEC:FL4:4303:Comp",
+          "value": 0.85
+        },
+        {
+          "label": "HEC:FL4:4306A:RschLab",
+          "value": 0.775
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 53896
+        },
+        {
+          "label": "310 - Academic Office",
+          "value": 20472
+        },
+        {
+          "label": "260 - Class Laboratory",
+          "value": 15461
+        },
+        {
+          "label": "110 - Classroom",
+          "value": 14931
+        },
+        {
+          "label": "210 - Research Lab / Studio",
+          "value": 10289
+        },
+        {
+          "label": "410 - Study Room",
+          "value": 8153
+        },
+        {
+          "label": "261 - Special Class Laboratory",
+          "value": 6412
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 3752
+        },
+        {
+          "label": "760 - Central Service",
+          "value": 2821
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 2426
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 2024
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 1620
+        },
+        {
+          "label": "320 - Administrative Office",
+          "value": 1608
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 1546
+        },
+        {
+          "label": "610 - Food Facility",
+          "value": 1358
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 1144
+        },
+        {
+          "label": "721 - Storage - Teaching Laboratory",
+          "value": 1091
+        },
+        {
+          "label": "615 - Food Facility Service",
+          "value": 979
+        },
+        {
+          "label": "630 - Commons",
+          "value": 825
+        },
+        {
+          "label": "765 - Central Service Support",
+          "value": 751
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 376
+        },
+        {
+          "label": "250 - Scholarly Activity",
+          "value": 293
+        },
+        {
+          "label": "125 - Classroom Service",
+          "value": 152
+        },
+        {
+          "label": "265 - Class Laboratory Service",
+          "value": 102
+        }
+      ],
+      "domain": [
+        0,
+        53896
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 92032
+        },
+        {
+          "label": "NSF",
+          "value": 60450
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 76945
+        },
+        {
+          "label": "S",
+          "value": 75537
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 75337
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 26794
+        },
+        {
+          "label": "2 - Class Laboratories",
+          "value": 23066
+        },
+        {
+          "label": "1 - Classroom Facilities",
+          "value": 15083
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 12202
+        }
+      ],
+      "domain": [
+        0,
+        75337
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 209
+        },
+        {
+          "label": "SS",
+          "value": 1
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "HEC:FL1:1031-32:Ofc",
+          "value": 2
+        },
+        {
+          "label": "HEC:FL1:1102-1113:Study",
+          "value": 64
+        },
+        {
+          "label": "HEC:FL1:1117-1126:Ofc",
+          "value": 9
+        },
+        {
+          "label": "HEC:FL1:1208-10:Ofc",
+          "value": 3
+        },
+        {
+          "label": "HEC:FL1:1211-16:Ofc",
+          "value": 6
+        },
+        {
+          "label": "HEC:FL1:1301-14:Ofc",
+          "value": 16
+        },
+        {
+          "label": "HEC:FL1:1303:Conf",
+          "value": 10
+        },
+        {
+          "label": "HEC:FL1:CMRLab:ClsLab",
+          "value": 170
+        },
+        {
+          "label": "HEC:FL1:ClsrmC:Clsrm",
+          "value": 125
+        },
+        {
+          "label": "HEC:FL1:ClsrmD:Clsrm",
+          "value": 125
+        },
+        {
+          "label": "HEC:FL2:2011-40:Study",
+          "value": 187
+        },
+        {
+          "label": "HEC:FL2:2105-31:Ofc",
+          "value": 15
+        },
+        {
+          "label": "HEC:FL2:2132A-E_2132G-J:Ofc",
+          "value": 35
+        },
+        {
+          "label": "HEC:FL2:2208:Food",
+          "value": 27
+        },
+        {
+          "label": "HEC:FL2:2210-20:Ofc",
+          "value": 6
+        },
+        {
+          "label": "HEC:FL2:2224-28:Ofc",
+          "value": 3
+        },
+        {
+          "label": "HEC:FL2:2301-19B_2352-53:Ofc",
+          "value": 44
+        },
+        {
+          "label": "HEC:FL2:COLab2108:ClsLab",
+          "value": 10
+        },
+        {
+          "label": "HEC:FL2:COLab2110:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL2:COLab2124:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL2:COLab2205:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL2:COLab2207:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL3:3001:Conf",
+          "value": 8
+        },
+        {
+          "label": "HEC:FL3:3102-06:Study",
+          "value": 22
+        },
+        {
+          "label": "HEC:FL3:3103-17:Study",
+          "value": 52
+        },
+        {
+          "label": "HEC:FL3:3112-14:Study",
+          "value": 12
+        },
+        {
+          "label": "HEC:FL3:3123-35:Ofc",
+          "value": 17
+        },
+        {
+          "label": "HEC:FL3:3212-20:Ofc",
+          "value": 11
+        },
+        {
+          "label": "HEC:FL3:3229_3229A-G:Ofc",
+          "value": 10
+        },
+        {
+          "label": "HEC:FL3:3301-09:Ofc",
+          "value": 4
+        },
+        {
+          "label": "HEC:FL3:3310:Conf",
+          "value": 12
+        },
+        {
+          "label": "HEC:FL3:3312-22:Ofc",
+          "value": 5
+        },
+        {
+          "label": "HEC:FL3:3315:Conf",
+          "value": 10
+        },
+        {
+          "label": "HEC:FL3:3317_3325B-D:Ofc",
+          "value": 5
+        },
+        {
+          "label": "HEC:FL3:DSLab3124:ClsLab",
+          "value": 40
+        },
+        {
+          "label": "HEC:FL3:DSLab3132:ClsLab",
+          "value": 35
+        },
+        {
+          "label": "HEC:FL3:LectureHall1:Clsrm",
+          "value": 355
+        },
+        {
+          "label": "HEC:FL3:LectureHall2:Clsrm",
+          "value": 355
+        },
+        {
+          "label": "HEC:FL4:4001:RschLab",
+          "value": 1
+        },
+        {
+          "label": "HEC:FL4:4010:Comp",
+          "value": 1
+        },
+        {
+          "label": "HEC:FL4:4023:RschLab",
+          "value": 1
+        },
+        {
+          "label": "HEC:FL4:4025:RschLab",
+          "value": 1
+        },
+        {
+          "label": "HEC:FL4:4202:RschLab",
+          "value": 1
+        },
+        {
+          "label": "HEC:FL4:4303:Comp",
+          "value": 1
+        },
+        {
+          "label": "HEC:FL4:4306A:RschLab",
+          "value": 1
+        }
+      ],
+      "domain": [
+        0,
+        355
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "HEC:FL1:1031-32:Ofc",
+          "value": 9
+        },
+        {
+          "label": "HEC:FL1:1102-1113:Study",
+          "value": 70
+        },
+        {
+          "label": "HEC:FL1:1117-1126:Ofc",
+          "value": 14
+        },
+        {
+          "label": "HEC:FL1:1208-10:Ofc",
+          "value": 25
+        },
+        {
+          "label": "HEC:FL1:1211-16:Ofc",
+          "value": 29
+        },
+        {
+          "label": "HEC:FL1:1301-14:Ofc",
+          "value": 34
+        },
+        {
+          "label": "HEC:FL1:1303:Conf",
+          "value": 7
+        },
+        {
+          "label": "HEC:FL1:CMRLab:ClsLab",
+          "value": 15
+        },
+        {
+          "label": "HEC:FL1:ClsrmC:Clsrm",
+          "value": 184
+        },
+        {
+          "label": "HEC:FL1:ClsrmD:Clsrm",
+          "value": 68
+        },
+        {
+          "label": "HEC:FL2:2011-40:Study",
+          "value": 87
+        },
+        {
+          "label": "HEC:FL2:2105-31:Ofc",
+          "value": 4
+        },
+        {
+          "label": "HEC:FL2:2132A-E_2132G-J:Ofc",
+          "value": 30
+        },
+        {
+          "label": "HEC:FL2:2208:Food",
+          "value": 29
+        },
+        {
+          "label": "HEC:FL2:2210-20:Ofc",
+          "value": 13
+        },
+        {
+          "label": "HEC:FL2:2224-28:Ofc",
+          "value": 7
+        },
+        {
+          "label": "HEC:FL2:2301-19B_2352-53:Ofc",
+          "value": 45
+        },
+        {
+          "label": "HEC:FL2:COLab2108:ClsLab",
+          "value": 12
+        },
+        {
+          "label": "HEC:FL2:COLab2110:ClsLab",
+          "value": 8
+        },
+        {
+          "label": "HEC:FL2:COLab2124:ClsLab",
+          "value": 27
+        },
+        {
+          "label": "HEC:FL2:COLab2205:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL2:COLab2207:ClsLab",
+          "value": 39
+        },
+        {
+          "label": "HEC:FL3:3001:Conf",
+          "value": 3
+        },
+        {
+          "label": "HEC:FL3:3102-06:Study",
+          "value": 43
+        },
+        {
+          "label": "HEC:FL3:3103-17:Study",
+          "value": 51
+        },
+        {
+          "label": "HEC:FL3:3112-14:Study",
+          "value": 10
+        },
+        {
+          "label": "HEC:FL3:3123-35:Ofc",
+          "value": 7
+        },
+        {
+          "label": "HEC:FL3:3212-20:Ofc",
+          "value": 29
+        },
+        {
+          "label": "HEC:FL3:3229_3229A-G:Ofc",
+          "value": 16
+        },
+        {
+          "label": "HEC:FL3:3301-09:Ofc",
+          "value": 16
+        },
+        {
+          "label": "HEC:FL3:3310:Conf",
+          "value": 7
+        },
+        {
+          "label": "HEC:FL3:3312-22:Ofc",
+          "value": 22
+        },
+        {
+          "label": "HEC:FL3:3315:Conf",
+          "value": 42
+        },
+        {
+          "label": "HEC:FL3:3317_3325B-D:Ofc",
+          "value": 30
+        },
+        {
+          "label": "HEC:FL3:DSLab3124:ClsLab",
+          "value": 97
+        },
+        {
+          "label": "HEC:FL3:DSLab3132:ClsLab",
+          "value": 33
+        },
+        {
+          "label": "HEC:FL3:LectureHall1:Clsrm",
+          "value": 56
+        },
+        {
+          "label": "HEC:FL3:LectureHall2:Clsrm",
+          "value": 53
+        },
+        {
+          "label": "HEC:FL4:4001:RschLab",
+          "value": 3
+        },
+        {
+          "label": "HEC:FL4:4010:Comp",
+          "value": 15
+        },
+        {
+          "label": "HEC:FL4:4023:RschLab",
+          "value": 5
+        },
+        {
+          "label": "HEC:FL4:4025:RschLab",
+          "value": 3
+        },
+        {
+          "label": "HEC:FL4:4202:RschLab",
+          "value": 10
+        },
+        {
+          "label": "HEC:FL4:4303:Comp",
+          "value": 4
+        },
+        {
+          "label": "HEC:FL4:4306A:RschLab",
+          "value": 4
+        }
+      ],
+      "domain": [
+        0,
+        184
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "HEC:FL1:1031-32:Ofc",
+          "value": 4
+        },
+        {
+          "label": "HEC:FL1:1102-1113:Study",
+          "value": 47
+        },
+        {
+          "label": "HEC:FL1:1117-1126:Ofc",
+          "value": 8
+        },
+        {
+          "label": "HEC:FL1:1208-10:Ofc",
+          "value": 19
+        },
+        {
+          "label": "HEC:FL1:1211-16:Ofc",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL1:1301-14:Ofc",
+          "value": 25
+        },
+        {
+          "label": "HEC:FL1:1303:Conf",
+          "value": 6
+        },
+        {
+          "label": "HEC:FL1:CMRLab:ClsLab",
+          "value": 14
+        },
+        {
+          "label": "HEC:FL1:ClsrmC:Clsrm",
+          "value": 110
+        },
+        {
+          "label": "HEC:FL1:ClsrmD:Clsrm",
+          "value": 48
+        },
+        {
+          "label": "HEC:FL2:2011-40:Study",
+          "value": 65
+        },
+        {
+          "label": "HEC:FL2:2105-31:Ofc",
+          "value": 3
+        },
+        {
+          "label": "HEC:FL2:2132A-E_2132G-J:Ofc",
+          "value": 18
+        },
+        {
+          "label": "HEC:FL2:2208:Food",
+          "value": 25
+        },
+        {
+          "label": "HEC:FL2:2210-20:Ofc",
+          "value": 10
+        },
+        {
+          "label": "HEC:FL2:2224-28:Ofc",
+          "value": 5
+        },
+        {
+          "label": "HEC:FL2:2301-19B_2352-53:Ofc",
+          "value": 22
+        },
+        {
+          "label": "HEC:FL2:COLab2108:ClsLab",
+          "value": 11
+        },
+        {
+          "label": "HEC:FL2:COLab2110:ClsLab",
+          "value": 6
+        },
+        {
+          "label": "HEC:FL2:COLab2124:ClsLab",
+          "value": 16
+        },
+        {
+          "label": "HEC:FL2:COLab2205:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL2:COLab2207:ClsLab",
+          "value": 28
+        },
+        {
+          "label": "HEC:FL3:3001:Conf",
+          "value": 3
+        },
+        {
+          "label": "HEC:FL3:3102-06:Study",
+          "value": 28
+        },
+        {
+          "label": "HEC:FL3:3103-17:Study",
+          "value": 42
+        },
+        {
+          "label": "HEC:FL3:3112-14:Study",
+          "value": 6
+        },
+        {
+          "label": "HEC:FL3:3123-35:Ofc",
+          "value": 7
+        },
+        {
+          "label": "HEC:FL3:3212-20:Ofc",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL3:3229_3229A-G:Ofc",
+          "value": 9
+        },
+        {
+          "label": "HEC:FL3:3301-09:Ofc",
+          "value": 7
+        },
+        {
+          "label": "HEC:FL3:3310:Conf",
+          "value": 6
+        },
+        {
+          "label": "HEC:FL3:3312-22:Ofc",
+          "value": 11
+        },
+        {
+          "label": "HEC:FL3:3315:Conf",
+          "value": 19
+        },
+        {
+          "label": "HEC:FL3:3317_3325B-D:Ofc",
+          "value": 12
+        },
+        {
+          "label": "HEC:FL3:DSLab3124:ClsLab",
+          "value": 67
+        },
+        {
+          "label": "HEC:FL3:DSLab3132:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "HEC:FL3:LectureHall1:Clsrm",
+          "value": 50
+        },
+        {
+          "label": "HEC:FL3:LectureHall2:Clsrm",
+          "value": 35
+        },
+        {
+          "label": "HEC:FL4:4001:RschLab",
+          "value": 2
+        },
+        {
+          "label": "HEC:FL4:4010:Comp",
+          "value": 7
+        },
+        {
+          "label": "HEC:FL4:4023:RschLab",
+          "value": 2
+        },
+        {
+          "label": "HEC:FL4:4025:RschLab",
+          "value": 2
+        },
+        {
+          "label": "HEC:FL4:4202:RschLab",
+          "value": 6
+        },
+        {
+          "label": "HEC:FL4:4303:Comp",
+          "value": 2
+        },
+        {
+          "label": "HEC:FL4:4306A:RschLab",
+          "value": 3
+        }
+      ],
+      "domain": [
+        0,
+        110
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "HEC:FL1:1031-32:Ofc",
+          "value": 11.999
+        },
+        {
+          "label": "HEC:FL1:1102-1113:Study",
+          "value": 11.0349
+        },
+        {
+          "label": "HEC:FL1:1117-1126:Ofc",
+          "value": 2.4412
+        },
+        {
+          "label": "HEC:FL1:1208-10:Ofc",
+          "value": 24.1461
+        },
+        {
+          "label": "HEC:FL1:1211-16:Ofc",
+          "value": 12.1238
+        },
+        {
+          "label": "HEC:FL1:1301-14:Ofc",
+          "value": 5.2234
+        },
+        {
+          "label": "HEC:FL1:1303:Conf",
+          "value": 4.7385
+        },
+        {
+          "label": "HEC:FL1:CMRLab:ClsLab",
+          "value": 1.3791
+        },
+        {
+          "label": "HEC:FL1:ClsrmC:Clsrm",
+          "value": 27.5502
+        },
+        {
+          "label": "HEC:FL1:ClsrmD:Clsrm",
+          "value": 14.5538
+        },
+        {
+          "label": "HEC:FL2:2011-40:Study",
+          "value": 9.2948
+        },
+        {
+          "label": "HEC:FL2:2105-31:Ofc",
+          "value": 0.8489
+        },
+        {
+          "label": "HEC:FL2:2132A-E_2132G-J:Ofc",
+          "value": 6.9541
+        },
+        {
+          "label": "HEC:FL2:2208:Food",
+          "value": 13.0185
+        },
+        {
+          "label": "HEC:FL2:2210-20:Ofc",
+          "value": 5.849
+        },
+        {
+          "label": "HEC:FL2:2224-28:Ofc",
+          "value": 7.983
+        },
+        {
+          "label": "HEC:FL2:2301-19B_2352-53:Ofc",
+          "value": 5.6575
+        },
+        {
+          "label": "HEC:FL2:COLab2108:ClsLab",
+          "value": 6.9435
+        },
+        {
+          "label": "HEC:FL2:COLab2110:ClsLab",
+          "value": 3.8838
+        },
+        {
+          "label": "HEC:FL2:COLab2124:ClsLab",
+          "value": 7.0435
+        },
+        {
+          "label": "HEC:FL2:COLab2205:ClsLab",
+          "value": 8.6076
+        },
+        {
+          "label": "HEC:FL2:COLab2207:ClsLab",
+          "value": 12.8521
+        },
+        {
+          "label": "HEC:FL3:3001:Conf",
+          "value": 5.5957
+        },
+        {
+          "label": "HEC:FL3:3102-06:Study",
+          "value": 28.2237
+        },
+        {
+          "label": "HEC:FL3:3103-17:Study",
+          "value": 17.2
+        },
+        {
+          "label": "HEC:FL3:3112-14:Study",
+          "value": 10.2189
+        },
+        {
+          "label": "HEC:FL3:3123-35:Ofc",
+          "value": 2.7009
+        },
+        {
+          "label": "HEC:FL3:3212-20:Ofc",
+          "value": 9.8668
+        },
+        {
+          "label": "HEC:FL3:3229_3229A-G:Ofc",
+          "value": 6.8483
+        },
+        {
+          "label": "HEC:FL3:3301-09:Ofc",
+          "value": 7.1778
+        },
+        {
+          "label": "HEC:FL3:3310:Conf",
+          "value": 5.18
+        },
+        {
+          "label": "HEC:FL3:3312-22:Ofc",
+          "value": 6.5564
+        },
+        {
+          "label": "HEC:FL3:3315:Conf",
+          "value": 34.3005
+        },
+        {
+          "label": "HEC:FL3:3317_3325B-D:Ofc",
+          "value": 31.3627
+        },
+        {
+          "label": "HEC:FL3:DSLab3124:ClsLab",
+          "value": 10.9107
+        },
+        {
+          "label": "HEC:FL3:DSLab3132:ClsLab",
+          "value": 10.2738
+        },
+        {
+          "label": "HEC:FL3:LectureHall1:Clsrm",
+          "value": 7.21
+        },
+        {
+          "label": "HEC:FL3:LectureHall2:Clsrm",
+          "value": 8.5789
+        },
+        {
+          "label": "HEC:FL4:4001:RschLab",
+          "value": 3.1924
+        },
+        {
+          "label": "HEC:FL4:4010:Comp",
+          "value": 45.5896
+        },
+        {
+          "label": "HEC:FL4:4023:RschLab",
+          "value": 3.3757
+        },
+        {
+          "label": "HEC:FL4:4025:RschLab",
+          "value": 3.1117
+        },
+        {
+          "label": "HEC:FL4:4202:RschLab",
+          "value": 36.2666
+        },
+        {
+          "label": "HEC:FL4:4303:Comp",
+          "value": 10.2299
+        },
+        {
+          "label": "HEC:FL4:4306A:RschLab",
+          "value": 9.4598
+        }
+      ],
+      "domain": [
+        0,
+        45.5896
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Lecture Hall I",
+          "value": 355
+        },
+        {
+          "label": "Lecture Hall II",
+          "value": 355
+        },
+        {
+          "label": "CMR Lab",
+          "value": 170
+        },
+        {
+          "label": "Classroom C",
+          "value": 125
+        },
+        {
+          "label": "Classroom D",
+          "value": 125
+        },
+        {
+          "label": "Conference Room",
+          "value": 12
+        }
+      ],
+      "domain": [
+        0,
+        355
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "CMR Lab",
+          "value": 45.99
+        },
+        {
+          "label": "Conference Room",
+          "value": 24.17
+        },
+        {
+          "label": "Lecture Hall I",
+          "value": 15.8
+        },
+        {
+          "label": "Lecture Hall II",
+          "value": 15.7
+        },
+        {
+          "label": "Classroom D",
+          "value": 15.02
+        },
+        {
+          "label": "Classroom C",
+          "value": 14.96
+        }
+      ],
+      "domain": [
+        0,
+        45.99
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "HEC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 587
+        },
+        {
+          "label": "Total SqFt",
+          "value": 152482
+        },
+        {
+          "label": "Capacity",
+          "value": 2263
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.1764
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.7464
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

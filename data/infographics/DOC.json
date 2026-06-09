@@ -1,0 +1,478 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "DOC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Office",
+          "value": 5213
+        },
+        {
+          "label": "Special Use",
+          "value": 45
+        },
+        {
+          "label": "Support",
+          "value": 763
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 2754
+        }
+      ],
+      "domain": [
+        0,
+        5213
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "1400 - College of Osteopathic Medicine",
+          "value": 3038
+        },
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 2754
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 819
+        },
+        {
+          "label": "1900 - College of Dental Medicine",
+          "value": 813
+        },
+        {
+          "label": "2000 - College of Optometry",
+          "value": 597
+        },
+        {
+          "label": "UCEC - University Compliance, Ethics, and Culture",
+          "value": 326
+        },
+        {
+          "label": "12 - Office of the Provost",
+          "value": 157
+        },
+        {
+          "label": "1700 - College of Veterinary Medicine",
+          "value": 137
+        },
+        {
+          "label": "1500 - College of Pharmacy",
+          "value": 134
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 4056
+        },
+        {
+          "label": "College of Osteopathic Medicine",
+          "value": 3038
+        },
+        {
+          "label": "College of Dental Medicine",
+          "value": 813
+        },
+        {
+          "label": "College of Optometry",
+          "value": 597
+        },
+        {
+          "label": "College of Veterinary Medicine",
+          "value": 137
+        },
+        {
+          "label": "College of Pharmacy",
+          "value": 134
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 10
+        },
+        {
+          "label": "Underused",
+          "value": 8
+        },
+        {
+          "label": "Moderate",
+          "value": 29
+        },
+        {
+          "label": "Target+",
+          "value": 8
+        }
+      ],
+      "domain": [
+        0,
+        29
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "DOC:FL1:101-109:Ofc",
+          "value": 0.71
+        },
+        {
+          "label": "DOC:FL1:110-118:Ofc",
+          "value": 0.1389
+        },
+        {
+          "label": "DOC:FL1:119-127:Ofc",
+          "value": 0.0988
+        },
+        {
+          "label": "DOC:FL1:128-143:Ofc",
+          "value": 0.4827
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "310 - Academic Office",
+          "value": 3143
+        },
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 2292
+        },
+        {
+          "label": "320 - Administrative Office",
+          "value": 1512
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 763
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 395
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 288
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 270
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 54
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 45
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 13
+        }
+      ],
+      "domain": [
+        0,
+        3143
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 6021
+        },
+        {
+          "label": "NSF",
+          "value": 2754
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "S",
+          "value": 4509
+        },
+        {
+          "label": "N",
+          "value": 4266
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "3 - Office Facilities",
+          "value": 5976
+        },
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 2754
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 45
+        }
+      ],
+      "domain": [
+        0,
+        5976
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 42
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "DOC:FL1:101-109:Ofc",
+          "value": 10
+        },
+        {
+          "label": "DOC:FL1:110-118:Ofc",
+          "value": 9
+        },
+        {
+          "label": "DOC:FL1:119-127:Ofc",
+          "value": 21
+        },
+        {
+          "label": "DOC:FL1:128-143:Ofc",
+          "value": 26
+        }
+      ],
+      "domain": [
+        0,
+        26
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "DOC:FL1:101-109:Ofc",
+          "value": 29
+        },
+        {
+          "label": "DOC:FL1:110-118:Ofc",
+          "value": 7
+        },
+        {
+          "label": "DOC:FL1:119-127:Ofc",
+          "value": 10
+        },
+        {
+          "label": "DOC:FL1:128-143:Ofc",
+          "value": 45
+        }
+      ],
+      "domain": [
+        0,
+        45
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "DOC:FL1:101-109:Ofc",
+          "value": 25
+        },
+        {
+          "label": "DOC:FL1:110-118:Ofc",
+          "value": 4
+        },
+        {
+          "label": "DOC:FL1:119-127:Ofc",
+          "value": 6
+        },
+        {
+          "label": "DOC:FL1:128-143:Ofc",
+          "value": 30
+        }
+      ],
+      "domain": [
+        0,
+        30
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "DOC:FL1:101-109:Ofc",
+          "value": 8.6934
+        },
+        {
+          "label": "DOC:FL1:110-118:Ofc",
+          "value": 2.2882
+        },
+        {
+          "label": "DOC:FL1:119-127:Ofc",
+          "value": 2.1343
+        },
+        {
+          "label": "DOC:FL1:128-143:Ofc",
+          "value": 8.6234
+        }
+      ],
+      "domain": [
+        0,
+        8.6934
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Conference Room",
+          "value": 8
+        }
+      ],
+      "domain": [
+        0,
+        8
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "Conference Room",
+          "value": 36.0
+        }
+      ],
+      "domain": [
+        0,
+        36.0
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "DOC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 55
+        },
+        {
+          "label": "Total SqFt",
+          "value": 8775
+        },
+        {
+          "label": "Capacity",
+          "value": 70
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.3089
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 1.0
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

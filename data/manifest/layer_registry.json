@@ -1,0 +1,530 @@
+[
+  {
+    "layer_id": "layer_campus_building",
+    "display_name": "Campus Building",
+    "data_source": "campus_building",
+    "style_rule": {
+      "ref": "layer_campus_building"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_zone_sqft",
+    "display_name": "Zone SqFt",
+    "data_source": "zone_sqft",
+    "style_rule": {
+      "ref": "layer_zone_sqft"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_capacity",
+    "display_name": "Capacity",
+    "data_source": "capacity",
+    "style_rule": {
+      "ref": "layer_capacity"
+    },
+    "applicable_scopes": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_daily_user_sessions",
+    "display_name": "Daily User Sessions",
+    "data_source": "daily_user_sessions",
+    "style_rule": {
+      "ref": "layer_daily_user_sessions"
+    },
+    "applicable_scopes": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_daily_unique_users",
+    "display_name": "Daily Unique Users",
+    "data_source": "daily_unique_users",
+    "style_rule": {
+      "ref": "layer_daily_unique_users"
+    },
+    "applicable_scopes": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_fill_rate_40h",
+    "display_name": "40 Hour Fill Rate",
+    "data_source": "fill_rate_40h",
+    "style_rule": {
+      "ref": "layer_fill_rate_40h"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_occupied_rate",
+    "display_name": "Occupied Rate",
+    "data_source": "occupied_rate",
+    "style_rule": {
+      "ref": "layer_occupied_rate"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_people_minutes_per_sqft",
+    "display_name": "People Minutes per Sqft",
+    "data_source": "people_minutes_per_sqft",
+    "style_rule": {
+      "ref": "layer_people_minutes_per_sqft"
+    },
+    "applicable_scopes": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_use_occupancy_gap",
+    "display_name": "Use vs Occupancy Gap",
+    "data_source": "use_occupancy_gap",
+    "style_rule": {
+      "ref": "layer_use_occupancy_gap"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_primary_usage",
+    "display_name": "Primary Usage",
+    "data_source": "primary_usage",
+    "style_rule": {
+      "ref": "layer_primary_usage"
+    },
+    "applicable_scopes": [
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_zone_type",
+    "display_name": "Zone Type",
+    "data_source": "zone_type",
+    "style_rule": {
+      "ref": "layer_zone_type"
+    },
+    "applicable_scopes": [
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_division",
+    "display_name": "Division",
+    "data_source": "division",
+    "style_rule": {
+      "ref": "layer_division"
+    },
+    "applicable_scopes": [
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_room_use",
+    "display_name": "Room Use",
+    "data_source": "room_use",
+    "style_rule": {
+      "ref": "layer_room_use"
+    },
+    "applicable_scopes": [
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_space_category",
+    "display_name": "Space Category",
+    "data_source": "space_category",
+    "style_rule": {
+      "ref": "layer_space_category"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_college",
+    "display_name": "College",
+    "data_source": "college",
+    "style_rule": {
+      "ref": "layer_college"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_healthcare_space",
+    "display_name": "Healthcare Space",
+    "data_source": "healthcare_space",
+    "style_rule": {
+      "ref": "layer_healthcare_space"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_underutilization",
+    "display_name": "Underutilization",
+    "data_source": "underutilization",
+    "style_rule": {
+      "ref": "layer_underutilization"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_lab_allocation",
+    "display_name": "Lab Allocation",
+    "data_source": "lab_allocation",
+    "style_rule": {
+      "ref": "layer_lab_allocation"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_room_type",
+    "display_name": "Assignable vs Not",
+    "data_source": "room_type",
+    "style_rule": {
+      "ref": "layer_room_type"
+    },
+    "applicable_scopes": [
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_space_standard",
+    "display_name": "Space Standard",
+    "data_source": "space_standard",
+    "style_rule": {
+      "ref": "layer_space_standard"
+    },
+    "applicable_scopes": [
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_cpec_code",
+    "display_name": "Space Category (CPEC)",
+    "data_source": "cpec_code",
+    "style_rule": {
+      "ref": "layer_cpec_code"
+    },
+    "applicable_scopes": [
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_zone_source",
+    "display_name": "Zone Source",
+    "data_source": "zone_source",
+    "style_rule": {
+      "ref": "layer_zone_source"
+    },
+    "applicable_scopes": [
+      "campus",
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Reconciliation"
+  },
+  {
+    "layer_id": "layer_reconciliation_status",
+    "display_name": "Reconciliation Status",
+    "data_source": "reconciliation_status",
+    "style_rule": {
+      "ref": "layer_reconciliation_status"
+    },
+    "applicable_scopes": [
+      "campus",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "rooms",
+    "family": "Reconciliation"
+  },
+  {
+    "layer_id": "layer_nominal_seats",
+    "display_name": "Nominal Seats",
+    "data_source": "nominal_seats",
+    "style_rule": {
+      "ref": "layer_nominal_seats"
+    },
+    "applicable_scopes": [
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_sqft_per_seat",
+    "display_name": "Sqft per Seat",
+    "data_source": "sqft_per_seat",
+    "style_rule": {
+      "ref": "layer_sqft_per_seat"
+    },
+    "applicable_scopes": [
+      "building",
+      "room"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Performance"
+  },
+  {
+    "layer_id": "layer_condition_fci",
+    "display_name": "Condition (FCI)",
+    "data_source": "condition_fci",
+    "style_rule": {
+      "ref": "layer_condition_fci"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_condition_fcni",
+    "display_name": "Condition (FCNI)",
+    "data_source": "condition_fcni",
+    "style_rule": {
+      "ref": "layer_condition_fcni"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_deferred_maintenance",
+    "display_name": "Deferred Maintenance",
+    "data_source": "deferred_maintenance",
+    "style_rule": {
+      "ref": "layer_deferred_maintenance"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_replacement_value",
+    "display_name": "Replacement Value",
+    "data_source": "replacement_value",
+    "style_rule": {
+      "ref": "layer_replacement_value"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_building_age",
+    "display_name": "Building Age",
+    "data_source": "building_age",
+    "style_rule": {
+      "ref": "layer_building_age"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_gsf",
+    "display_name": "Gross SqFt",
+    "data_source": "gsf",
+    "style_rule": {
+      "ref": "layer_gsf"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_stories",
+    "display_name": "Stories",
+    "data_source": "stories",
+    "style_rule": {
+      "ref": "layer_stories"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  },
+  {
+    "layer_id": "layer_ownership",
+    "display_name": "Ownership",
+    "data_source": "ownership",
+    "style_rule": {
+      "ref": "layer_ownership"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Categorical"
+  },
+  {
+    "layer_id": "layer_ada_flag",
+    "display_name": "ADA Remediation",
+    "data_source": "ada_flag",
+    "style_rule": {
+      "ref": "layer_ada_flag"
+    },
+    "applicable_scopes": [
+      "campus"
+    ],
+    "cascade_behavior": "inherit",
+    "campus_render": "envelope",
+    "family": "Analytical"
+  }
+]

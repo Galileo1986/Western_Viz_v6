@@ -1,0 +1,241 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "VPC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Laboratory",
+          "value": 1432
+        },
+        {
+          "label": "Office",
+          "value": 137
+        },
+        {
+          "label": "Support",
+          "value": 208
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 185
+        }
+      ],
+      "domain": [
+        0,
+        1432
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "1700 - College of Veterinary Medicine",
+          "value": 1777
+        },
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 185
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "College of Veterinary Medicine",
+          "value": 1777
+        },
+        {
+          "label": "Shared / Administrative",
+          "value": 185
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Underused",
+          "value": 12
+        }
+      ],
+      "domain": [
+        0,
+        12
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Balanced",
+          "value": 6
+        }
+      ],
+      "domain": [
+        0,
+        6
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "260 - Class Laboratory",
+          "value": 918
+        },
+        {
+          "label": "265 - Class Laboratory Service",
+          "value": 514
+        },
+        {
+          "label": "721 - Storage - Teaching Laboratory",
+          "value": 208
+        },
+        {
+          "label": "310 - Academic Office",
+          "value": 137
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 104
+        },
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 58
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 23
+        }
+      ],
+      "domain": [
+        0,
+        918
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 1777
+        },
+        {
+          "label": "NSF",
+          "value": 185
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "S",
+          "value": 1777
+        },
+        {
+          "label": "N",
+          "value": 185
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "2 - Class Laboratories",
+          "value": 1640
+        },
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 185
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 137
+        }
+      ],
+      "domain": [
+        0,
+        1640
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "VPC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 12
+        },
+        {
+          "label": "Total SqFt",
+          "value": 1962
+        },
+        {
+          "label": "Capacity",
+          "value": 18
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.1306
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.7335
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

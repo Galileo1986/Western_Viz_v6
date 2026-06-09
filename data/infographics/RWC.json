@@ -1,0 +1,590 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "RWC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Classroom",
+          "value": 6187
+        },
+        {
+          "label": "Laboratory",
+          "value": 6955
+        },
+        {
+          "label": "Office",
+          "value": 1548
+        },
+        {
+          "label": "Special Use",
+          "value": 307
+        },
+        {
+          "label": "General Use",
+          "value": 181
+        },
+        {
+          "label": "Support",
+          "value": 359
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 13968
+        }
+      ],
+      "domain": [
+        0,
+        13968
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 13968
+        },
+        {
+          "label": "1600 - College of Health Sciences",
+          "value": 4776
+        },
+        {
+          "label": "12 - Office of the Provost",
+          "value": 3736
+        },
+        {
+          "label": "1400 - College of Osteopathic Medicine",
+          "value": 3608
+        },
+        {
+          "label": "1900 - College of Dental Medicine",
+          "value": 1725
+        },
+        {
+          "label": "1700 - College of Veterinary Medicine",
+          "value": 1323
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 369
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 18073
+        },
+        {
+          "label": "College of Health Sciences",
+          "value": 4776
+        },
+        {
+          "label": "College of Osteopathic Medicine",
+          "value": 3608
+        },
+        {
+          "label": "College of Dental Medicine",
+          "value": 1725
+        },
+        {
+          "label": "College of Veterinary Medicine",
+          "value": 1323
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 159
+        },
+        {
+          "label": "Underused",
+          "value": 1
+        },
+        {
+          "label": "Moderate",
+          "value": 8
+        },
+        {
+          "label": "Target+",
+          "value": 7
+        }
+      ],
+      "domain": [
+        0,
+        159
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Balanced",
+          "value": 12
+        },
+        {
+          "label": "Idle",
+          "value": 109
+        }
+      ],
+      "domain": [
+        0,
+        109
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "RWC:FL1:CooperHall:Clsrm",
+          "value": 0.1491
+        },
+        {
+          "label": "RWC:FL1:SwiftHall:Clsrm",
+          "value": 0.0574
+        },
+        {
+          "label": "RWC:FL1:TrendleHall:Clsrm",
+          "value": 0.0396
+        },
+        {
+          "label": "RWC:FLB1:B103-B103B2:RschLab",
+          "value": 0.675
+        },
+        {
+          "label": "RWC:FLB1:B104-B104A:RschLab",
+          "value": 0.0259
+        },
+        {
+          "label": "RWC:FLB1:B106-B106D:RschLab",
+          "value": 0.0063
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 10874
+        },
+        {
+          "label": "210 - Research Lab / Studio",
+          "value": 6955
+        },
+        {
+          "label": "110 - Classroom",
+          "value": 6187
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 2086
+        },
+        {
+          "label": "320 - Administrative Office",
+          "value": 1417
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 879
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 359
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 307
+        },
+        {
+          "label": "630 - Commons",
+          "value": 181
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 131
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 129
+        }
+      ],
+      "domain": [
+        0,
+        10874
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 15537
+        },
+        {
+          "label": "NSF",
+          "value": 13968
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 15566
+        },
+        {
+          "label": "S",
+          "value": 13939
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 14149
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 7262
+        },
+        {
+          "label": "1 - Classroom Facilities",
+          "value": 6187
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 1907
+        }
+      ],
+      "domain": [
+        0,
+        14149
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 18
+        },
+        {
+          "label": "PARSED",
+          "value": 10
+        },
+        {
+          "label": "ZR+alias->AVG",
+          "value": 3
+        },
+        {
+          "label": "SS",
+          "value": 1
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "RWC:FL1:CooperHall:Clsrm",
+          "value": 109
+        },
+        {
+          "label": "RWC:FL1:SwiftHall:Clsrm",
+          "value": 84
+        },
+        {
+          "label": "RWC:FL1:TrendleHall:Clsrm",
+          "value": 96
+        },
+        {
+          "label": "RWC:FLB1:B103-B103B2:RschLab",
+          "value": 5
+        },
+        {
+          "label": "RWC:FLB1:B104-B104A:RschLab",
+          "value": 29
+        },
+        {
+          "label": "RWC:FLB1:B106-B106D:RschLab",
+          "value": 4
+        },
+        {
+          "label": "RWC:FLB1:B108-B108A:RschLab",
+          "value": 1
+        },
+        {
+          "label": "RWC:FLB1:B111-B111D:RschLab",
+          "value": 4
+        }
+      ],
+      "domain": [
+        0,
+        109
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "RWC:FL1:CooperHall:Clsrm",
+          "value": 5
+        },
+        {
+          "label": "RWC:FL1:SwiftHall:Clsrm",
+          "value": 11
+        },
+        {
+          "label": "RWC:FL1:TrendleHall:Clsrm",
+          "value": 16
+        },
+        {
+          "label": "RWC:FLB1:B103-B103B2:RschLab",
+          "value": 14
+        },
+        {
+          "label": "RWC:FLB1:B104-B104A:RschLab",
+          "value": 3
+        },
+        {
+          "label": "RWC:FLB1:B106-B106D:RschLab",
+          "value": 0
+        }
+      ],
+      "domain": [
+        0,
+        16
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "RWC:FL1:CooperHall:Clsrm",
+          "value": 4
+        },
+        {
+          "label": "RWC:FL1:SwiftHall:Clsrm",
+          "value": 8
+        },
+        {
+          "label": "RWC:FL1:TrendleHall:Clsrm",
+          "value": 9
+        },
+        {
+          "label": "RWC:FLB1:B103-B103B2:RschLab",
+          "value": 8
+        },
+        {
+          "label": "RWC:FLB1:B104-B104A:RschLab",
+          "value": 2
+        },
+        {
+          "label": "RWC:FLB1:B106-B106D:RschLab",
+          "value": 0
+        }
+      ],
+      "domain": [
+        0,
+        9
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "RWC:FL1:CooperHall:Clsrm",
+          "value": 7.8342
+        },
+        {
+          "label": "RWC:FL1:SwiftHall:Clsrm",
+          "value": 4.389
+        },
+        {
+          "label": "RWC:FL1:TrendleHall:Clsrm",
+          "value": 6.8987
+        },
+        {
+          "label": "RWC:FLB1:B103-B103B2:RschLab",
+          "value": 2.055
+        },
+        {
+          "label": "RWC:FLB1:B104-B104A:RschLab",
+          "value": 0.744
+        },
+        {
+          "label": "RWC:FLB1:B106-B106D:RschLab",
+          "value": 0.0255
+        },
+        {
+          "label": "RWC:FLB1:B108-B108A:RschLab",
+          "value": 0.0
+        },
+        {
+          "label": "RWC:FLB1:B111-B111D:RschLab",
+          "value": 0.0
+        }
+      ],
+      "domain": [
+        0,
+        7.8342
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Cooper Hall",
+          "value": 109
+        },
+        {
+          "label": "Trendle Hall",
+          "value": 96
+        },
+        {
+          "label": "Swift Hall",
+          "value": 84
+        }
+      ],
+      "domain": [
+        0,
+        109
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "Cooper Hall",
+          "value": 25.16
+        },
+        {
+          "label": "Swift Hall",
+          "value": 20.48
+        },
+        {
+          "label": "Trendle Hall",
+          "value": 17.97
+        }
+      ],
+      "domain": [
+        0,
+        25.16
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "RWC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 175
+        },
+        {
+          "label": "Total SqFt",
+          "value": 29505
+        },
+        {
+          "label": "Capacity",
+          "value": 440
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.0764
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.583
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

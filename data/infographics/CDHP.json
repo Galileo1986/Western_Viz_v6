@@ -1,0 +1,422 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "CDHP",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Laboratory",
+          "value": 1349
+        },
+        {
+          "label": "Office",
+          "value": 4221
+        },
+        {
+          "label": "Special Use",
+          "value": 387
+        },
+        {
+          "label": "Support",
+          "value": 658
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 4259
+        }
+      ],
+      "domain": [
+        0,
+        4259
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "12 - Office of the Provost",
+          "value": 4672
+        },
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 4603
+        },
+        {
+          "label": "1315 - Office of Strategic Enrollment & Marketing",
+          "value": 1018
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 581
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 10874
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 18
+        },
+        {
+          "label": "Underused",
+          "value": 40
+        },
+        {
+          "label": "Target+",
+          "value": 8
+        }
+      ],
+      "domain": [
+        0,
+        40
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Balanced",
+          "value": 12
+        }
+      ],
+      "domain": [
+        0,
+        12
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "CDHP:FL1:103-106:Ofc",
+          "value": 1.0
+        },
+        {
+          "label": "CDHP:FL1:109-109D:Ofc",
+          "value": 0.0383
+        },
+        {
+          "label": "CDHP:FL2:201-204:Ofc",
+          "value": 0.69
+        },
+        {
+          "label": "CDHP:FL2:214-220:Ofc",
+          "value": 0.1167
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 3564
+        },
+        {
+          "label": "320 - Administrative Office",
+          "value": 3291
+        },
+        {
+          "label": "250 - Scholarly Activity",
+          "value": 1349
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 658
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 622
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 492
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 387
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 308
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 155
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 48
+        }
+      ],
+      "domain": [
+        0,
+        3564
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 6615
+        },
+        {
+          "label": "NSF",
+          "value": 4259
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 7550
+        },
+        {
+          "label": "S",
+          "value": 3324
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "3 - Office Facilities",
+          "value": 4879
+        },
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 4259
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 1736
+        }
+      ],
+      "domain": [
+        0,
+        4879
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 23
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "CDHP:FL1:103-106:Ofc",
+          "value": 4
+        },
+        {
+          "label": "CDHP:FL1:109-109D:Ofc",
+          "value": 15
+        },
+        {
+          "label": "CDHP:FL2:201-204:Ofc",
+          "value": 5
+        },
+        {
+          "label": "CDHP:FL2:214-220:Ofc",
+          "value": 24
+        }
+      ],
+      "domain": [
+        0,
+        24
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "CDHP:FL1:103-106:Ofc",
+          "value": 15
+        },
+        {
+          "label": "CDHP:FL1:109-109D:Ofc",
+          "value": 1
+        },
+        {
+          "label": "CDHP:FL2:201-204:Ofc",
+          "value": 12
+        },
+        {
+          "label": "CDHP:FL2:214-220:Ofc",
+          "value": 14
+        }
+      ],
+      "domain": [
+        0,
+        15
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "CDHP:FL1:103-106:Ofc",
+          "value": 14
+        },
+        {
+          "label": "CDHP:FL1:109-109D:Ofc",
+          "value": 1
+        },
+        {
+          "label": "CDHP:FL2:201-204:Ofc",
+          "value": 7
+        },
+        {
+          "label": "CDHP:FL2:214-220:Ofc",
+          "value": 7
+        }
+      ],
+      "domain": [
+        0,
+        14
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "CDHP:FL1:103-106:Ofc",
+          "value": 17.7681
+        },
+        {
+          "label": "CDHP:FL1:109-109D:Ofc",
+          "value": 0.5639
+        },
+        {
+          "label": "CDHP:FL2:201-204:Ofc",
+          "value": 11.4913
+        },
+        {
+          "label": "CDHP:FL2:214-220:Ofc",
+          "value": 3.1638
+        }
+      ],
+      "domain": [
+        0,
+        17.7681
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "CDHP at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 66
+        },
+        {
+          "label": "Total SqFt",
+          "value": 10874
+        },
+        {
+          "label": "Capacity",
+          "value": 130
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.0965
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.865
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

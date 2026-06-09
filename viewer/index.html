@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WesternU 3D Viewer (minimal-black, real geometry)</title>
+<!-- Preload the splash logo so it's fetched during HTML parse — BEFORE the deferred three.js/rhino3dm
+     module loads. (Keep in sync with LOGO_SRC[0] in app/main.js.) -->
+<link rel="preload" href="./logo.png" as="image" />
+<!--
+  V2 viewer: the minimal-black look (UI_ClaudeIterations/viz_tool_minimal.html) over the REAL viewer
+  engine — real .3dm buildings + WUC context backdrop + reconciled data. The existing viewer/ is
+  untouched. Composition root: app/main.js. Skin: ui/skins/minimal.js. Render style:
+  render_config.json. This file ports the minimal preview's stylesheet, retargeted onto the engine's
+  data-region hosts ([data-region="rail"|"readings"|"hover"], appended into #ui by the skin engine).
+-->
+<style>
+  /* Self-hosted Inter (variable, latin) so the UI always renders in Inter — not just when the OS
+     happens to have it installed. Local file → works offline. Falls back to Segoe UI if it fails. */
+  @font-face{
+    font-family:"Inter";
+    font-style:normal;
+    font-weight:100 900;
+    font-display:swap;
+    src:url("../fonts/inter-latin-variable.woff2") format("woff2");
+  }
+  :root{
+    color-scheme:dark; /* native controls (incl. the <select> popup) paint DARK from first frame — kills the white flash */
+    --bg:#000000; --bg-2:#070708;
+    --panel:rgba(255,255,255,.022); --line:rgba(255,255,255,.085); --line-2:rgba(255,255,255,.16);
+    --ink:#f2f3f5; --muted:#7f8488; --dim:#4a4e52;
+    --hi:#c8f24a;
+    --sans:"Inter","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);
+    font:13px/1.5 var(--sans);-webkit-font-smoothing:antialiased;}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:6px}
+
+  /* #ui IS the layout grid (the skin engine appends the rail/readings/hover hosts into it). */
+  #ui{position:fixed;inset:0;display:grid;
+    grid-template-rows:56px 1fr 34px;
+    grid-template-columns:396px 1fr;
+    grid-template-areas:"top top" "rail stage" "foot foot";}
+
+  /* top bar */
+  #top{grid-area:top;display:flex;align-items:center;gap:18px;padding:0 26px;border-bottom:1px solid var(--line);
+    background:rgba(0,0,0,.55);backdrop-filter:blur(8px);z-index:5;}
+  .brand{display:flex;align-items:baseline;gap:11px;}
+  .brand b{font:500 15px/1 var(--sans);letter-spacing:.04em;}
+  .brand .divr{width:1px;height:14px;background:var(--line-2);}
+  .brand span{font:12px/1 var(--sans);color:var(--muted);}
+  /* top-right ARTIFACT logo (replaces the old KPI strip). black-on-transparent asset → invert to white.
+     The source PNG is 1.5:1 with heavy vertical whitespace around the wordmark, so object-fit:cover in a
+     wide-short box crops the padding and shows the wordmark band at a legible size in the 56px bar. */
+  .top-logo{display:flex;align-items:center;}
+  .top-logo img{height:27px;width:128px;object-fit:cover;object-position:center;display:block;
+    filter:invert(1);opacity:.9;}
+  /* lime "SCREENSHOT" button, upper-right next to the logo. Captures the whole UI → native save dialog. */
+  .shot-btn{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;
+    color:#0a0a0c;background:var(--accent,#c8f24a);border:none;border-radius:6px;padding:6px;
+    cursor:pointer;transition:filter .12s ease,opacity .12s ease;}
+  .shot-btn .shot-ico{display:block;}
+  .shot-btn:hover{filter:brightness(1.08);}
+  .shot-btn:active{filter:brightness(.94);}
+  .shot-btn[disabled]{opacity:.55;cursor:progress;}
+
+  /* stage (the WebGL canvas mounts here) */
+  #stage{grid-area:stage;position:relative;overflow:hidden;background:transparent;}
+  #stage canvas{position:absolute;inset:0;display:block;}
+  .vp-tag{position:absolute;font:11px/1.5 var(--sans);color:var(--muted);pointer-events:none;z-index:2;}
+  .vp-tag .k{color:var(--dim);font:10px/1.5 var(--mono);letter-spacing:.08em;}
+  .vp-tl{top:16px;left:18px;} .vp-tr{top:16px;right:18px;text-align:right;} .vp-bl{bottom:16px;left:18px;}
+  .compass{position:absolute;right:18px;bottom:16px;font:10px/1 var(--mono);color:var(--dim);letter-spacing:.1em;
+    pointer-events:none;z-index:2;}
+
+  /* footer */
+  #foot{grid-area:foot;display:flex;align-items:center;gap:26px;padding:0 26px;border-top:1px solid var(--line);
+    font:10px/1 var(--mono);color:var(--dim);letter-spacing:.12em;text-transform:uppercase;
+    background:rgba(0,0,0,.55);backdrop-filter:blur(8px);z-index:5;}
+  #foot b{color:var(--muted);font-weight:400;}
+  #foot .right{margin-left:auto;}
+
+  /* ---- shared section chrome (rail) ---- */
+  .sec{padding:20px 22px;border-bottom:1px solid var(--line);}
+  .sec:last-child{border-bottom:0;}
+  .sec > h3{margin:0 0 14px;font:10px/1 var(--mono);letter-spacing:.2em;color:var(--muted);
+    text-transform:uppercase;font-weight:500;}
+  /* lime control eyebrows (UImigration.md §3): Scope, Building selector, Layer selector.
+     Infographic title (.fig-title) + analysis/blurb head (.blurb-head) stay muted/white. */
+  #building-select-wrap > h3, #layer-sec > h3, .sec.scope > h3, #legend > h3{color:var(--hi);font-weight:600;}
+  /* compact the Scope + Building sections to free vertical space for the data sections below
+     (user 2026-06-08): tighter section padding, smaller heading gap, shorter controls. */
+  .sec.scope, #building-select-wrap{padding-top:12px;padding-bottom:12px;}
+  .sec.scope > h3, #building-select-wrap > h3{margin-bottom:8px;}
+  .sec.scope .seg button{padding:6px;}
+  #building-select-wrap .bsel-summary{padding:8px 13px;}
+  /* tighten the gap between the layer chips and the active-layer description (user 2026-06-08) */
+  #layer-sec{padding-bottom:12px;}
+  #layer-sec + .sec{padding-top:12px;}
+
+  /* rail host */
+  /* NO backdrop-filter here: the rail is a grid COLUMN beside the canvas (not over it), so the blur had no
+     visible effect — but a native <select> inside a backdrop-filtered ancestor triggers the Chromium bug
+     where the dropdown opens as an empty WHITE box that only populates a frame later. Removing it fixes the
+     building-dropdown flash with zero visual change (background stays near-black over the black page). */
+  [data-region="rail"]{grid-area:rail;border-right:1px solid var(--line);overflow-y:auto;overflow-x:hidden;
+    flex-direction:column;background:rgba(0,0,0,.55);z-index:4;}
+
+  /* scope segmented control */
+  .seg{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:3px;}
+  .seg button{flex:1;background:transparent;border:0;color:var(--muted);padding:8px;border-radius:6px;
+    cursor:pointer;font:13px/1 var(--sans);transition:.18s;}
+  .seg button:hover{color:var(--ink);}
+  .hint{margin:13px 0 0;font:12px/1.5 var(--sans);color:var(--muted);}
+
+  /* select field */
+  .field{width:100%;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;
+    padding:11px 13px;font:13px/1 var(--sans);appearance:none;cursor:pointer;
+    background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+    background-position:calc(100% - 17px) center,calc(100% - 12px) center;background-size:5px 5px;background-repeat:no-repeat;}
+  .field:hover{border-color:var(--line-2);}
+  /* building dropdown — CUSTOM <details> listbox (skin_minimal), NOT a native <select>: a native popup
+     flashes white over the WebGL canvas for ~1s before painting dark; this is plain DOM, opens instantly. */
+  .bsel{position:relative;}
+  .bsel-summary{list-style:none;display:block;width:100%;background-color:#000;color:#fff;}
+  .bsel-summary::-webkit-details-marker{display:none;}   /* hide the default disclosure triangle */
+  .bsel-summary::marker{content:"";}
+  .bsel[open] .bsel-summary{border-color:var(--line-2);}
+  /* the open menu: absolute panel below the summary so it overlays (doesn't push the rail content) */
+  .bsel-menu{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:30;
+    max-height:340px;overflow-y:auto;background:#000;border:1px solid var(--line-2);border-radius:8px;
+    box-shadow:0 18px 50px rgba(0,0,0,.6);padding:4px;}
+  .bsel-opt{display:block;width:100%;text-align:left;background:transparent;color:var(--ink);
+    border:0;border-radius:6px;padding:9px 11px;font:13px/1.25 var(--sans);cursor:pointer;}
+  .bsel-opt:hover{background:rgba(255,255,255,.08);}
+  .bsel-opt[data-active="true"]{color:var(--hi);}
+  .field-meta{margin-top:10px;font:11px/1 var(--mono);color:var(--dim);letter-spacing:.08em;}
+
+  /* layer family tabs */
+  .fam-tabs{display:flex;gap:18px;border-bottom:1px solid var(--line);margin-bottom:12px;}
+  .ftab{background:transparent;border:0;color:var(--muted);cursor:pointer;padding:0 0 9px;
+    font:10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;position:relative;transition:.15s;}
+  .ftab:hover{color:var(--ink);}
+  .ftab.on{color:var(--ink);}
+  .ftab.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--hi);}
+  .fam-panel{display:none;}
+  .fam-panel.on{display:block;}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;}
+  .chip{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:6px;
+    padding:5px 11px;cursor:pointer;font:12px/1.2 var(--sans);transition:.15s;}
+  .chip:hover{border-color:var(--line-2);color:var(--ink);}
+
+  /* legend */
+  .grad{height:6px;border-radius:3px;}
+  .grad-x{display:flex;justify-content:space-between;margin-top:8px;font:11px/1 var(--mono);color:var(--dim);}
+  .cascade{margin-top:13px;font:11px/1.6 var(--sans);color:var(--muted);}
+  .swatches{display:flex;flex-direction:column;gap:8px;}
+  .swatches.two-col{display:grid;grid-template-columns:1fr 1fr;column-gap:14px;row-gap:8px;}
+  .sw{display:flex;align-items:center;gap:10px;font:12px/1 var(--sans);color:var(--muted);min-width:0;}
+  .sw span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .sw i{width:10px;height:10px;border-radius:3px;flex:0 0 auto;}
+
+  /* prose / blurb */
+  .prose{margin:0;font:12.5px/1.65 var(--sans);color:#aab0b5;}
+  .prose b{color:var(--ink);font-weight:500;}
+  /* layer-prose heading = layer name; grey/ink (NOT lime — lime is reserved for control eyebrows, §3) */
+  .blurb-head{font:15px/1.4 var(--sans);font-weight:600;color:var(--ink);margin-bottom:6px;}
+
+  /* insights — stat tiles + horizontal bars */
+  .fig{margin-top:14px;}
+  .fig:first-of-type{margin-top:2px;}
+  .fig-title{font:12px/1.3 var(--sans);color:var(--ink);margin-bottom:8px;}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .stat{background:var(--bg-2);padding:14px 15px;}
+  .stat-grid > .stat:only-child{grid-column:1 / -1;} /* lone stat (e.g. healthcare "None") spans full width */
+  .stat .sv{font:300 24px/1 var(--sans);color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+  .stat .sl{font:10px/1.3 var(--mono);color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:8px;}
+  .barsh{display:flex;flex-direction:column;gap:5px;}
+  .barh-row{display:flex;align-items:center;gap:8px;}
+  .barh-lbl{flex:0 0 44%;font:10.5px/1.25 var(--sans);color:var(--muted);word-break:break-word;}
+  .barh-track{flex:1;height:8px;background:var(--panel);border-radius:5px;overflow:hidden;}
+  .barh-fill{display:block;height:100%;background:var(--hi);border-radius:5px;opacity:.85;}
+  .barh-val{flex:0 0 auto;font:10.5px/1 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums;}
+  /* donut (categorical figures, UImigration.md §11) — geometry from spec.js; only style here */
+  .donut{display:block;margin:4px auto 2px;overflow:visible;max-width:100%;}
+  .donut path{stroke:var(--bg);stroke-width:1.5;stroke-linejoin:round;}
+  .donut text{fill:var(--muted);font:8px/1 var(--mono);}
+  .fig-more{font:10px/1 var(--mono);color:var(--dim);margin-top:6px;}
+  .fig-cap{font:10px/1.5 var(--sans);color:var(--muted);margin-top:8px;} /* grey + in-chart label font (user 2026-06-08) */
+  .fig-insight{font:11px/1.45 var(--sans);color:var(--muted);margin-top:4px;}
+
+  /* per-family infographic styles (user 2026-06-08) — values only; legend carries the color mapping */
+  /* Categorical → treemap */
+  .treemap{display:block;margin:2px auto;max-width:100%;height:auto;overflow:visible;}
+  .treemap rect{stroke:var(--bg);stroke-width:1.5;}
+  .treemap text{fill:#0a0a0c;font:600 9px/1 var(--mono);}
+  /* EXPERIMENT (reversible): campus categorical-room spotlight — clickable cells, active outline, dimmed rest */
+  .tcell[data-clickable="true"]{cursor:pointer;transition:opacity .12s ease;}
+  .tcell[data-clickable="true"]:hover{opacity:.85;}
+  .tcell[data-dim="true"]{opacity:.28;}
+  .tcell[data-active="true"] rect{stroke:#fff;stroke-width:2;}
+  /* Performance → bullet bars (domain-relative, no row labels) */
+  .bulleth{display:flex;flex-direction:column;gap:5px;}
+  .bullet-row{display:flex;align-items:center;gap:8px;}
+  /* row label = the referent (building ID at campus, zone/room at building). Fixed gutter so the bars
+     stay aligned; long building-mode zone ids ellipsize rather than wrap the row (user 2026-06-08). */
+  /* gutter width is per-chart (--lblw, set by spec.js): tight for short campus codes so the bars sit
+     right next to them, wider for building zone labels. Capped + ellipsized for very long labels. */
+  .bullet-lbl{flex:0 0 var(--lblw,30%);max-width:60%;min-width:0;font:10px/1.25 var(--sans);color:var(--ink);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .bullet-track{flex:1;height:9px;background:var(--panel);border-radius:5px;overflow:hidden;}
+  .bullet-fill{display:block;height:100%;border-radius:5px;}
+  .bullet-val{flex:0 0 auto;min-width:42px;text-align:right;font:10.5px/1 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums;}
+  .bullet-dom{font:10px/1 var(--mono);color:var(--dim);margin-top:6px;text-align:right;}
+  /* Analytical → stepped columns */
+  .colsh{display:flex;align-items:flex-end;gap:6px;height:140px;padding-top:4px;}
+  .colh{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;min-width:0;}
+  .colh-v{font:10px/1 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .colh-bar{width:100%;border-radius:3px 3px 0 0;min-height:3px;}
+  /* Reconciliation → unit dot matrix */
+  .dotmx-wrap{text-align:center;}
+  .dotmx{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;justify-items:center;}
+  .dotmx i{width:8px;height:8px;border-radius:50%;display:block;}
+  .dotmx-cap{font:10px/1.3 var(--mono);color:var(--muted);margin-top:8px;}
+
+  /* per-layer "Key takeaway" insight block (UImigration.md §7): lime eyebrow + one short sentence */
+  .insight-eyebrow{font:700 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--hi);margin-bottom:8px;}
+  .insight-big{font:400 14px/1.5 var(--sans);color:var(--ink);}
+
+  /* ---- readings = FLOATING corner cards over the 3D (sandbox vp-col/vp-card; UImigration.md §6) ---- */
+  [data-region="readings"]{position:absolute;top:70px;right:14px;z-index:6;
+    width:min(390px,42vw);max-height:calc(100% - 104px);overflow-y:auto;overflow-x:hidden;
+    background:transparent;border:0;pointer-events:none;}
+  /* each block = a floating card (padding 12 14). Host click-through; cards not. Target [data-block]
+     (set by the engine on every card root) so the padding wins over the rail's .sec rule. */
+  [data-region="readings"] > [data-block]{pointer-events:auto;margin-bottom:12px;padding:12px 14px;
+    background:rgba(18,18,18,.82);border:1px solid var(--line);border-radius:12px;
+    backdrop-filter:blur(10px);box-shadow:0 18px 50px rgba(0,0,0,.5);}
+  [data-region="readings"] > [data-block]:last-child{margin-bottom:0;}
+
+  /* selection / building-info / room / header cards (sandbox sel-* style) */
+  .sel-head{position:relative;}
+  .sel-kick{font:700 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--hi);}
+  .sel-code{font:200 34px/1 var(--sans);letter-spacing:-.01em;margin:9px 0 4px;color:var(--ink);}
+  .sel-code.sm{font-size:23px;}
+  .sel-name{font:11px/1.3 var(--sans);color:var(--muted);}
+  .sel-x{position:absolute;top:-2px;right:-2px;width:24px;height:24px;border:1px solid var(--line);
+    border-radius:6px;background:transparent;color:var(--muted);cursor:pointer;font:13px/1 var(--sans);}
+  .sel-x:hover{color:var(--ink);border-color:var(--hi);}
+  /* active-layer row on the campus building card — compact (user 2026-06-06) */
+  .sel-active{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    margin:8px 0;padding:7px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sel-active .sa-l{font:11px/1.3 var(--sans);color:var(--muted);}
+  .sel-active .sa-v{font:400 16px/1 var(--sans);color:var(--hi);font-variant-numeric:tabular-nums;}
+  .sel-active .sa-sw{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:baseline;}
+  .sel-badge{display:inline-flex;align-items:center;gap:7px;flex-wrap:wrap;margin:2px 0 11px;padding:6px 11px;
+    border:1px solid var(--line);border-radius:99px;font:10px/1 var(--mono);color:var(--muted);}
+  .sel-badge .dot{width:6px;height:6px;border-radius:50%;flex:0 0 auto;background:var(--muted);}
+  .sel-badge .src{color:var(--muted);opacity:.7;}
+  .sel-sectitle{font:9px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:4px 0 2px;}
+  .sel-table{display:flex;flex-direction:column;}
+  .sel-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);}
+  .sel-row:last-child{border-bottom:0;}
+  .sel-row .rk{color:var(--muted);font:12px/1.3 var(--sans);}
+  .sel-row .rv{font:500 13px/1 var(--sans);font-variant-numeric:tabular-nums;}
+  .sel-explore{display:block;width:100%;margin-top:14px;padding:11px;cursor:pointer;border:0;border-radius:8px;
+    background:var(--ink);color:#0a0a0a;font:600 12px/1 var(--sans);}
+  .sel-explore:hover{opacity:.88;}
+
+  /* hover tooltip host */
+  [data-region="hover"]{position:fixed;top:0;left:0;z-index:30;min-width:160px;padding:12px 14px;pointer-events:none;
+    background:rgba(10,10,11,.92);border:1px solid var(--line-2);border-radius:11px;backdrop-filter:blur(8px);
+    box-shadow:0 20px 50px rgba(0,0,0,.6);}
+  .hr{display:flex;justify-content:space-between;gap:18px;font:12px/1.9 var(--sans);}
+  .hr .l{color:var(--muted);}
+  .hr .v{font-variant-numeric:tabular-nums;}
+
+  .boot-error{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99;color:#ff9da7;
+    background:rgba(10,10,11,.92);border:1px solid var(--line-2);border-radius:10px;padding:14px 18px;}
+
+  /* ---- startup splash: black page · logo · lime progress bar → Enter button (wired in app/main.js) ---- */
+  #splash{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:30px;background:#000;color:var(--ink);
+    transition:opacity .55s ease;opacity:1;}
+  #splash.hidden{opacity:0;pointer-events:none;}
+  .splash-inner{display:flex;flex-direction:column;align-items:center;gap:26px;width:min(460px,82vw);
+    padding:0 24px;text-align:center;}
+  /* logo: a user-supplied image (viewer/logo.* — see app/main.js LOGO_SRC); if it fails to load we
+     fall back to the WesternU text wordmark (no asset required to ship). */
+  .splash-logo{min-height:46px;display:flex;align-items:center;justify-content:center;}
+  /* The supplied ARTIFACT wordmark is pure black on transparent → invert it to white so it reads on the
+     black splash. (A logo that's already light would need this dropped; tune per asset.) */
+  #splash-logo-img{max-width:min(528px,90vw);max-height:204px;width:auto;height:auto;display:block;
+    filter:invert(1);}
+  .splash-wordmark{display:none;font:200 46px/1 var(--sans);letter-spacing:.06em;color:var(--ink);}
+  .splash-wordmark b{font-weight:600;}
+  .splash-sub{font:13px/1 var(--mono);letter-spacing:.26em;text-transform:uppercase;color:var(--ink);
+    margin-top:-8px;}
+  /* progress group (hidden once ready) */
+  .splash-progress{width:100%;display:flex;flex-direction:column;gap:11px;}
+  #splash.ready .splash-progress{display:none;}
+  .splash-bar{position:relative;height:4px;width:100%;border-radius:99px;overflow:hidden;
+    background:rgba(255,255,255,.09);}
+  .splash-fill{position:absolute;left:0;top:0;bottom:0;width:0%;border-radius:99px;background:var(--hi);
+    box-shadow:0 0 14px rgba(200,242,74,.55);transition:width .35s ease;}
+  /* warming-up shimmer shown until the first real progress tick (module + wasm load has no % signal) */
+  .splash-fill.indeterminate{width:34% !important;animation:splashSlide 1.15s ease-in-out infinite;
+    transition:none;}
+  @keyframes splashSlide{0%{left:-34%}100%{left:100%}}
+  .splash-status{display:flex;align-items:center;justify-content:space-between;gap:14px;
+    font:10px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .splash-pct{color:var(--hi);font-variant-numeric:tabular-nums;}
+  /* Enter button (shown only when ready) */
+  .splash-enter{display:none;min-width:200px;padding:15px 34px;border:0;border-radius:10px;cursor:pointer;
+    background:var(--hi);color:#15240a;font:600 14px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;
+    box-shadow:0 0 0 0 rgba(200,242,74,.5);transition:transform .15s ease,box-shadow .25s ease,opacity .15s;}
+  #splash.ready .splash-enter{display:inline-block;animation:splashEnterIn .5s ease both;}
+  .splash-enter:hover{transform:translateY(-1px);box-shadow:0 10px 34px rgba(200,242,74,.32);}
+  .splash-enter:active{transform:translateY(0);}
+  @keyframes splashEnterIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .splash-err{font:12px/1.5 var(--sans);color:#ff9da7;max-width:100%;}
+
+  /* ---- 2D floor-plan panel (building scope; bottom-right floating card; ui.md) ---- */
+  /* built by viewer/ui/floorplan.js into #planpanel; shown/hidden by scope (display:flex when shown). */
+  /* default size: width = the building-id/name floating card (min(390px,42vw)); height 15% < prior (user 2026-06-06) */
+  #planpanel{position:absolute;right:14px;bottom:14px;z-index:6;
+    width:min(390px,42vw);height:min(52.7vh,476px);max-width:calc(100% - 28px);max-height:calc(100% - 28px);
+    min-width:300px;min-height:240px;
+    display:none;flex-direction:column;overflow:hidden;pointer-events:auto;
+    background:rgba(18,18,18,.82);border:1px solid var(--line);border-radius:12px;
+    backdrop-filter:blur(10px);box-shadow:0 18px 50px rgba(0,0,0,.5);}
+  /* resize grip — top-left corner (panel is anchored bottom-right → grows toward top-left) */
+  .plan-grip{position:absolute;top:0;left:0;width:18px;height:18px;cursor:nwse-resize;z-index:3;touch-action:none;}
+  .plan-grip::before{content:"";position:absolute;top:6px;left:6px;width:7px;height:7px;
+    border-top:2px solid var(--muted);border-left:2px solid var(--muted);border-radius:1px;}
+  .plan-grip:hover::before{border-color:var(--ink);}
+  .plan-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:11px 14px;
+    border-bottom:1px solid var(--line);cursor:move;user-select:none;touch-action:none;}
+  .plan-head.dragging{cursor:grabbing;}
+  .plan-title{font:700 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--hi);}
+  .plan-hint{font:10px/1 var(--mono);color:var(--dim);}
+  .plan-floors{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+  .plan-floor-btn{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);
+    font:600 12px/1 var(--sans);padding:6px 12px;border-radius:7px;cursor:pointer;transition:.12s;}
+  .plan-floor-btn:hover{color:var(--ink);border-color:var(--line-2);}
+  .plan-floor-btn.on{background:var(--hi);border-color:var(--hi);color:#15240a;}
+  /* flex:1 + min-height:0 → the SVG area fills whatever height the panel is resized to */
+  .plan-svgwrap{position:relative;flex:1;min-height:0;overflow:hidden;
+    background:radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.03) 0%, transparent 70%);}
+  .plan-svg{width:100%;height:100%;display:block;cursor:grab;touch-action:none;}
+  .plan-svg.grabbing{cursor:grabbing;}
+  /* CAD linework on top of fills but never blocking room clicks */
+  .plan-svg .cad{fill:none;stroke:rgba(225,232,238,.42);stroke-width:1;vector-effect:non-scaling-stroke;
+    stroke-linecap:round;stroke-linejoin:round;pointer-events:none;}
+  /* each room filled with its active-layer color (--rc from styleMap) @ 62%; hover/selected → solid */
+  .plan-svg .room{fill:var(--rc,transparent);fill-opacity:.62;fill-rule:evenodd;stroke:none;pointer-events:all;cursor:pointer;
+    transition:fill-opacity .1s;}
+  .plan-svg .room:hover{fill-opacity:1;}
+  .plan-svg .room.sel{fill-opacity:1;stroke:var(--sel,#c8f24a);stroke-width:2;vector-effect:non-scaling-stroke;}
+  .plan-svg .rlabel{fill:rgba(225,232,238,.82);font:2.4px var(--sans);text-anchor:middle;
+    dominant-baseline:central;pointer-events:none;}
+  .plan-svg .rlabel.sel{fill:#15240a;font-weight:700;}
+  .plan-ghost{padding:10px 14px;border-bottom:1px solid var(--line);}
+  .plan-ghost-btn{appearance:none;width:100%;border:1px solid var(--line);background:transparent;color:var(--muted);
+    font:600 12px/1 var(--sans);padding:9px 13px;border-radius:8px;cursor:pointer;transition:.12s;
+    display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .plan-ghost-btn:hover{color:var(--ink);border-color:var(--line-2);}
+  .plan-ghost-btn.on{background:var(--hi);border-color:var(--hi);color:#15240a;}
+  .plan-ghost-btn .st{font:10px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;opacity:.85;}
+  .plan-ghost-op{display:flex;align-items:center;gap:8px;margin-top:8px;}
+  .plan-ghost-op .lbl{font:10px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--dim);}
+  .plan-ghost-op input[type=range]{flex:1;min-width:0;accent-color:var(--hi);cursor:pointer;}
+  .plan-ghost-op .val{font:11px/1 var(--mono);color:var(--muted);min-width:34px;text-align:right;}
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+  "html2canvas": "https://esm.sh/html2canvas@1.4.1"
+}}
+</script>
+</head>
+<body>
+  <!-- startup splash (black · logo · lime progress → Enter). Painted from static HTML so it shows
+       instantly, before the three.js module + rhino3dm wasm finish loading. Driven by app/main.js. -->
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="splash-logo">
+        <!-- src set HERE (not by JS) so the browser starts loading it immediately on parse. app/main.js
+             only handles the error→next-candidate→wordmark fallback. Keep src = LOGO_SRC[0]. -->
+        <img id="splash-logo-img" src="./logo.png" alt="ARTIFACT" />
+        <div id="splash-wordmark" class="splash-wordmark"><b>Western</b>U</div>
+      </div>
+      <div class="splash-sub">WesternU Campus Master Plan</div>
+      <div class="splash-progress">
+        <div class="splash-bar"><span id="splash-fill" class="splash-fill indeterminate"></span></div>
+        <div class="splash-status"><span id="splash-status">Initializing…</span><span id="splash-pct" class="splash-pct"></span></div>
+      </div>
+      <button id="splash-enter" class="splash-enter" type="button" disabled>Enter</button>
+    </div>
+  </div>
+
+  <div id="ui">
+    <header id="top">
+      <div class="brand"><b>WesternU</b><span class="divr"></span><span>Campus Master Plan</span></div>
+      <!-- lime screenshot button: captures the entire UI to an image, opens a native save dialog.
+           Icon-only (photo camera) to keep the top bar compact; the label lives in title=/aria-label. -->
+      <button id="shot-btn" class="shot-btn" type="button" title="Save a screenshot of the current view" aria-label="Screenshot">
+        <svg class="shot-ico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+      </button>
+      <!-- top-right = ARTIFACT logo (replaced the Buildings/Rooms/Reconciled/Scope KPI strip). Same asset
+           as the splash; black-on-transparent → invert to white on the dark bar. -->
+      <div class="top-logo"><img src="./logo.png" alt="ARTIFACT" /></div>
+    </header>
+
+    <main id="stage">
+      <div class="vp-tag vp-tl"><span class="k">RENDER</span><br>rhino3dm · three.js</div>
+      <div class="vp-tag vp-tr"><span class="k">CAMERA</span><br><span id="cam-tag">az 0° · el 0°</span></div>
+      <div class="vp-tag vp-bl"><span class="k">LAYER</span><br><span id="layer-tag">—</span></div>
+      <!-- 2D floor-plan panel (building scope; built by viewer/ui/floorplan.js, shown/hidden by scope) -->
+      <div id="planpanel"></div>
+    </main>
+
+    <footer id="foot">
+      <span><b>Source</b> reconciliation v13</span>
+      <span><b>Render</b> real .3dm + context</span>
+      <span class="right">real geometry + reconciled data</span>
+    </footer>
+    <!-- the skin engine appends [data-region="rail"], [data-region="readings"], [data-region="hover"] here -->
+  </div>
+  <script type="module" src="./app/main.js"></script>
+</body>
+</html>

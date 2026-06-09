@@ -1,0 +1,993 @@
+{
+  "version": "1",
+  "scope": "campus",
+  "building_code": null,
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Campus space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Classroom",
+          "value": 53256
+        },
+        {
+          "label": "Laboratory",
+          "value": 92126
+        },
+        {
+          "label": "Office",
+          "value": 133796
+        },
+        {
+          "label": "Study / Library",
+          "value": 27026
+        },
+        {
+          "label": "Special Use",
+          "value": 6120
+        },
+        {
+          "label": "General Use",
+          "value": 13125
+        },
+        {
+          "label": "Support",
+          "value": 34178
+        },
+        {
+          "label": "Health Care",
+          "value": 5944
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 213063
+        },
+        {
+          "label": "Unclassified",
+          "value": 71488
+        }
+      ],
+      "domain": [
+        0,
+        213063
+      ]
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Campus space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 404531
+        },
+        {
+          "label": "College of Osteopathic Medicine",
+          "value": 79386
+        },
+        {
+          "label": "College of Veterinary Medicine",
+          "value": 42989
+        },
+        {
+          "label": "College of Pharmacy",
+          "value": 37964
+        },
+        {
+          "label": "College of Health Sciences",
+          "value": 28827
+        },
+        {
+          "label": "College of Optometry",
+          "value": 19930
+        },
+        {
+          "label": "College of Dental Medicine",
+          "value": 18308
+        },
+        {
+          "label": "College of Graduate Nursing",
+          "value": 12610
+        },
+        {
+          "label": "College of Podiatric Medicine",
+          "value": 5577
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band (campus)",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 669
+        },
+        {
+          "label": "Underused",
+          "value": 1329
+        },
+        {
+          "label": "Moderate",
+          "value": 459
+        },
+        {
+          "label": "Target+",
+          "value": 190
+        }
+      ],
+      "domain": [
+        0,
+        1329
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation (campus)",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Bottleneck",
+          "value": 7
+        },
+        {
+          "label": "Balanced",
+          "value": 153
+        },
+        {
+          "label": "Idle",
+          "value": 253
+        }
+      ],
+      "domain": [
+        0,
+        253
+      ]
+    },
+    {
+      "figure_id": "condition_fci_mix",
+      "type": "bar",
+      "title": "Buildings by FCI condition rating",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Good",
+          "value": 5
+        },
+        {
+          "label": "Fair",
+          "value": 3
+        },
+        {
+          "label": "Poor",
+          "value": 7
+        }
+      ],
+      "domain": [
+        0,
+        7
+      ]
+    },
+    {
+      "figure_id": "deferred_maintenance_by_building",
+      "type": "bar",
+      "title": "10-year deferred maintenance by building",
+      "unit": "USD",
+      "series": [
+        {
+          "label": "HPC",
+          "value": 25600000
+        },
+        {
+          "label": "HEC",
+          "value": 21800000
+        },
+        {
+          "label": "HSC",
+          "value": 20500000
+        },
+        {
+          "label": "RWC",
+          "value": 18400000
+        },
+        {
+          "label": "AT",
+          "value": 16200000
+        },
+        {
+          "label": "CDHP",
+          "value": 6550000
+        },
+        {
+          "label": "PLC",
+          "value": 6550000
+        },
+        {
+          "label": "PCC",
+          "value": 5640000
+        },
+        {
+          "label": "VMC",
+          "value": 4960000
+        },
+        {
+          "label": "VCC",
+          "value": 3770000
+        },
+        {
+          "label": "NSC",
+          "value": 2760000
+        },
+        {
+          "label": "USC",
+          "value": 2670000
+        },
+        {
+          "label": "SSC",
+          "value": 2650000
+        },
+        {
+          "label": "AAC",
+          "value": 2350000
+        },
+        {
+          "label": "VPC",
+          "value": 436000
+        }
+      ],
+      "domain": [
+        0,
+        25600000
+      ]
+    },
+    {
+      "figure_id": "sqft_by_building",
+      "type": "bar",
+      "title": "Inventory SqFt by building",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "HEC",
+          "value": 152482
+        },
+        {
+          "label": "HPC",
+          "value": 115333
+        },
+        {
+          "label": "HSC",
+          "value": 65709
+        },
+        {
+          "label": "AT",
+          "value": 65486
+        },
+        {
+          "label": "PCC",
+          "value": 59312
+        },
+        {
+          "label": "PLC",
+          "value": 30013
+        },
+        {
+          "label": "RWC",
+          "value": 29505
+        },
+        {
+          "label": "VCC",
+          "value": 28403
+        },
+        {
+          "label": "VMC",
+          "value": 24251
+        },
+        {
+          "label": "AAC",
+          "value": 17100
+        },
+        {
+          "label": "NSC",
+          "value": 12873
+        },
+        {
+          "label": "SSC",
+          "value": 12009
+        },
+        {
+          "label": "CDHP",
+          "value": 10874
+        },
+        {
+          "label": "DOC",
+          "value": 8775
+        },
+        {
+          "label": "USC",
+          "value": 6893
+        },
+        {
+          "label": "BBC",
+          "value": 5754
+        },
+        {
+          "label": "TTL",
+          "value": 3388
+        },
+        {
+          "label": "VPC",
+          "value": 1962
+        }
+      ],
+      "domain": [
+        0,
+        152482
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_building",
+      "type": "bar",
+      "title": "Average 40-hour fill rate by building",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "RWC",
+          "value": 0.0764
+        },
+        {
+          "label": "CDHP",
+          "value": 0.0965
+        },
+        {
+          "label": "AT",
+          "value": 0.1015
+        },
+        {
+          "label": "VPC",
+          "value": 0.1306
+        },
+        {
+          "label": "PLC",
+          "value": 0.1475
+        },
+        {
+          "label": "PCC",
+          "value": 0.1524
+        },
+        {
+          "label": "HSC",
+          "value": 0.1712
+        },
+        {
+          "label": "HEC",
+          "value": 0.1764
+        },
+        {
+          "label": "AAC",
+          "value": 0.1773
+        },
+        {
+          "label": "HPC",
+          "value": 0.1875
+        },
+        {
+          "label": "NSC",
+          "value": 0.196
+        },
+        {
+          "label": "USC",
+          "value": 0.2276
+        },
+        {
+          "label": "VCC",
+          "value": 0.2388
+        },
+        {
+          "label": "VMC",
+          "value": 0.2798
+        },
+        {
+          "label": "DOC",
+          "value": 0.3089
+        },
+        {
+          "label": "SSC",
+          "value": 0.3234
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "occupied_rate_by_building",
+      "type": "bar",
+      "title": "Average occupied rate by building",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "RWC",
+          "value": 0.583
+        },
+        {
+          "label": "VPC",
+          "value": 0.7335
+        },
+        {
+          "label": "HEC",
+          "value": 0.7464
+        },
+        {
+          "label": "AT",
+          "value": 0.7943
+        },
+        {
+          "label": "CDHP",
+          "value": 0.865
+        },
+        {
+          "label": "VCC",
+          "value": 0.883
+        },
+        {
+          "label": "VMC",
+          "value": 0.8906
+        },
+        {
+          "label": "PLC",
+          "value": 0.9075
+        },
+        {
+          "label": "AAC",
+          "value": 0.9114
+        },
+        {
+          "label": "NSC",
+          "value": 0.9327
+        },
+        {
+          "label": "SSC",
+          "value": 0.9601
+        },
+        {
+          "label": "HPC",
+          "value": 0.9926
+        },
+        {
+          "label": "DOC",
+          "value": 1.0
+        },
+        {
+          "label": "HSC",
+          "value": 1.0
+        },
+        {
+          "label": "PCC",
+          "value": 1.0
+        },
+        {
+          "label": "USC",
+          "value": 1.0
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space (campus)",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space (sqft)",
+          "value": 5944
+        },
+        {
+          "label": "Buildings with healthcare",
+          "value": 1
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source (campus)",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 816
+        },
+        {
+          "label": "AVG",
+          "value": 336
+        },
+        {
+          "label": "SS",
+          "value": 100
+        },
+        {
+          "label": "PARSED",
+          "value": 28
+        },
+        {
+          "label": "ZR+alias->AVG",
+          "value": 3
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "reconciliation_status_mix",
+      "type": "bar",
+      "title": "Rooms by reconciliation status (campus)",
+      "unit": "count",
+      "series": [
+        {
+          "label": "NO_END_ZONE_HAS_SECTION",
+          "value": 872
+        },
+        {
+          "label": "FULL_MATCH",
+          "value": 856
+        },
+        {
+          "label": "NO_ZONE_ASSIGNED",
+          "value": 426
+        },
+        {
+          "label": "SUPPLEMENTAL_AVG_FLOOR",
+          "value": 336
+        },
+        {
+          "label": "NO_FLOOR_KPI",
+          "value": 66
+        },
+        {
+          "label": "ZONE_OK_NO_SECTION",
+          "value": 63
+        },
+        {
+          "label": "ZONE_FROM_ZONEID_PARSE",
+          "value": 27
+        },
+        {
+          "label": "NO_AVG_DATA",
+          "value": 9
+        },
+        {
+          "label": "ZONE_FROM_ZONEID_PARSE_NO_SECTION",
+          "value": 1
+        }
+      ],
+      "domain": [
+        0,
+        872
+      ]
+    },
+    {
+      "figure_id": "ownership_mix",
+      "type": "pie",
+      "title": "Buildings by ownership",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Own",
+          "value": 13
+        },
+        {
+          "label": "Lease",
+          "value": 2
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "ada_mix",
+      "type": "pie",
+      "title": "Buildings by ADA remediation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "None",
+          "value": 9
+        },
+        {
+          "label": "Has items",
+          "value": 6
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "building_age_by_building",
+      "type": "bar",
+      "title": "Building age",
+      "unit": "years",
+      "series": [
+        {
+          "label": "PLC",
+          "value": 101
+        },
+        {
+          "label": "VMC",
+          "value": 75
+        },
+        {
+          "label": "HSC",
+          "value": 71
+        },
+        {
+          "label": "AAC",
+          "value": 70
+        },
+        {
+          "label": "RWC",
+          "value": 70
+        },
+        {
+          "label": "USC",
+          "value": 70
+        },
+        {
+          "label": "NSC",
+          "value": 69
+        },
+        {
+          "label": "CDHP",
+          "value": 67
+        },
+        {
+          "label": "SSC",
+          "value": 67
+        },
+        {
+          "label": "HPC",
+          "value": 63
+        },
+        {
+          "label": "AT",
+          "value": 57
+        },
+        {
+          "label": "VCC",
+          "value": 18
+        },
+        {
+          "label": "PCC",
+          "value": 17
+        },
+        {
+          "label": "VPC",
+          "value": 17
+        },
+        {
+          "label": "HEC",
+          "value": 16
+        }
+      ],
+      "domain": [
+        0,
+        101
+      ]
+    },
+    {
+      "figure_id": "gsf_by_building",
+      "type": "bar",
+      "title": "Gross SqFt by building",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "HEC",
+          "value": 178000
+        },
+        {
+          "label": "HPC",
+          "value": 126668
+        },
+        {
+          "label": "HSC",
+          "value": 72125
+        },
+        {
+          "label": "AT",
+          "value": 71328
+        },
+        {
+          "label": "PLC",
+          "value": 33392
+        },
+        {
+          "label": "VCC",
+          "value": 31200
+        },
+        {
+          "label": "RWC",
+          "value": 31035
+        },
+        {
+          "label": "VMC",
+          "value": 24962
+        },
+        {
+          "label": "AAC",
+          "value": 19376
+        },
+        {
+          "label": "USC",
+          "value": 16325
+        },
+        {
+          "label": "SSC",
+          "value": 13518
+        },
+        {
+          "label": "CDHP",
+          "value": 13200
+        },
+        {
+          "label": "NSC",
+          "value": 9522
+        },
+        {
+          "label": "PCC",
+          "value": 2190
+        },
+        {
+          "label": "VPC",
+          "value": 2190
+        }
+      ],
+      "domain": [
+        0,
+        178000
+      ]
+    },
+    {
+      "figure_id": "stories_by_building",
+      "type": "bar",
+      "title": "Stories by building",
+      "unit": "floors",
+      "series": [
+        {
+          "label": "AT",
+          "value": 6
+        },
+        {
+          "label": "HEC",
+          "value": 4
+        },
+        {
+          "label": "PLC",
+          "value": 4
+        },
+        {
+          "label": "AAC",
+          "value": 2
+        },
+        {
+          "label": "CDHP",
+          "value": 2
+        },
+        {
+          "label": "HPC",
+          "value": 2
+        },
+        {
+          "label": "HSC",
+          "value": 2
+        },
+        {
+          "label": "NSC",
+          "value": 2
+        },
+        {
+          "label": "SSC",
+          "value": 2
+        },
+        {
+          "label": "USC",
+          "value": 2
+        },
+        {
+          "label": "VCC",
+          "value": 2
+        },
+        {
+          "label": "VMC",
+          "value": 2
+        },
+        {
+          "label": "PCC",
+          "value": 1
+        },
+        {
+          "label": "RWC",
+          "value": 1
+        },
+        {
+          "label": "VPC",
+          "value": 1
+        }
+      ],
+      "domain": [
+        0,
+        6
+      ]
+    },
+    {
+      "figure_id": "replacement_value_by_building",
+      "type": "bar",
+      "title": "Replacement value by building",
+      "unit": "USD",
+      "series": [
+        {
+          "label": "HEC",
+          "value": 131448915
+        },
+        {
+          "label": "HPC",
+          "value": 74301701
+        },
+        {
+          "label": "HSC",
+          "value": 53170522
+        },
+        {
+          "label": "PCC",
+          "value": 36823760
+        },
+        {
+          "label": "AT",
+          "value": 27429114
+        },
+        {
+          "label": "RWC",
+          "value": 25857534
+        },
+        {
+          "label": "CDHP",
+          "value": 23390488
+        },
+        {
+          "label": "VCC",
+          "value": 23251136
+        },
+        {
+          "label": "VMC",
+          "value": 19537664
+        },
+        {
+          "label": "NSC",
+          "value": 15993220
+        },
+        {
+          "label": "AAC",
+          "value": 9291422
+        },
+        {
+          "label": "SSC",
+          "value": 9119813
+        },
+        {
+          "label": "USC",
+          "value": 5452791
+        },
+        {
+          "label": "VPC",
+          "value": 2116086
+        }
+      ],
+      "domain": [
+        0,
+        131448915
+      ]
+    },
+    {
+      "figure_id": "fcni_by_building",
+      "type": "bar",
+      "title": "Condition (FCNI) by building",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "RWC",
+          "value": 0.71
+        },
+        {
+          "label": "AT",
+          "value": 0.59
+        },
+        {
+          "label": "USC",
+          "value": 0.49
+        },
+        {
+          "label": "HSC",
+          "value": 0.39
+        },
+        {
+          "label": "HPC",
+          "value": 0.34
+        },
+        {
+          "label": "SSC",
+          "value": 0.29
+        },
+        {
+          "label": "PLC",
+          "value": 0.28
+        },
+        {
+          "label": "AAC",
+          "value": 0.25
+        },
+        {
+          "label": "VMC",
+          "value": 0.25
+        },
+        {
+          "label": "VPC",
+          "value": 0.21
+        },
+        {
+          "label": "HEC",
+          "value": 0.17
+        },
+        {
+          "label": "NSC",
+          "value": 0.17
+        },
+        {
+          "label": "VCC",
+          "value": 0.16
+        },
+        {
+          "label": "PCC",
+          "value": 0.15
+        },
+        {
+          "label": "CDHP",
+          "value": 0.1
+        }
+      ],
+      "domain": [
+        0,
+        0.71
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "Campus at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Buildings",
+          "value": 18
+        },
+        {
+          "label": "Rooms",
+          "value": 2656
+        },
+        {
+          "label": "Total SqFt",
+          "value": 650122
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

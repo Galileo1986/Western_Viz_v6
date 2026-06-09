@@ -1,0 +1,182 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "PCC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Unclassified",
+          "value": 59312
+        }
+      ],
+      "domain": [
+        0,
+        59312
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Unassigned / Other Area",
+          "value": 59312
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 59312
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 119
+        },
+        {
+          "label": "Underused",
+          "value": 217
+        }
+      ],
+      "domain": [
+        0,
+        217
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "UNO - Unclassified / Other",
+          "value": 59312
+        }
+      ],
+      "domain": [
+        0,
+        59312
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "NSF",
+          "value": 59312
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "0",
+          "value": 59312
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 59312
+        }
+      ],
+      "domain": [
+        0,
+        59312
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "AVG",
+          "value": 336
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "PCC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 336
+        },
+        {
+          "label": "Total SqFt",
+          "value": 59312
+        },
+        {
+          "label": "Capacity",
+          "value": 1379
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.1524
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 1.0
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

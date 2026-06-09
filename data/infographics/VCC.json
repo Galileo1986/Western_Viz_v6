@@ -1,0 +1,694 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "VCC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Classroom",
+          "value": 2735
+        },
+        {
+          "label": "Laboratory",
+          "value": 2486
+        },
+        {
+          "label": "Office",
+          "value": 7661
+        },
+        {
+          "label": "Special Use",
+          "value": 181
+        },
+        {
+          "label": "General Use",
+          "value": 2025
+        },
+        {
+          "label": "Support",
+          "value": 148
+        },
+        {
+          "label": "Health Care",
+          "value": 5944
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 7223
+        }
+      ],
+      "domain": [
+        0,
+        7661
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "1700 - College of Veterinary Medicine",
+          "value": 20961
+        },
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 7223
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 219
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "College of Veterinary Medicine",
+          "value": 20961
+        },
+        {
+          "label": "Shared / Administrative",
+          "value": 7442
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Underused",
+          "value": 64
+        },
+        {
+          "label": "Moderate",
+          "value": 32
+        },
+        {
+          "label": "Target+",
+          "value": 5
+        }
+      ],
+      "domain": [
+        0,
+        64
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Bottleneck",
+          "value": 2
+        },
+        {
+          "label": "Balanced",
+          "value": 4
+        }
+      ],
+      "domain": [
+        0,
+        4
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "VCC:FL1:103-121:Ofc",
+          "value": 0.2
+        },
+        {
+          "label": "VCC:FL1:132:RschLab",
+          "value": 0.825
+        },
+        {
+          "label": "VCC:FL1:133:RschLab",
+          "value": 0.275
+        },
+        {
+          "label": "VCC:FL1:SkillsLab:ClsLab",
+          "value": 1.0
+        },
+        {
+          "label": "VCC:FL1:WetLab:ClsLab",
+          "value": 0.16
+        },
+        {
+          "label": "VCC:FL2:205:Conf",
+          "value": 0.2
+        },
+        {
+          "label": "VCC:FL2:206-221:Ofc",
+          "value": 0.3097
+        },
+        {
+          "label": "VCC:FL2:224-233_248-249:Ofc",
+          "value": 0.3207
+        },
+        {
+          "label": "VCC:FL2:238-243:Ofc",
+          "value": 0.2133
+        },
+        {
+          "label": "VCC:FL2:Classroom#244:Clsrm",
+          "value": 0.9161
+        },
+        {
+          "label": "VCC:FL2:JohnstonAuditorium:Clsrm",
+          "value": 0.2705
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "310 - Academic Office",
+          "value": 6364
+        },
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 5582
+        },
+        {
+          "label": "850 - Treatment / Examination - General",
+          "value": 2767
+        },
+        {
+          "label": "110 - Classroom",
+          "value": 2735
+        },
+        {
+          "label": "260 - Class Laboratory",
+          "value": 1890
+        },
+        {
+          "label": "630 - Commons",
+          "value": 1708
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 1203
+        },
+        {
+          "label": "880 - Public Waiting",
+          "value": 1131
+        },
+        {
+          "label": "854 - Treatment / Examination Service",
+          "value": 1026
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 740
+        },
+        {
+          "label": "210 - Research Lab / Studio",
+          "value": 596
+        },
+        {
+          "label": "840 - Surgical Operating Room",
+          "value": 590
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 519
+        },
+        {
+          "label": "635 - Commons Service",
+          "value": 317
+        },
+        {
+          "label": "870 - Medical Supplies",
+          "value": 249
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 241
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 197
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 181
+        },
+        {
+          "label": "842 - Surgery Service",
+          "value": 181
+        },
+        {
+          "label": "721 - Storage - Teaching Laboratory",
+          "value": 148
+        },
+        {
+          "label": "320 - Administrative Office",
+          "value": 38
+        }
+      ],
+      "domain": [
+        0,
+        6364
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 21180
+        },
+        {
+          "label": "NSF",
+          "value": 7223
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 15230
+        },
+        {
+          "label": "S",
+          "value": 13173
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 15192
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 7661
+        },
+        {
+          "label": "1 - Classroom Facilities",
+          "value": 2735
+        },
+        {
+          "label": "2 - Class Laboratories",
+          "value": 2038
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 777
+        }
+      ],
+      "domain": [
+        0,
+        15192
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "pie",
+      "title": "Healthcare vs other space (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Other",
+          "value": 22459
+        },
+        {
+          "label": "Health Care",
+          "value": 5944
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "ZR",
+          "value": 43
+        },
+        {
+          "label": "SS",
+          "value": 21
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "VCC:FL1:103-121:Ofc",
+          "value": 73
+        },
+        {
+          "label": "VCC:FL1:132:RschLab",
+          "value": 2
+        },
+        {
+          "label": "VCC:FL1:133:RschLab",
+          "value": 1
+        },
+        {
+          "label": "VCC:FL1:SkillsLab:ClsLab",
+          "value": 5
+        },
+        {
+          "label": "VCC:FL1:WetLab:ClsLab",
+          "value": 20
+        },
+        {
+          "label": "VCC:FL2:205:Conf",
+          "value": 11
+        },
+        {
+          "label": "VCC:FL2:206-221:Ofc",
+          "value": 18
+        },
+        {
+          "label": "VCC:FL2:224-233_248-249:Ofc",
+          "value": 23
+        },
+        {
+          "label": "VCC:FL2:238-243:Ofc",
+          "value": 15
+        },
+        {
+          "label": "VCC:FL2:Classroom#244:Clsrm",
+          "value": 14
+        },
+        {
+          "label": "VCC:FL2:JohnstonAuditorium:Clsrm",
+          "value": 140
+        }
+      ],
+      "domain": [
+        0,
+        140
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "VCC:FL1:103-121:Ofc",
+          "value": 64
+        },
+        {
+          "label": "VCC:FL1:132:RschLab",
+          "value": 8
+        },
+        {
+          "label": "VCC:FL1:133:RschLab",
+          "value": 2
+        },
+        {
+          "label": "VCC:FL1:SkillsLab:ClsLab",
+          "value": 10
+        },
+        {
+          "label": "VCC:FL1:WetLab:ClsLab",
+          "value": 7
+        },
+        {
+          "label": "VCC:FL2:205:Conf",
+          "value": 10
+        },
+        {
+          "label": "VCC:FL2:206-221:Ofc",
+          "value": 24
+        },
+        {
+          "label": "VCC:FL2:224-233_248-249:Ofc",
+          "value": 25
+        },
+        {
+          "label": "VCC:FL2:238-243:Ofc",
+          "value": 18
+        },
+        {
+          "label": "VCC:FL2:Classroom#244:Clsrm",
+          "value": 46
+        },
+        {
+          "label": "VCC:FL2:JohnstonAuditorium:Clsrm",
+          "value": 84
+        }
+      ],
+      "domain": [
+        0,
+        84
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "VCC:FL1:103-121:Ofc",
+          "value": 24
+        },
+        {
+          "label": "VCC:FL1:132:RschLab",
+          "value": 5
+        },
+        {
+          "label": "VCC:FL1:133:RschLab",
+          "value": 1
+        },
+        {
+          "label": "VCC:FL1:SkillsLab:ClsLab",
+          "value": 7
+        },
+        {
+          "label": "VCC:FL1:WetLab:ClsLab",
+          "value": 5
+        },
+        {
+          "label": "VCC:FL2:205:Conf",
+          "value": 9
+        },
+        {
+          "label": "VCC:FL2:206-221:Ofc",
+          "value": 23
+        },
+        {
+          "label": "VCC:FL2:224-233_248-249:Ofc",
+          "value": 17
+        },
+        {
+          "label": "VCC:FL2:238-243:Ofc",
+          "value": 10
+        },
+        {
+          "label": "VCC:FL2:Classroom#244:Clsrm",
+          "value": 34
+        },
+        {
+          "label": "VCC:FL2:JohnstonAuditorium:Clsrm",
+          "value": 73
+        }
+      ],
+      "domain": [
+        0,
+        73
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "VCC:FL1:103-121:Ofc",
+          "value": 7.0129
+        },
+        {
+          "label": "VCC:FL1:132:RschLab",
+          "value": 6.9819
+        },
+        {
+          "label": "VCC:FL1:133:RschLab",
+          "value": 1.4726
+        },
+        {
+          "label": "VCC:FL1:SkillsLab:ClsLab",
+          "value": 19.5701
+        },
+        {
+          "label": "VCC:FL1:WetLab:ClsLab",
+          "value": 2.7914
+        },
+        {
+          "label": "VCC:FL2:205:Conf",
+          "value": 10.5175
+        },
+        {
+          "label": "VCC:FL2:206-221:Ofc",
+          "value": 3.2386
+        },
+        {
+          "label": "VCC:FL2:224-233_248-249:Ofc",
+          "value": 5.0862
+        },
+        {
+          "label": "VCC:FL2:238-243:Ofc",
+          "value": 2.8768
+        },
+        {
+          "label": "VCC:FL2:Classroom#244:Clsrm",
+          "value": 31.2323
+        },
+        {
+          "label": "VCC:FL2:JohnstonAuditorium:Clsrm",
+          "value": 32.1849
+        }
+      ],
+      "domain": [
+        0,
+        32.1849
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Johnston Auditorium",
+          "value": 140
+        },
+        {
+          "label": "VCC Student Commons",
+          "value": 121
+        },
+        {
+          "label": "The Thing Lab (Wet Lab)",
+          "value": 80
+        },
+        {
+          "label": "Classroom #244",
+          "value": 50
+        }
+      ],
+      "domain": [
+        0,
+        140
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "Classroom #244",
+          "value": 20.06
+        },
+        {
+          "label": "The Thing Lab (Wet Lab)",
+          "value": 19.35
+        },
+        {
+          "label": "VCC Student Commons",
+          "value": 14.12
+        },
+        {
+          "label": "Johnston Auditorium",
+          "value": 12.37
+        }
+      ],
+      "domain": [
+        0,
+        20.06
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "VCC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 101
+        },
+        {
+          "label": "Total SqFt",
+          "value": 28403
+        },
+        {
+          "label": "Capacity",
+          "value": 450
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.2388
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.883
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

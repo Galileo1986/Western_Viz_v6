@@ -1,0 +1,610 @@
+{
+  "version": "1",
+  "scope": "building",
+  "building_code": "PLC",
+  "figures": [
+    {
+      "figure_id": "space_category_distribution",
+      "type": "bar",
+      "title": "Space type (from Room Use)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Classroom",
+          "value": 2830
+        },
+        {
+          "label": "Office",
+          "value": 6772
+        },
+        {
+          "label": "Study / Library",
+          "value": 6737
+        },
+        {
+          "label": "Special Use",
+          "value": 925
+        },
+        {
+          "label": "General Use",
+          "value": 600
+        },
+        {
+          "label": "Support",
+          "value": 773
+        },
+        {
+          "label": "Building Service (NSF)",
+          "value": 11376
+        }
+      ],
+      "domain": [
+        0,
+        11376
+      ]
+    },
+    {
+      "figure_id": "division_mix",
+      "type": "pie",
+      "title": "Space by division (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "12 - Office of the Provost",
+          "value": 13098
+        },
+        {
+          "label": "UNO - Unassigned / Other Area",
+          "value": 11612
+        },
+        {
+          "label": "ISS - Institutional Shared Services & COO",
+          "value": 2366
+        },
+        {
+          "label": "1600 - College of Health Sciences",
+          "value": 1598
+        },
+        {
+          "label": "2100 - College of Podiatric Medicine",
+          "value": 1232
+        },
+        {
+          "label": "UCEC - University Compliance, Ethics, and Culture",
+          "value": 107
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "college_mix",
+      "type": "pie",
+      "title": "Space by college (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "Shared / Administrative",
+          "value": 27183
+        },
+        {
+          "label": "College of Health Sciences",
+          "value": 1598
+        },
+        {
+          "label": "College of Podiatric Medicine",
+          "value": 1232
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "underutilization_mix",
+      "type": "bar",
+      "title": "Rooms by utilization band",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Dead",
+          "value": 12
+        },
+        {
+          "label": "Underused",
+          "value": 56
+        },
+        {
+          "label": "Moderate",
+          "value": 31
+        },
+        {
+          "label": "Target+",
+          "value": 19
+        }
+      ],
+      "domain": [
+        0,
+        56
+      ]
+    },
+    {
+      "figure_id": "lab_allocation_mix",
+      "type": "bar",
+      "title": "Teaching rooms by allocation",
+      "unit": "count",
+      "series": [
+        {
+          "label": "Balanced",
+          "value": 2
+        }
+      ],
+      "domain": [
+        0,
+        2
+      ]
+    },
+    {
+      "figure_id": "fill_rate_by_zone",
+      "type": "bar",
+      "title": "40-hour fill rate by zone",
+      "unit": "ratio",
+      "series": [
+        {
+          "label": "LRC:FL1:103-103C:Ofc",
+          "value": 1.0
+        },
+        {
+          "label": "LRC:FL1:107-108:Ofc",
+          "value": 0.4929
+        },
+        {
+          "label": "LRC:FL2:ClassroomA:Clsrm",
+          "value": 0.1579
+        },
+        {
+          "label": "LRC:FL2:ClassroomB:Clsrm",
+          "value": 0.235
+        },
+        {
+          "label": "LRC:FL3:300-305:StdyRm",
+          "value": 0.0464
+        },
+        {
+          "label": "LRC:FL3:306-314:StdyRm",
+          "value": 0.2043
+        },
+        {
+          "label": "LRC:FL4:403-411:Ofc",
+          "value": 0.1052
+        },
+        {
+          "label": "LRC:FL4:412-419:Ofc",
+          "value": 0.3038
+        }
+      ],
+      "domain": [
+        0,
+        1
+      ]
+    },
+    {
+      "figure_id": "room_use_mix",
+      "type": "bar",
+      "title": "Space by room use (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "CIRC - Public Circulation",
+          "value": 8981
+        },
+        {
+          "label": "320 - Administrative Office",
+          "value": 4835
+        },
+        {
+          "label": "410 - Study Room",
+          "value": 4732
+        },
+        {
+          "label": "110 - Classroom",
+          "value": 2830
+        },
+        {
+          "label": "440 - Stack",
+          "value": 1435
+        },
+        {
+          "label": "TOIL - Public Restroom",
+          "value": 1188
+        },
+        {
+          "label": "345 - Conference Room Service",
+          "value": 1175
+        },
+        {
+          "label": "MECH - Mechanical Space",
+          "value": 1171
+        },
+        {
+          "label": "510 - Central Computer / Telecomm",
+          "value": 925
+        },
+        {
+          "label": "722 - Storage - Office",
+          "value": 773
+        },
+        {
+          "label": "335 - Office Service",
+          "value": 762
+        },
+        {
+          "label": "460 - Library Processing Room",
+          "value": 570
+        },
+        {
+          "label": "630 - Commons",
+          "value": 345
+        },
+        {
+          "label": "635 - Commons Service",
+          "value": 255
+        },
+        {
+          "label": "CUST - Custodial Support",
+          "value": 36
+        }
+      ],
+      "domain": [
+        0,
+        8981
+      ]
+    },
+    {
+      "figure_id": "room_type_mix",
+      "type": "pie",
+      "title": "Assignable vs non-assignable (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "ASF",
+          "value": 18637
+        },
+        {
+          "label": "NSF",
+          "value": 11376
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "space_standard_mix",
+      "type": "pie",
+      "title": "Space by standard (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "N",
+          "value": 23548
+        },
+        {
+          "label": "S",
+          "value": 6465
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "cpec_mix",
+      "type": "bar",
+      "title": "Space by CPEC category (SqFt)",
+      "unit": "sqft",
+      "series": [
+        {
+          "label": "6 - Non-Standard Rooms",
+          "value": 18713
+        },
+        {
+          "label": "3 - Office Facilities",
+          "value": 7545
+        },
+        {
+          "label": "1 - Classroom Facilities",
+          "value": 2830
+        },
+        {
+          "label": "4 - Research / Scholarly Activity",
+          "value": 925
+        }
+      ],
+      "domain": [
+        0,
+        18713
+      ]
+    },
+    {
+      "figure_id": "healthcare_space_mix",
+      "type": "stat",
+      "title": "Healthcare space",
+      "unit": null,
+      "series": [
+        {
+          "label": "Healthcare space in this building",
+          "value": "None"
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "zone_source_mix",
+      "type": "pie",
+      "title": "Rooms by zone source",
+      "unit": "count",
+      "series": [
+        {
+          "label": "SS",
+          "value": 44
+        }
+      ],
+      "domain": null
+    },
+    {
+      "figure_id": "capacity_by_zone",
+      "type": "bar",
+      "title": "Capacity by zone",
+      "unit": "people",
+      "series": [
+        {
+          "label": "LRC:FL1:103-103C:Ofc",
+          "value": 4
+        },
+        {
+          "label": "LRC:FL1:107-108:Ofc",
+          "value": 7
+        },
+        {
+          "label": "LRC:FL2:ClassroomA:Clsrm",
+          "value": 60
+        },
+        {
+          "label": "LRC:FL2:ClassroomB:Clsrm",
+          "value": 50
+        },
+        {
+          "label": "LRC:FL3:300-305:StdyRm",
+          "value": 176
+        },
+        {
+          "label": "LRC:FL3:306-314:StdyRm",
+          "value": 46
+        },
+        {
+          "label": "LRC:FL4:403-411:Ofc",
+          "value": 29
+        },
+        {
+          "label": "LRC:FL4:412-419:Ofc",
+          "value": 13
+        }
+      ],
+      "domain": [
+        0,
+        176
+      ]
+    },
+    {
+      "figure_id": "sessions_by_zone",
+      "type": "bar",
+      "title": "Daily user sessions by zone",
+      "unit": "sessions/day",
+      "series": [
+        {
+          "label": "LRC:FL1:103-103C:Ofc",
+          "value": 21
+        },
+        {
+          "label": "LRC:FL1:107-108:Ofc",
+          "value": 15
+        },
+        {
+          "label": "LRC:FL2:ClassroomA:Clsrm",
+          "value": 9
+        },
+        {
+          "label": "LRC:FL2:ClassroomB:Clsrm",
+          "value": 34
+        },
+        {
+          "label": "LRC:FL3:300-305:StdyRm",
+          "value": 40
+        },
+        {
+          "label": "LRC:FL3:306-314:StdyRm",
+          "value": 37
+        },
+        {
+          "label": "LRC:FL4:403-411:Ofc",
+          "value": 11
+        },
+        {
+          "label": "LRC:FL4:412-419:Ofc",
+          "value": 13
+        }
+      ],
+      "domain": [
+        0,
+        40
+      ]
+    },
+    {
+      "figure_id": "unique_users_by_zone",
+      "type": "bar",
+      "title": "Daily unique users by zone",
+      "unit": "users/day",
+      "series": [
+        {
+          "label": "LRC:FL1:103-103C:Ofc",
+          "value": 19
+        },
+        {
+          "label": "LRC:FL1:107-108:Ofc",
+          "value": 10
+        },
+        {
+          "label": "LRC:FL2:ClassroomA:Clsrm",
+          "value": 8
+        },
+        {
+          "label": "LRC:FL2:ClassroomB:Clsrm",
+          "value": 28
+        },
+        {
+          "label": "LRC:FL3:300-305:StdyRm",
+          "value": 29
+        },
+        {
+          "label": "LRC:FL3:306-314:StdyRm",
+          "value": 29
+        },
+        {
+          "label": "LRC:FL4:403-411:Ofc",
+          "value": 4
+        },
+        {
+          "label": "LRC:FL4:412-419:Ofc",
+          "value": 8
+        }
+      ],
+      "domain": [
+        0,
+        29
+      ]
+    },
+    {
+      "figure_id": "people_minutes_by_zone",
+      "type": "bar",
+      "title": "People-minutes per SqFt by zone",
+      "unit": "people*min/sqft",
+      "series": [
+        {
+          "label": "LRC:FL1:103-103C:Ofc",
+          "value": 7.5434
+        },
+        {
+          "label": "LRC:FL1:107-108:Ofc",
+          "value": 8.9429
+        },
+        {
+          "label": "LRC:FL2:ClassroomA:Clsrm",
+          "value": 7.4543
+        },
+        {
+          "label": "LRC:FL2:ClassroomB:Clsrm",
+          "value": 12.8472
+        },
+        {
+          "label": "LRC:FL3:300-305:StdyRm",
+          "value": 3.2388
+        },
+        {
+          "label": "LRC:FL3:306-314:StdyRm",
+          "value": 17.4798
+        },
+        {
+          "label": "LRC:FL4:403-411:Ofc",
+          "value": 2.9026
+        },
+        {
+          "label": "LRC:FL4:412-419:Ofc",
+          "value": 5.0465
+        }
+      ],
+      "domain": [
+        0,
+        17.4798
+      ]
+    },
+    {
+      "figure_id": "seats_by_room",
+      "type": "bar",
+      "title": "Top rooms by nominal seats",
+      "unit": "seats",
+      "series": [
+        {
+          "label": "Classroom A",
+          "value": 60
+        },
+        {
+          "label": "Classroom B",
+          "value": 50
+        },
+        {
+          "label": "Conference Room",
+          "value": 16
+        },
+        {
+          "label": "Wellness Room",
+          "value": 15
+        }
+      ],
+      "domain": [
+        0,
+        60
+      ]
+    },
+    {
+      "figure_id": "sqft_per_seat_by_room",
+      "type": "bar",
+      "title": "Top rooms by SqFt per seat",
+      "unit": "sqft/seat",
+      "series": [
+        {
+          "label": "Wellness Room",
+          "value": 44.0
+        },
+        {
+          "label": "Conference Room",
+          "value": 32.19
+        },
+        {
+          "label": "Classroom A",
+          "value": 26.63
+        },
+        {
+          "label": "Classroom B",
+          "value": 24.64
+        }
+      ],
+      "domain": [
+        0,
+        44.0
+      ]
+    },
+    {
+      "figure_id": "headline_stats",
+      "type": "stat",
+      "title": "PLC at a glance",
+      "unit": null,
+      "series": [
+        {
+          "label": "Rooms",
+          "value": 118
+        },
+        {
+          "label": "Total SqFt",
+          "value": 30013
+        },
+        {
+          "label": "Capacity",
+          "value": 436
+        },
+        {
+          "label": "Avg 40h fill rate",
+          "value": 0.1475
+        },
+        {
+          "label": "Avg occupied rate",
+          "value": 0.9075
+        }
+      ],
+      "domain": null
+    }
+  ]
+}

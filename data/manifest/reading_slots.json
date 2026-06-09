@@ -1,0 +1,394 @@
+[
+  {
+    "slot_id": "campus_building",
+    "display_name": "Campus Building",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "first",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "zone_sqft",
+    "display_name": "Zone SqFt",
+    "unit": "sqft",
+    "value_type": "numeric",
+    "aggregation_rule": "sum",
+    "scope_levels": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "capacity",
+    "display_name": "Capacity",
+    "unit": "people",
+    "value_type": "numeric",
+    "aggregation_rule": "sum",
+    "scope_levels": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "daily_user_sessions",
+    "display_name": "Daily User Sessions",
+    "unit": "sessions/day",
+    "value_type": "numeric",
+    "aggregation_rule": "sum",
+    "scope_levels": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "daily_unique_users",
+    "display_name": "Daily Unique Users",
+    "unit": "users/day",
+    "value_type": "numeric",
+    "aggregation_rule": "sum",
+    "scope_levels": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "fill_rate_40h",
+    "display_name": "40 Hour Fill Rate",
+    "unit": "ratio",
+    "value_type": "numeric",
+    "aggregation_rule": "mean",
+    "scope_levels": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "occupied_rate",
+    "display_name": "Occupied Rate",
+    "unit": "ratio",
+    "value_type": "numeric",
+    "aggregation_rule": "mean",
+    "scope_levels": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "people_minutes_per_sqft",
+    "display_name": "People Minutes per Sqft",
+    "unit": "people*min/sqft",
+    "value_type": "numeric",
+    "aggregation_rule": "mean",
+    "scope_levels": [
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "use_occupancy_gap",
+    "display_name": "Use vs Occupancy Gap",
+    "unit": "ratio",
+    "value_type": "numeric",
+    "aggregation_rule": "mean",
+    "scope_levels": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "primary_usage",
+    "display_name": "Primary Usage",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "zone_type",
+    "display_name": "Zone Type",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "division",
+    "display_name": "Division",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "room_use",
+    "display_name": "Room Use",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "space_category",
+    "display_name": "Space Category",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "campus",
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "college",
+    "display_name": "College",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "campus",
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "healthcare_space",
+    "display_name": "Healthcare Space",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "campus",
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "underutilization",
+    "display_name": "Underutilization",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "campus",
+      "building",
+      "floor",
+      "zone",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "lab_allocation",
+    "display_name": "Lab Allocation",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "campus",
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "room_type",
+    "display_name": "Assignable vs Not",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "space_standard",
+    "display_name": "Space Standard",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "cpec_code",
+    "display_name": "Space Category (CPEC)",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "zone_source",
+    "display_name": "Zone Source",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "campus",
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "reconciliation_status",
+    "display_name": "Reconciliation Status",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "identity",
+    "scope_levels": [
+      "campus",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "nominal_seats",
+    "display_name": "Nominal Seats",
+    "unit": "seats",
+    "value_type": "numeric",
+    "aggregation_rule": "sum",
+    "scope_levels": [
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "sqft_per_seat",
+    "display_name": "Sqft per Seat",
+    "unit": "sqft/seat",
+    "value_type": "numeric",
+    "aggregation_rule": "mean",
+    "scope_levels": [
+      "building",
+      "room"
+    ]
+  },
+  {
+    "slot_id": "condition_fci",
+    "display_name": "Condition (FCI)",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "first",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "condition_fcni",
+    "display_name": "Condition (FCNI)",
+    "unit": "ratio",
+    "value_type": "numeric",
+    "aggregation_rule": "mean",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "deferred_maintenance",
+    "display_name": "Deferred Maintenance",
+    "unit": "USD",
+    "value_type": "numeric",
+    "aggregation_rule": "sum",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "replacement_value",
+    "display_name": "Replacement Value",
+    "unit": "USD",
+    "value_type": "numeric",
+    "aggregation_rule": "sum",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "building_age",
+    "display_name": "Building Age",
+    "unit": "years",
+    "value_type": "numeric",
+    "aggregation_rule": "first",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "gsf",
+    "display_name": "Gross SqFt",
+    "unit": "sqft",
+    "value_type": "numeric",
+    "aggregation_rule": "first",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "stories",
+    "display_name": "Stories",
+    "unit": "floors",
+    "value_type": "numeric",
+    "aggregation_rule": "first",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "ownership",
+    "display_name": "Ownership",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "first",
+    "scope_levels": [
+      "campus"
+    ]
+  },
+  {
+    "slot_id": "ada_flag",
+    "display_name": "ADA Remediation",
+    "unit": null,
+    "value_type": "categorical",
+    "aggregation_rule": "first",
+    "scope_levels": [
+      "campus"
+    ]
+  }
+]
